@@ -15,6 +15,7 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 
 SITE = "카카오선물하기"
 CATEGORY = "건강식품·영양제"
+URL = "https://gift.kakao.com/ranking/category/8"
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUT_DIR = BASE_DIR / "data" / "raw"
@@ -56,11 +57,7 @@ def main():
         context = browser.new_context(user_agent=UA, locale="ko-KR")
         page = context.new_page()
 
-        page.goto("https://gift.kakao.com/ranking", timeout=20000, wait_until="domcontentloaded")
-        page.wait_for_timeout(2000)
-        page.get_by_text("건강", exact=True).first.click()
-        page.wait_for_timeout(1500)
-        page.get_by_text(CATEGORY, exact=True).first.click()
+        page.goto(URL, timeout=20000, wait_until="domcontentloaded")
         page.wait_for_timeout(2000)
 
         cards = page.locator("div.unit_prd")
@@ -73,6 +70,10 @@ def main():
             raw = card.inner_text()
             item = parse_item(raw)
             if not item:
+                continue
+            if item["광고여부"] == "Y":
+                # 광고(스폰서) 상품은 별도의 1~5위 번호를 달고 나와 실제 판매순위와
+                # 겹치므로(둘 다 1위, 2위...) 판매순위 집계에서 제외한다.
                 continue
             rank += 1
             if item["순위"] is None:

@@ -1,4 +1,4 @@
-"""올리브영 - 건강식품 카테고리 BEST 랭킹 크롤러 (프로토타입).
+"""올리브영 - '판매랭킹 · 건강식품' 카테고리 베스트 크롤러.
 
 실행하면 오늘 날짜로 data/raw/올리브영_YYYY-MM-DD.csv 파일을 만든다.
 """
@@ -14,7 +14,13 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 
 SITE = "올리브영"
 CATEGORY = "건강식품"
-URL = "https://www.oliveyoung.co.kr/store/display/getCategoryShop.do?dispCatNo=10000020001&gateCd=Drawer&"
+AJAX_URL = (
+    "https://www.oliveyoung.co.kr/store/main/getBestList.do?"
+    "dispCatNo=900000100100001&fltDispCatNo=10000020001&pageIdx=1&rowsPerPage=10"
+    "&t_page=%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC%EA%B4%80"
+    "&t_click=%EB%9E%AD%ED%82%B9BEST%EC%83%81%ED%92%88%EB%B8%8C%EB%9E%9C%EB%93%9C_%EC%9D%B8%EA%B8%B0%EC%83%81%ED%92%88%EB%8D%94%EB%B3%B4%EA%B8%B0"
+)
+TOP_N = 10
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUT_DIR = BASE_DIR / "data" / "raw"
@@ -25,59 +31,75 @@ def main():
     today = date.today().isoformat()
     out_path = OUT_DIR / f"{SITE}_{today}.csv"
 
-    rows = []
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        context = browser.new_context(user_agent=UA, locale="ko-KR", viewport={"width": 1400, "height": 1000})
+        context = browser.new_context(user_agent=UA, locale="ko-KR")
         page = context.new_page()
 
-        page.goto(URL, timeout=20000, wait_until="domcontentloaded")
-        page.wait_for_timeout(3000)
+        # getBestList.do는 일반 페이지 이동으로 접근하면 전체 페이지 셸을 돌려주고,
+        # 올리브영 사이트를 한 번 방문해 세션을 확보한 뒤 XHR로 호출해야 실제
+        # "판매랭킹 · 건강식품" 목록(HTML 조각이 아니라 페이지 내부에 렌더링된 리스트)이
+        # fltDispCatNo 필터가 적용된 상태로 내려온다.
+        page.goto("https://www.oliveyoung.co.kr/store/main/main.do", timeout=20000, wait_until="domcontentloaded")
+        page.wait_for_timeout(1000)
 
-        items = page.locator("div.ct-product#mRnkGoodsSec > div.item")
-        count = items.count()
-        print(f"발견된 상품 수: {count}")
-
-        if count == 0:
-            # 원인 진단용: 실제로 어떤 화면이 응답됐는지 확인 (차단/구조 변경 여부 판단)
-            print("응답 상태코드/본문 앞부분 확인:")
-            print("  페이지 제목:", page.title())
-            print("  본문 일부:", page.inner_text("body")[:500].replace("\n", " | "))
-
-        for i in range(count):
-            item = items.nth(i)
-            try:
-                rank = item.locator("span.num").first.inner_text().strip()
-                name = item.locator("span.prd-name").first.inner_text().strip()
-                price_raw = item.locator("p.price span.price-2").first.inner_text()
-                price = "".join(ch for ch in price_raw if ch.isdigit())
-                brand = item.locator("button.btn_zzim").first.get_attribute("data-ref-goodsbrand") or ""
-                link = item.locator("a").first.get_attribute("href") or ""
-                image = item.locator("img").first.get_attribute("src") or ""
-            except Exception as e:
-                print("항목 파싱 실패:", e)
-                continue
-
-            if not name or not price:
-                continue
-
-            rows.append({
-                "수집일": today,
-                "사이트": SITE,
-                "카테고리": CATEGORY,
-                "순위": rank,
-                "브랜드": brand,
-                "상품명": name,
-                "가격": price,
-                "링크": link,
-                "이미지": image,
-            })
-
+        raw_items = page.evaluate(
+            """
+            async (url) => {
+              const res = await fetch(url, {
+                headers: { 'X-Requested-With': 'XMLHttpRequest' },
+                credentials: 'include'
+              });
+              const html = await res.text();
+              const doc = new DOMParser().parseFromString(html, 'text/html');
+              return Array.from(doc.querySelectorAll('ul.cate_prd_list > li')).map(li => {
+                const rankEl = li.querySelector('.thumb_flag.best');
+                const brandEl = li.querySelector('.tx_brand');
+                const nameEl = li.querySelector('.tx_name');
+                const priceEl = li.querySelector('.prd_price .tx_cur .tx_num');
+                const linkEl = li.querySelector('a.prd_thumb');
+                const imgEl = li.querySelector('a.prd_thumb img');
+                return {
+                  rank: rankEl ? rankEl.textContent.trim() : null,
+                  brand: brandEl ? brandEl.textContent.trim() : null,
+                  name: nameEl ? nameEl.textContent.trim() : null,
+                  price: priceEl ? priceEl.textContent.trim() : null,
+                  link: linkEl ? linkEl.getAttribute('href') : null,
+                  image: imgEl ? imgEl.getAttribute('src') : null,
+                };
+              });
+            }
+            """,
+            AJAX_URL,
+        )
         browser.close()
+
+    print(f"발견된 상품 수: {len(raw_items)}")
+
+    rows = []
+    for raw in raw_items:
+        if not (raw["rank"] and raw["name"] and raw["price"]):
+            continue
+        rank = int(raw["rank"])
+        if rank > TOP_N:
+            continue
+        rows.append({
+            "수집일": today,
+            "사이트": SITE,
+            "카테고리": CATEGORY,
+            "순위": rank,
+            "브랜드": raw["brand"] or "",
+            "상품명": raw["name"],
+            "가격": raw["price"].replace(",", ""),
+            "링크": raw["link"] or "",
+            "이미지": raw["image"] or "",
+        })
 
     if not rows:
         print("수집된 상품이 없습니다. 사이트 구조가 바뀌었을 수 있어요.")
         raise SystemExit(1)
+
+    rows.sort(key=lambda r: r["순위"])
 
     fieldnames = ["수집일", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격", "링크", "이미지"]
     with open(out_path, "w", newline="", encoding="utf-8-sig") as f:

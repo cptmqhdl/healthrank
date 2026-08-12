@@ -1,13 +1,9 @@
-"""다이소몰 - 랭킹 페이지의 '식품' 카테고리 크롤러 (프로토타입).
-
-다이소몰 랭킹 페이지에는 건강기능식품 전용 필터가 없어, 가장 가까운 상위 카테고리인
-'식품'을 기준으로 수집한다 (실제로 상위권 대부분이 홍삼/유산균/비타민 등 건강 관련 식품).
+"""다이소몰 - '건강식품' 카테고리 페이지의 '건강식품 카테고리별 랭킹' 위젯 크롤러.
 
 실행하면 오늘 날짜로 data/raw/다이소몰_YYYY-MM-DD.csv 파일을 만든다.
 """
 
 import csv
-import re
 from datetime import date
 from pathlib import Path
 
@@ -17,21 +13,12 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
 
 SITE = "다이소몰"
-CATEGORY = "식품"
-URL = "https://www.daisomall.co.kr/ds/rank/new"
+CATEGORY = "건강식품"
+URL = "https://www.daisomall.co.kr/ds/diy2/C246"
+TOP_N = 10
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUT_DIR = BASE_DIR / "data" / "raw"
-
-# "현재 순위\n1\n(급상승\n)?장바구니\n담기\n(NEW\n)?12,345\n원\n상품명\n택배배송..." 형태를 그대로 파싱
-ITEM_RE = re.compile(
-    r"현재 순위\n(\d+)\n"
-    r"(?:급상승\n)?"
-    r"장바구니\n담기\n"
-    r"(?:NEW\n)?"
-    r"([\d,]+)\n원\n"
-    r"([^\n]+)"
-)
 
 
 def main():
@@ -45,48 +32,61 @@ def main():
         page = context.new_page()
 
         page.goto(URL, timeout=20000, wait_until="domcontentloaded")
-        page.wait_for_timeout(2500)
-        page.get_by_role("button", name=CATEGORY, exact=True).click(timeout=8000)
+        page.wait_for_timeout(2000)
+
+        # "건강식품 카테고리별 랭킹" 위젯까지 스크롤해야 실제 렌더링된다
+        page.get_by_text("건강식품 카테고리별 랭킹", exact=True).first.scroll_into_view_if_needed(timeout=10000)
         page.wait_for_timeout(2500)
 
-        text = page.inner_text("body")
+        # 스와이프 캐러셀이라 카드 하나씩 순서대로 접근하면 화면이 움직여 타임아웃이 날 수
+        # 있어, JS로 한 번에 전체 카드 데이터를 스냅샷 떠서 가져온다.
+        raw_items = page.evaluate("""
+            () => Array.from(document.querySelectorAll('div.nav-rank div.product-card')).map(card => {
+                const numEl = card.querySelector('.rank .num');
+                const nameEl = card.querySelector('.product-title');
+                const priceEl = card.querySelector('.price-value .value');
+                const linkEl = card.querySelector('a.prod-thumb__link');
+                const imgEl = card.querySelector('.prod-thumb img');
+                return {
+                    rank: numEl ? numEl.textContent.trim() : null,
+                    name: nameEl ? nameEl.textContent.trim() : null,
+                    price: priceEl ? priceEl.textContent.trim() : null,
+                    link: linkEl ? linkEl.getAttribute('href') : null,
+                    image: imgEl ? imgEl.getAttribute('src') : null,
+                };
+            })
+        """)
+        print(f"발견된 상품 수: {len(raw_items)}")
 
-        # 카드별 상품 링크/이미지는 텍스트만으로 알 수 없어, 화면에 보이는 순서대로 따로 모은 뒤
-        # 아래에서 정규식으로 뽑은 상품 목록과 같은 순서라고 가정하고 짝지어준다.
-        link_els = page.locator("a.prod-thumb__link")
-        links = []
-        for i in range(link_els.count()):
-            el = link_els.nth(i)
-            href = el.get_attribute("href") or ""
-            img = el.locator("img").first.get_attribute("src") or ""
-            links.append({
-                "링크": ("https://www.daisomall.co.kr" + href) if href.startswith("/") else href,
-                "이미지": img,
+        rows = []
+        for raw in raw_items:
+            if not (raw["rank"] and raw["name"] and raw["price"]):
+                continue
+            rank = int(raw["rank"])
+            if rank > TOP_N:
+                continue
+            href = raw["link"] or ""
+            link = ("https://www.daisomall.co.kr" + href) if href.startswith("/") else href
+
+            rows.append({
+                "수집일": today,
+                "사이트": SITE,
+                "카테고리": CATEGORY,
+                "순위": rank,
+                "브랜드": "",
+                "상품명": raw["name"],
+                "가격": raw["price"].replace(",", ""),
+                "링크": link,
+                "이미지": raw["image"] or "",
             })
 
         browser.close()
 
-    matches = ITEM_RE.findall(text)
-    print(f"발견된 상품 수: {len(matches)}")
-
-    rows = []
-    for idx, (rank, price, name) in enumerate(matches):
-        extra = links[idx] if idx < len(links) else {"링크": "", "이미지": ""}
-        rows.append({
-            "수집일": today,
-            "사이트": SITE,
-            "카테고리": CATEGORY,
-            "순위": rank,
-            "브랜드": "",
-            "상품명": name.strip(),
-            "가격": price.replace(",", ""),
-            "링크": extra["링크"],
-            "이미지": extra["이미지"],
-        })
-
     if not rows:
         print("수집된 상품이 없습니다. 사이트 구조가 바뀌었을 수 있어요.")
         raise SystemExit(1)
+
+    rows.sort(key=lambda r: r["순위"])
 
     fieldnames = ["수집일", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격", "링크", "이미지"]
     with open(out_path, "w", newline="", encoding="utf-8-sig") as f:
