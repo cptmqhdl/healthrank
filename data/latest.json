@@ -1,12 +1,12 @@
 {
   "generated_from_dates": [
-    "2026-08-12"
+    "2026-08-12 18:53"
   ],
   "sites": {
     "kakao": {
       "id": "kakao",
       "label": "카카오톡 선물하기",
-      "date": "2026-08-12",
+      "date": "2026-08-12 18:53",
       "count": 10,
       "items": [
         {
@@ -144,7 +144,7 @@
     "daiso": {
       "id": "daiso",
       "label": "다이소몰",
-      "date": "2026-08-12",
+      "date": "2026-08-12 18:53",
       "count": 10,
       "items": [
         {
@@ -282,7 +282,7 @@
     "oliveyoung": {
       "id": "oliveyoung",
       "label": "올리브영",
-      "date": "2026-08-12",
+      "date": "2026-08-12 18:53",
       "count": 10,
       "items": [
         {

@@ -36,6 +36,9 @@ def build_site(site_id: str, prefix: str, label: str) -> dict | None:
     latest_path = files[-1]
     latest_date = latest_path.stem.replace(f"{prefix}_", "")
     latest_rows = read_csv(latest_path)
+    # "수집시각"(날짜+시간) 컬럼이 있으면 그걸 우선 쓰고, 옛날 데이터라 없으면
+    # 파일명의 날짜만 사용한다.
+    collected_at = (latest_rows[0].get("수집시각") if latest_rows else None) or latest_date
 
     prev_by_name: dict[str, int] = {}
     if len(files) >= 2:
@@ -78,7 +81,7 @@ def build_site(site_id: str, prefix: str, label: str) -> dict | None:
     return {
         "id": site_id,
         "label": label,
-        "date": latest_date,
+        "date": collected_at,
         "count": len(items),
         "items": items,
     }

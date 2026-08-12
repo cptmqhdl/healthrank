@@ -4,7 +4,7 @@
 """
 
 import csv
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
@@ -16,6 +16,7 @@ SITE = "다이소몰"
 CATEGORY = "건강식품"
 URL = "https://www.daisomall.co.kr/ds/diy2/C246"
 TOP_N = 10
+KST = timezone(timedelta(hours=9))
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUT_DIR = BASE_DIR / "data" / "raw"
@@ -24,6 +25,7 @@ OUT_DIR = BASE_DIR / "data" / "raw"
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     today = date.today().isoformat()
+    collected_at = datetime.now(KST).strftime("%Y-%m-%d %H:%M")
     out_path = OUT_DIR / f"{SITE}_{today}.csv"
 
     with sync_playwright() as p:
@@ -73,6 +75,7 @@ def main():
 
             rows.append({
                 "수집일": today,
+                "수집시각": collected_at,
                 "사이트": SITE,
                 "카테고리": CATEGORY,
                 "순위": rank,
@@ -91,7 +94,7 @@ def main():
 
     rows.sort(key=lambda r: r["순위"])
 
-    fieldnames = ["수집일", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격", "링크", "이미지"]
+    fieldnames = ["수집일", "수집시각", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격", "링크", "이미지"]
     with open(out_path, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()

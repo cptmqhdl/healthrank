@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>헬스랭크</title>
+<title>건강식품 데일리 랭킹</title>
 <style>
   :root{
     --bg:#ffffff;
@@ -117,53 +117,10 @@
     .tile{padding:48px 20px;}
   }
 
-  /* ---- hero ---- */
-  .eyebrow{
-    display:inline-block;
-    font-size:14px;
-    font-weight:600;
-    letter-spacing:-0.224px;
-    color:var(--accent);
-    background:var(--chip-bg);
-    padding:6px 14px;
-    border-radius:9999px;
-    margin-bottom:24px;
-  }
-  .hero h1{
-    font-size:56px;
-    line-height:1.07;
-    letter-spacing:-0.28px;
-  }
-  .hero .lead{
-    font-family:var(--font-text);
-    font-size:24px;
-    font-weight:300;
-    line-height:1.5;
-    letter-spacing:0;
-    color:var(--text-muted);
-    margin-top:20px;
-    max-width:640px;
-  }
-  @media (max-width:640px){ .hero h1{font-size:34px;} }
-
-  /* ---- kpi cards ---- */
-  .card-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:16px;
-    margin-top:48px;
-  }
-  @media (max-width:900px){ .card-grid{grid-template-columns:repeat(2,1fr);} }
-  @media (max-width:480px){ .card-grid{grid-template-columns:1fr;} }
-  .card{
-    background:var(--surface);
-    border:1px solid var(--surface-border);
-    border-radius:18px;
-    padding:24px;
-  }
-  .card .k{font-size:14px;font-weight:600;letter-spacing:-0.224px;color:var(--text-muted);margin-bottom:8px;}
-  .card .v{font-size:17px;font-weight:600;letter-spacing:-0.374px;}
-  .card .d{font-size:14px;color:var(--text-muted);margin-top:6px;line-height:1.43;}
+  /* ---- about (간단 소개, 순위 섹션 아래로 이동) ---- */
+  .about{padding:40px 24px;}
+  .about h2{font-size:22px;letter-spacing:-0.374px;}
+  .about p{margin-top:8px;color:var(--text-muted);font-size:15px;max-width:560px;}
 
   /* ---- section head ---- */
   .section-head{margin-bottom:40px;}
@@ -245,41 +202,9 @@
 <body>
 
 <div class="nav">
-  <div class="nav-brand">💊 헬스랭크</div>
+  <div class="nav-brand">💊 건강식품 데일리 랭킹</div>
   <div class="nav-badge" id="navBadge">4단계 · 실제 데이터 연동</div>
 </div>
-
-<section class="tile hero">
-  <div class="wrap">
-    <span class="eyebrow">AI 인터뷰 요약 · 2026.08.12</span>
-    <h1>건강기능식품 판매순위,<br/>이제 한 페이지에서.</h1>
-    <p class="lead">카카오톡 선물하기 · 다이소몰 · 올리브영을 매일 돌아다니며 확인하던 일을
-      자동으로 모아, 오늘의 순위와 이번 달 흐름을 한눈에 봅니다.</p>
-
-    <div class="card-grid">
-      <div class="card">
-        <div class="k">목표</div>
-        <div class="v">데일리 판매순위 통합 확인</div>
-        <div class="d">여러 사이트를 일일이 확인하는 번거로움 해소</div>
-      </div>
-      <div class="card">
-        <div class="k">결과물</div>
-        <div class="v">대시보드 + 월간 리포트</div>
-        <div class="d">평소엔 대시보드로, 월말엔 리포트로</div>
-      </div>
-      <div class="card">
-        <div class="k">데이터 대상</div>
-        <div class="v">카카오선물하기 · 다이소몰 · 올리브영</div>
-        <div class="d">순위 · 상품명 · 가격 수집</div>
-      </div>
-      <div class="card">
-        <div class="k">주기</div>
-        <div class="v">매일 자동 수집</div>
-        <div class="d">매월 초/말 월간 집계 리포트</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="tile tile-alt" id="preview">
   <div class="wrap-wide">
@@ -292,8 +217,16 @@
   </div>
 </section>
 
+<section class="tile about">
+  <div class="wrap">
+    <h2>건강식품 데일리 랭킹</h2>
+    <p>카카오톡 선물하기 · 다이소몰 · 올리브영의 건강기능식품 판매순위를 매일 자동으로
+      모아 보여주는 개인용 대시보드예요.</p>
+  </div>
+</section>
+
 <footer>
-  건강기능식품 데일리 판매순위 대시보드 · 4단계(실제 데이터 연동) · PLAYBOOK.md + DESIGN-apple.md 기반
+  건강식품 데일리 랭킹 · 4단계(실제 데이터 연동) · PLAYBOOK.md + DESIGN-apple.md 기반
 </footer>
 
 <script>

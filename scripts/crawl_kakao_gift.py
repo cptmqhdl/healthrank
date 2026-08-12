@@ -5,7 +5,7 @@
 
 import csv
 import re
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
@@ -16,6 +16,7 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 SITE = "카카오선물하기"
 CATEGORY = "건강식품·영양제"
 URL = "https://gift.kakao.com/ranking/category/8"
+KST = timezone(timedelta(hours=9))
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUT_DIR = BASE_DIR / "data" / "raw"
@@ -49,6 +50,7 @@ def parse_item(text: str):
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     today = date.today().isoformat()
+    collected_at = datetime.now(KST).strftime("%Y-%m-%d %H:%M")
     out_path = OUT_DIR / f"{SITE}_{today}.csv"
 
     rows = []
@@ -88,6 +90,7 @@ def main():
             item["사이트"] = SITE
             item["카테고리"] = CATEGORY
             item["수집일"] = today
+            item["수집시각"] = collected_at
 
             href = card.locator("a.link_prdunit").first.get_attribute("href")
             item["링크"] = ("https://gift.kakao.com" + href) if href and href.startswith("/") else (href or "")
@@ -101,7 +104,7 @@ def main():
         print("수집된 상품이 없습니다. 사이트 구조가 바뀌었을 수 있어요.")
         raise SystemExit(1)
 
-    fieldnames = ["수집일", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격", "광고여부", "링크", "이미지"]
+    fieldnames = ["수집일", "수집시각", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격", "광고여부", "링크", "이미지"]
     with open(out_path, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
