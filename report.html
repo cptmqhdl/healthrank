@@ -22,9 +22,9 @@
     --chip-text:#1d1d1f;
     --success:#1a7f37;
     --danger:#d1393a;
-    --cat-1:#2a78d6;
-    --cat-2:#eb6834;
-    --cat-3:#1baf7a;
+    --cat-kakao:#FEE500;
+    --cat-daiso:#ED1C24;
+    --cat-oliveyoung:#9BCE26;
     --shadow-product:0 8px 30px rgba(0,0,0,0.16);
     --font-display:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;
     --font-text:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",system-ui,sans-serif;
@@ -45,9 +45,6 @@
       --chip-text:#ffffff;
       --success:#30d158;
       --danger:#ff453a;
-      --cat-1:#3987e5;
-      --cat-2:#d95926;
-      --cat-3:#199e70;
       --shadow-product:0 8px 34px rgba(0,0,0,0.5);
     }
   }
@@ -66,9 +63,6 @@
     --chip-text:#ffffff;
     --success:#30d158;
     --danger:#ff453a;
-    --cat-1:#3987e5;
-    --cat-2:#d95926;
-    --cat-3:#199e70;
     --shadow-product:0 8px 34px rgba(0,0,0,0.5);
   }
 
@@ -528,7 +522,7 @@
   });
 
   var CHANNEL_LABEL = { kakao: '카카오톡 선물하기', daiso: '다이소몰', oliveyoung: '올리브영' };
-  var CHANNEL_COLOR_VAR = { kakao: '--cat-1', daiso: '--cat-2', oliveyoung: '--cat-3' };
+  var CHANNEL_COLOR_VAR = { kakao: '--cat-kakao', daiso: '--cat-daiso', oliveyoung: '--cat-oliveyoung' };
 
   function renderCategoryLegend(){
     var legend = document.getElementById('categoryLegend');
