@@ -335,7 +335,7 @@
 
 <div class="nav">
   <div class="nav-brand">💊 헬스랭크</div>
-  <div class="nav-badge">1단계 · 방향 정리 완료</div>
+  <div class="nav-badge" id="navBadge">4단계 · 실제 데이터 연동</div>
 </div>
 
 <section class="tile hero">
@@ -418,101 +418,14 @@
 <section class="tile tile-dark" id="preview">
   <div class="wrap-wide">
     <div class="section-head">
-      <h2>대시보드 화면 미리보기</h2>
-      <p>아직 실제 크롤링 전이라 <strong>샘플 데이터</strong>로 화면 느낌만 먼저 잡아봤어요.
-        탭을 눌러 사이트를 바꿔보세요.</p>
+      <h2>오늘의 판매순위</h2>
+      <p id="previewLead">데이터를 불러오는 중이에요…</p>
     </div>
 
-    <div class="tabs" role="tablist" aria-label="사이트 선택">
-      <button class="tab-btn" role="tab" aria-selected="true" aria-controls="panel-kakao" id="tab-kakao">카카오톡 선물하기</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-daiso" id="tab-daiso">다이소몰</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-oliveyoung" id="tab-oliveyoung">올리브영</button>
-    </div>
-    <p class="tab-note">예시 화면입니다 — 실제 순위·가격 데이터가 아닙니다.</p>
+    <div class="tabs" role="tablist" aria-label="사이트 선택" id="siteTabs"></div>
+    <p class="tab-note" id="tabNote"></p>
 
-    <div class="rank-grid" role="tabpanel" id="panel-kakao" aria-labelledby="tab-kakao">
-      <div class="rank-card">
-        <div class="rank-top"><span class="rank-num">1</span><span class="rank-delta up tabular">▲2</span></div>
-        <div class="rank-name">프로바이오틱스 유산균 골드 2000억</div>
-        <div class="rank-price tabular">32,900원</div>
-      </div>
-      <div class="rank-card">
-        <div class="rank-top"><span class="rank-num">2</span><span class="rank-delta flat">–</span></div>
-        <div class="rank-name">홍삼정 에브리타임 스틱</div>
-        <div class="rank-price tabular">68,000원</div>
-      </div>
-      <div class="rank-card">
-        <div class="rank-top"><span class="rank-num">3</span><span class="rank-delta down tabular">▼1</span></div>
-        <div class="rank-name">루테인 지아잔틴 눈건강</div>
-        <div class="rank-price tabular">24,900원</div>
-      </div>
-      <div class="rank-card">
-        <div class="rank-top"><span class="rank-num">4</span><span class="rank-delta up tabular">▲1</span></div>
-        <div class="rank-name">오메가3 이엑스 알티지</div>
-        <div class="rank-price tabular">29,900원</div>
-      </div>
-      <div class="rank-card">
-        <div class="rank-top"><span class="rank-num">5</span><span class="rank-delta new">NEW</span></div>
-        <div class="rank-name">밀크씨슬 실리마린 간건강</div>
-        <div class="rank-price tabular">21,500원</div>
-      </div>
-    </div>
-
-    <div class="rank-grid" role="tabpanel" id="panel-daiso" aria-labelledby="tab-daiso" hidden>
-      <div class="rank-card">
-        <div class="rank-top"><span class="rank-num">1</span><span class="rank-delta up tabular">▲3</span></div>
-        <div class="rank-name">멀티비타민 미네랄 60정</div>
-        <div class="rank-price tabular">5,000원</div>
-      </div>
-      <div class="rank-card">
-        <div class="rank-top"><span class="rank-num">2</span><span class="rank-delta flat">–</span></div>
-        <div class="rank-name">마그네슘 비타민B6</div>
-        <div class="rank-price tabular">5,000원</div>
-      </div>
-      <div class="rank-card">
-        <div class="rank-top"><span class="rank-num">3</span><span class="rank-delta up tabular">▲1</span></div>
-        <div class="rank-name">밀크씨슬 실리마린</div>
-        <div class="rank-price tabular">5,000원</div>
-      </div>
-      <div class="rank-card">
-        <div class="rank-top"><span class="rank-num">4</span><span class="rank-delta down tabular">▼2</span></div>
-        <div class="rank-name">콜라겐 젤리 스틱</div>
-        <div class="rank-price tabular">5,000원</div>
-      </div>
-      <div class="rank-card">
-        <div class="rank-top"><span class="rank-num">5</span><span class="rank-delta new">NEW</span></div>
-        <div class="rank-name">프로바이오틱스 유산균</div>
-        <div class="rank-price tabular">5,000원</div>
-      </div>
-    </div>
-
-    <div class="rank-grid" role="tabpanel" id="panel-oliveyoung" aria-labelledby="tab-oliveyoung" hidden>
-      <div class="rank-card">
-        <div class="rank-top"><span class="rank-num">1</span><span class="rank-delta flat">–</span></div>
-        <div class="rank-name">아연 마그네슘 비타민B6</div>
-        <div class="rank-price tabular">13,500원</div>
-      </div>
-      <div class="rank-card">
-        <div class="rank-top"><span class="rank-num">2</span><span class="rank-delta up tabular">▲1</span></div>
-        <div class="rank-name">비타민C 1000 이너뷰티</div>
-        <div class="rank-price tabular">15,900원</div>
-      </div>
-      <div class="rank-card">
-        <div class="rank-top"><span class="rank-num">3</span><span class="rank-delta down tabular">▼1</span></div>
-        <div class="rank-name">이너뷰티 콜라겐 스틱</div>
-        <div class="rank-price tabular">32,000원</div>
-      </div>
-      <div class="rank-card">
-        <div class="rank-top"><span class="rank-num">4</span><span class="rank-delta up tabular">▲2</span></div>
-        <div class="rank-name">프로바이오틱스 유산균 스틱</div>
-        <div class="rank-price tabular">27,000원</div>
-      </div>
-      <div class="rank-card">
-        <div class="rank-top"><span class="rank-num">5</span><span class="rank-delta new">NEW</span></div>
-        <div class="rank-name">오메가3 트리플</div>
-        <div class="rank-price tabular">24,000원</div>
-      </div>
-    </div>
+    <div id="rankPanels"></div>
   </div>
 </section>
 
@@ -520,7 +433,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2>다음 단계 로드맵</h2>
-      <p>급하지 않게, 순서대로 하나씩 만들어가요. 지금은 1단계가 끝난 상태예요.</p>
+      <p>급하지 않게, 순서대로 하나씩 만들어가요. 지금은 4단계가 끝난 상태예요.</p>
     </div>
     <div class="roadmap">
       <div class="step done">
@@ -528,25 +441,25 @@
         <div class="step-body"><h3>인터뷰 &amp; 방향 확정</h3><p>목표·데이터·주기·형태를 정리했어요.</p></div>
         <div class="step-status">완료</div>
       </div>
+      <div class="step done">
+        <div class="step-num">✓</div>
+        <div class="step-body"><h3>3개 사이트 크롤러 제작</h3><p>카카오·다이소·올리브영 모두 연결했어요.</p></div>
+        <div class="step-status">완료</div>
+      </div>
+      <div class="step done">
+        <div class="step-num">✓</div>
+        <div class="step-body"><h3>매일 자동 수집</h3><p>깃허브 서버에서 매일 09:30 자동 실행.</p></div>
+        <div class="step-status">완료</div>
+      </div>
+      <div class="step done">
+        <div class="step-num">✓</div>
+        <div class="step-body"><h3>실제 데이터로 대시보드 완성</h3><p>위 화면이 이제 진짜 데이터를 보여줘요.</p></div>
+        <div class="step-status">완료</div>
+      </div>
       <div class="step next">
-        <div class="step-num">2</div>
-        <div class="step-body"><h3>사이트 1곳부터 크롤러 시작</h3><p>가장 쉬운 사이트 하나로 먼저 확인해봐요.</p></div>
-        <div class="step-status">다음 단계</div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body"><h3>3개 사이트 + 매일 자동 수집</h3><p>세 곳 모두 연결하고 스케줄러로 자동화.</p></div>
-        <div class="step-status">예정</div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-body"><h3>실제 데이터로 대시보드 완성</h3><p>지금 이 화면을 진짜 데이터에 연결.</p></div>
-        <div class="step-status">예정</div>
-      </div>
-      <div class="step">
         <div class="step-num">5</div>
         <div class="step-body"><h3>월간 리포트 자동화</h3><p>매월 초/말에 자동으로 리포트 생성.</p></div>
-        <div class="step-status">예정</div>
+        <div class="step-status">다음 단계</div>
       </div>
       <div class="step">
         <div class="step-num">6</div>
@@ -563,53 +476,114 @@
       <h2>지금 할 수 있는 다음 액션 3가지</h2>
     </div>
     <div class="actions">
-      <div class="action"><div class="num">1</div><p>카카오톡 선물하기 / 다이소몰 / 올리브영 중 크롤링이 가장 쉬워 보이는 사이트 하나를 먼저 골라보기</p></div>
-      <div class="action"><div class="num">2</div><p>이 화면(카드 배치, 탭 구성)이 실제로 원하는 모습에 가까운지 확인하고 피드백 주기</p></div>
-      <div class="action"><div class="num">3</div><p>준비되면 아래 프롬프트로 새 대화를 열어 2단계(크롤러 제작)를 이어가기</p></div>
+      <div class="action"><div class="num">1</div><p>매일 아침 이 페이지를 열어서 오늘의 순위 변화를 확인하기</p></div>
+      <div class="action"><div class="num">2</div><p>화면 구성(카드 배치, 탭, 순위 변동 표시)에서 고치고 싶은 부분 있으면 편하게 피드백 주기</p></div>
+      <div class="action"><div class="num">3</div><p>준비되면 아래 프롬프트로 새 대화를 열어 5단계(월간 리포트 자동화)를 이어가기</p></div>
     </div>
 
     <div class="prompt-box">
       <button class="copy-btn" id="copyBtn" type="button">복사</button>
-      <pre id="promptText">지난 인터뷰에서 정한 내용이야:
+      <pre id="promptText">지난 진행 내용이야:
 - 목표: 건강기능식품 데일리 판매순위를 한 페이지에서 확인
-- 이유: 여러 사이트를 매번 확인하는 게 번거로움 + 월간 리포트도 만들고 싶음
-- 방식: 특정 사이트 크롤링
-- 결과물: 인터랙티브 대시보드 + 월간 리포트 둘 다
-- 데이터: 순위, 상품명, 가격
-- 대상 사이트: 카카오톡 선물하기, 다이소몰, 올리브영
-- 열람 대상: 지금은 나만, 나중에 팀 공유
-- 반복 주기: 매일 자동 수집, 매월 초/말 월간 집계
-- 다룰 줄 아는 도구: 엑셀
-- 제약: 없음, 마감 급하지 않음
+- 1~4단계 완료: 3개 사이트 크롤러 제작, 매일 자동 수집(깃허브 액션), 실제 데이터로
+  대시보드(report.html) 연동까지 끝남
+- 저장소: https://github.com/cptmqhdl/healthrank (공개), 웹 주소: https://cptmqhdl.github.io/healthrank/
+- 데이터: data/raw/*.csv → scripts/build_dashboard_data.py 가 data/latest.json 으로 가공 →
+  report.html이 이 json을 읽어 화면에 표시
 
-이제 2단계로, 세 사이트 중 하나를 골라 크롤러 프로토타입부터 같이 만들어줘.
+이제 5단계로, 매월 초/말에 그 달 데이터를 집계해서(평균 순위, 순위 변동, 최다 1위 상품 등)
+self-contained HTML 월간 리포트를 자동 생성하는 걸 같이 만들어줘.
 디자인은 DESIGN-apple.md 스타일을 계속 유지해줘.</pre>
     </div>
   </div>
 </section>
 
 <footer>
-  건강기능식품 데일리 판매순위 대시보드 · 1단계 리포트 · PLAYBOOK.md + DESIGN-apple.md 기반
+  건강기능식품 데일리 판매순위 대시보드 · 4단계(실제 데이터 연동) · PLAYBOOK.md + DESIGN-apple.md 기반
 </footer>
 
 <script>
 (function(){
-  var tabs = document.querySelectorAll('.tab-btn');
-  var panels = {
-    'tab-kakao':'panel-kakao',
-    'tab-daiso':'panel-daiso',
-    'tab-oliveyoung':'panel-oliveyoung'
+  var DELTA_LABEL = {
+    up: function(v){ return '▲' + v; },
+    down: function(v){ return '▼' + v; },
+    flat: function(){ return '–'; },
+    new: function(){ return 'NEW'; }
   };
-  tabs.forEach(function(tab){
-    tab.addEventListener('click', function(){
-      tabs.forEach(function(t){ t.setAttribute('aria-selected','false'); });
-      tab.setAttribute('aria-selected','true');
-      Object.values(panels).forEach(function(id){
-        document.getElementById(id).hidden = true;
-      });
-      document.getElementById(panels[tab.id]).hidden = false;
+  var SITE_ORDER = ['kakao', 'daiso', 'oliveyoung'];
+
+  function escapeHtml(str){
+    return String(str).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
     });
-  });
+  }
+
+  function renderRankCard(item){
+    var delta = item.delta || { type: 'flat', value: 0 };
+    var label = (DELTA_LABEL[delta.type] || DELTA_LABEL.flat)(delta.value);
+    var adBadge = item.ad ? '<span class="rank-delta flat" style="margin-left:6px;">광고</span>' : '';
+    return (
+      '<div class="rank-card">' +
+        '<div class="rank-top">' +
+          '<span class="rank-num">' + item.rank + '</span>' +
+          '<span class="rank-delta ' + delta.type + ' tabular">' + label + '</span>' +
+        '</div>' +
+        '<div class="rank-name">' + escapeHtml(item.name) + adBadge + '</div>' +
+        '<div class="rank-price tabular">' + item.price.toLocaleString('ko-KR') + '원</div>' +
+      '</div>'
+    );
+  }
+
+  function renderSite(site, index){
+    var tab = document.createElement('button');
+    tab.className = 'tab-btn';
+    tab.type = 'button';
+    tab.setAttribute('role', 'tab');
+    tab.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
+    tab.setAttribute('aria-controls', 'panel-' + site.id);
+    tab.id = 'tab-' + site.id;
+    tab.textContent = site.label;
+    document.getElementById('siteTabs').appendChild(tab);
+
+    var panel = document.createElement('div');
+    panel.className = 'rank-grid';
+    panel.setAttribute('role', 'tabpanel');
+    panel.id = 'panel-' + site.id;
+    panel.setAttribute('aria-labelledby', 'tab-' + site.id);
+    if(index !== 0){ panel.hidden = true; }
+    panel.innerHTML = site.items.map(renderRankCard).join('');
+    document.getElementById('rankPanels').appendChild(panel);
+
+    tab.addEventListener('click', function(){
+      document.querySelectorAll('.tab-btn').forEach(function(t){ t.setAttribute('aria-selected','false'); });
+      tab.setAttribute('aria-selected','true');
+      document.querySelectorAll('#rankPanels .rank-grid').forEach(function(p){ p.hidden = true; });
+      panel.hidden = false;
+    });
+  }
+
+  fetch('data/latest.json', { cache: 'no-store' })
+    .then(function(res){
+      if(!res.ok){ throw new Error('데이터 파일을 찾을 수 없어요'); }
+      return res.json();
+    })
+    .then(function(data){
+      var sites = SITE_ORDER.map(function(id){ return data.sites[id]; }).filter(Boolean);
+      if(sites.length === 0){ throw new Error('아직 수집된 데이터가 없어요'); }
+
+      document.getElementById('previewLead').textContent =
+        '사이트별 판매순위 1~10위, 최근 수집일 ' + data.generated_from_dates.join(', ') + ' 기준이에요. 탭을 눌러 사이트를 바꿔보세요.';
+      document.getElementById('tabNote').textContent =
+        '순위 옆 표시는 전날 대비 변동이에요 (NEW = 전날에는 없던 상품 또는 첫 수집일).';
+      document.getElementById('navBadge').textContent = '실제 데이터 · ' + sites[0].date + ' 기준';
+
+      sites.forEach(renderSite);
+    })
+    .catch(function(err){
+      document.getElementById('previewLead').textContent =
+        '데이터를 불러오지 못했어요 (' + err.message + '). 깃허브 페이지 주소로 접속했는지 확인해주세요 — ' +
+        '컴퓨터에서 파일을 직접 더블클릭해서 열면 데이터를 불러올 수 없어요.';
+    });
 
   var copyBtn = document.getElementById('copyBtn');
   copyBtn.addEventListener('click', function(){

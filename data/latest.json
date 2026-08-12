@@ -1,0 +1,306 @@
+{
+  "generated_from_dates": [
+    "2026-08-12"
+  ],
+  "sites": {
+    "kakao": {
+      "id": "kakao",
+      "label": "카카오톡 선물하기",
+      "date": "2026-08-12",
+      "count": 10,
+      "items": [
+        {
+          "rank": 1,
+          "brand": "오쏘몰",
+          "name": "독일 명품 비타민 오쏘몰 이뮨 멀티비타민&미네랄 7입 - 단독 기프트박스 증정 (공식수입)",
+          "price": 34000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 2,
+          "brand": "옵티젠",
+          "name": "한국인 맞춤 비타민 옵티젠 이뮨 멀티비타민&미네랄 10입 / 1박스 (+GIFT 쇼핑백)",
+          "price": 26900,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 3,
+          "brand": "오쏘몰",
+          "name": "독일 명품 비타민 오쏘몰 이뮨 멀티비타민&미네랄 30입 - 시그니처 기프트 에디션 (공식수입)",
+          "price": 99000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 4,
+          "brand": "오쏘몰",
+          "name": "독일 명품 비타민 오쏘몰 이뮨 멀티비타민&미네랄 10입 - 슬리브 기프트 에디션 (공식수입)",
+          "price": 43900,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 5,
+          "brand": "센트룸",
+          "name": "[센트룸] 맛있는 멀티비타민 미네랄 멀티구미 (80구미)",
+          "price": 24000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 6,
+          "brand": "웰릿",
+          "name": "투슬리스 한정판 선물세트 투슬리스 굿즈 4종 [드래곤길들이기] 웰릿 맛있는 멀티비타민 구미 120구미(2개월분) 투슬리스 인형&아크릴 키링+다꾸스티커+랜덤 띠부씰 증정",
+          "price": 45000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 7,
+          "brand": "종근당",
+          "name": "올인원 명품비타민 이뮨 멀티비타민 미네랄 7입+비타민젤리 마시는 액상 종합 비타민 수험생 직장인 부모님 건강 선물",
+          "price": 23800,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 8,
+          "brand": "GNM자연의품격",
+          "name": "\"본품2병증정\" GNM 올인원 이뮨 액상 종합비타민 2박스 (총 14+2병) / 멀티비타민 이뮨비타민 이뮨샷 비타민",
+          "price": 32900,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 9,
+          "brand": "뉴트리포유",
+          "name": "명품 비타민 뉴트리포유 듀얼+ 이뮨 종합 멀티비타민&미네랄 7입+2입 증정 - 선물하기 단독 에디션",
+          "price": 19900,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 10,
+          "brand": "정관장",
+          "name": "신상비타민선물 [정관장] 활기마이트(액상30ml+분말500mg) 7입 + [증정] 1입",
+          "price": 39000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        }
+      ]
+    },
+    "daiso": {
+      "id": "daiso",
+      "label": "다이소몰",
+      "date": "2026-08-12",
+      "count": 10,
+      "items": [
+        {
+          "rank": 1,
+          "brand": "",
+          "name": "[신혜선 PICK] 동국제약 마데카 글루타치온 필름 12매 12일분",
+          "price": 5000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 2,
+          "brand": "",
+          "name": "[보령약국 X Pantio] 다이어트 컷 올인원 15포 15일분",
+          "price": 5000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 3,
+          "brand": "",
+          "name": "[의약외품][신혜선 PICK] 동국 벤포 비타맥스정 10정 10일분",
+          "price": 2000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 4,
+          "brand": "",
+          "name": "낫띵베럴 작두콩차 1.5g x 7 티백",
+          "price": 2000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 5,
+          "brand": "",
+          "name": "[신혜선 PICK] 동국제약 마데카 PDRN 필름 10매 10일분",
+          "price": 5000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 6,
+          "brand": "",
+          "name": "[신혜선 PICK] 동국제약 면역엔 홍삼 필름 10매 10일분",
+          "price": 5000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 7,
+          "brand": "",
+          "name": "[신혜선 PICK] 동국 마이팝 푸룬＆식이섬유",
+          "price": 2000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 8,
+          "brand": "",
+          "name": "휴럼 하루한포 유기농 야채분말 15포 15일분",
+          "price": 5000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 9,
+          "brand": "",
+          "name": "대상 순창 청양초 쌈장 190 g",
+          "price": 2000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 10,
+          "brand": "",
+          "name": "[의약외품][신혜선 PICK] 동국제약 멜라케어 더블 화이트 정 10정 10일분",
+          "price": 3000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        }
+      ]
+    },
+    "oliveyoung": {
+      "id": "oliveyoung",
+      "label": "올리브영",
+      "date": "2026-08-12",
+      "count": 5,
+      "items": [
+        {
+          "rank": 1,
+          "brand": "정관장",
+          "name": "정관장 아이패스 시크릿 공부부적 (500mg*20매) (20일분)",
+          "price": 36000,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 2,
+          "brand": "프로뉴트리션",
+          "name": "[8월 올영픽/한선화 PICK] 프로뉴트리션 듀얼플랜 다이어트 유산균 14포",
+          "price": 29900,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 3,
+          "brand": "바이오코어유산균",
+          "name": "CJ 바이오코어 비피더스 다이어트 유산균 14캡슐 (2주분)",
+          "price": 16900,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 4,
+          "brand": "판도라",
+          "name": "[8월 올영픽] 판도라 브이트리티 7/14+1포 (7/15일분)",
+          "price": 24100,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 5,
+          "brand": "고려은단",
+          "name": "고려은단 비타민C1000 600정 (20개월분)",
+          "price": 42900,
+          "ad": false,
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        }
+      ]
+    }
+  }
+}
