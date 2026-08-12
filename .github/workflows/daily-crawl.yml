@@ -1,0 +1,44 @@
+name: 데일리 건강기능식품 판매순위 수집
+
+on:
+  schedule:
+    # 매일 09:30 KST = 00:30 UTC (한국은 서머타임이 없어 연중 동일)
+    - cron: "30 0 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 라이브러리 설치
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: 크롤러 실행 (사이트 하나가 실패해도 나머지는 계속 진행)
+        run: |
+          set +e
+          FAILED=0
+          python scripts/crawl_kakao_gift.py || FAILED=1
+          python scripts/crawl_daiso.py || FAILED=1
+          python scripts/crawl_oliveyoung.py || FAILED=1
+          exit $FAILED
+
+      - name: 결과 커밋 및 푸시
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/raw
+          git diff --cached --quiet || git commit -m "데일리 수집: $(date -u +'%Y-%m-%d')"
+          git push

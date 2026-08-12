@@ -69,7 +69,7 @@ def main():
 
     if not rows:
         print("수집된 상품이 없습니다. 사이트 구조가 바뀌었을 수 있어요.")
-        return
+        raise SystemExit(1)
 
     fieldnames = ["수집일", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격"]
     with open(out_path, "w", newline="", encoding="utf-8-sig") as f:
