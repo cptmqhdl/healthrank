@@ -67,6 +67,8 @@ def build_site(site_id: str, prefix: str, label: str) -> dict | None:
                 "name": name,
                 "price": int(row["가격"]),
                 "ad": row.get("광고여부") == "Y",
+                "link": row.get("링크") or "",
+                "image": row.get("이미지") or "",
                 "delta": delta,
             }
         )

@@ -52,6 +52,8 @@ def main():
                 price_raw = item.locator("p.price span.price-2").first.inner_text()
                 price = "".join(ch for ch in price_raw if ch.isdigit())
                 brand = item.locator("button.btn_zzim").first.get_attribute("data-ref-goodsbrand") or ""
+                link = item.locator("a").first.get_attribute("href") or ""
+                image = item.locator("img").first.get_attribute("src") or ""
             except Exception as e:
                 print("항목 파싱 실패:", e)
                 continue
@@ -67,6 +69,8 @@ def main():
                 "브랜드": brand,
                 "상품명": name,
                 "가격": price,
+                "링크": link,
+                "이미지": image,
             })
 
         browser.close()
@@ -75,7 +79,7 @@ def main():
         print("수집된 상품이 없습니다. 사이트 구조가 바뀌었을 수 있어요.")
         raise SystemExit(1)
 
-    fieldnames = ["수집일", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격"]
+    fieldnames = ["수집일", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격", "링크", "이미지"]
     with open(out_path, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()

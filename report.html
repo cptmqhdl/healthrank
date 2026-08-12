@@ -239,6 +239,19 @@
     display:flex;
     flex-direction:column;
     gap:10px;
+    text-decoration:none;
+    color:inherit;
+    transition:transform 0.15s ease, border-color 0.15s ease;
+  }
+  a.rank-card:hover{border-color:var(--accent-strong);transform:translateY(-2px);}
+  a.rank-card:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px;}
+  .rank-thumb{
+    width:100%;
+    aspect-ratio:1/1;
+    border-radius:12px;
+    background:var(--tile-dark-bg) center/cover no-repeat;
+    background-size:contain;
+    border:1px solid var(--tile-dark-border);
   }
   .rank-top{display:flex;align-items:center;justify-content:space-between;}
   .rank-num{
@@ -522,15 +535,23 @@ self-contained HTML 월간 리포트를 자동 생성하는 걸 같이 만들어
     var delta = item.delta || { type: 'flat', value: 0 };
     var label = (DELTA_LABEL[delta.type] || DELTA_LABEL.flat)(delta.value);
     var adBadge = item.ad ? '<span class="rank-delta flat" style="margin-left:6px;">광고</span>' : '';
+    var tag = item.link ? 'a' : 'div';
+    var linkAttrs = item.link
+      ? ' href="' + escapeHtml(item.link) + '" target="_blank" rel="noopener noreferrer"'
+      : '';
+    var thumb = item.image
+      ? '<div class="rank-thumb" style="background-image:url(\'' + escapeHtml(item.image) + '\');"></div>'
+      : '';
     return (
-      '<div class="rank-card">' +
+      '<' + tag + ' class="rank-card"' + linkAttrs + '>' +
+        thumb +
         '<div class="rank-top">' +
           '<span class="rank-num">' + item.rank + '</span>' +
           '<span class="rank-delta ' + delta.type + ' tabular">' + label + '</span>' +
         '</div>' +
         '<div class="rank-name">' + escapeHtml(item.name) + adBadge + '</div>' +
         '<div class="rank-price tabular">' + item.price.toLocaleString('ko-KR') + '원</div>' +
-      '</div>'
+      '</' + tag + '>'
     );
   }
 

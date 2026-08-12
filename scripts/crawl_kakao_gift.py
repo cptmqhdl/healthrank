@@ -69,7 +69,8 @@ def main():
 
         rank = 0
         for i in range(count):
-            raw = cards.nth(i).inner_text()
+            card = cards.nth(i)
+            raw = card.inner_text()
             item = parse_item(raw)
             if not item:
                 continue
@@ -79,6 +80,11 @@ def main():
             item["사이트"] = SITE
             item["카테고리"] = CATEGORY
             item["수집일"] = today
+
+            href = card.locator("a.link_prdunit").first.get_attribute("href")
+            item["링크"] = ("https://gift.kakao.com" + href) if href and href.startswith("/") else (href or "")
+            item["이미지"] = card.locator("img.img_thumb").first.get_attribute("src") or ""
+
             rows.append(item)
 
         browser.close()
@@ -87,7 +93,7 @@ def main():
         print("수집된 상품이 없습니다. 사이트 구조가 바뀌었을 수 있어요.")
         raise SystemExit(1)
 
-    fieldnames = ["수집일", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격", "광고여부"]
+    fieldnames = ["수집일", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격", "광고여부", "링크", "이미지"]
     with open(out_path, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()

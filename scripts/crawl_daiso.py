@@ -50,13 +50,28 @@ def main():
         page.wait_for_timeout(2500)
 
         text = page.inner_text("body")
+
+        # 카드별 상품 링크/이미지는 텍스트만으로 알 수 없어, 화면에 보이는 순서대로 따로 모은 뒤
+        # 아래에서 정규식으로 뽑은 상품 목록과 같은 순서라고 가정하고 짝지어준다.
+        link_els = page.locator("a.prod-thumb__link")
+        links = []
+        for i in range(link_els.count()):
+            el = link_els.nth(i)
+            href = el.get_attribute("href") or ""
+            img = el.locator("img").first.get_attribute("src") or ""
+            links.append({
+                "링크": ("https://www.daisomall.co.kr" + href) if href.startswith("/") else href,
+                "이미지": img,
+            })
+
         browser.close()
 
     matches = ITEM_RE.findall(text)
     print(f"발견된 상품 수: {len(matches)}")
 
     rows = []
-    for rank, price, name in matches:
+    for idx, (rank, price, name) in enumerate(matches):
+        extra = links[idx] if idx < len(links) else {"링크": "", "이미지": ""}
         rows.append({
             "수집일": today,
             "사이트": SITE,
@@ -65,13 +80,15 @@ def main():
             "브랜드": "",
             "상품명": name.strip(),
             "가격": price.replace(",", ""),
+            "링크": extra["링크"],
+            "이미지": extra["이미지"],
         })
 
     if not rows:
         print("수집된 상품이 없습니다. 사이트 구조가 바뀌었을 수 있어요.")
         raise SystemExit(1)
 
-    fieldnames = ["수집일", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격"]
+    fieldnames = ["수집일", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격", "링크", "이미지"]
     with open(out_path, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
