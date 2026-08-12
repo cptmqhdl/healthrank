@@ -170,30 +170,21 @@
   .section-head h2{font-size:34px;line-height:1.15;letter-spacing:-0.374px;}
   .section-head p{margin-top:12px;color:var(--text-muted);font-size:17px;max-width:560px;}
 
-  /* ---- tabs ---- */
-  .tabs{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap;}
-  .tab-btn{
-    appearance:none;
-    border:1px solid var(--surface-border);
-    background:var(--surface);
-    color:var(--text-muted);
-    font-size:14px;
-    font-weight:600;
-    letter-spacing:-0.224px;
-    padding:10px 18px;
-    border-radius:9999px;
-    cursor:pointer;
-    transition:transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+  /* ---- channel sections (사이트별 구획) ---- */
+  .channel-block{margin-bottom:56px;}
+  .channel-block:last-child{margin-bottom:0;}
+  .channel-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:18px;
+    padding-bottom:14px;
+    border-bottom:2px solid var(--surface-border);
   }
-  .tab-btn:hover{color:var(--text);}
-  .tab-btn:active{transform:scale(0.95);}
-  .tab-btn:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px;}
-  .tab-btn[aria-selected="true"]{
-    background:var(--accent);
-    border-color:var(--accent);
-    color:#fff;
-  }
-  .tab-note{font-size:13px;color:var(--text-muted);margin-bottom:20px;}
+  .channel-name{font-family:var(--font-display);font-size:22px;font-weight:600;letter-spacing:-0.374px;}
+  .channel-meta{font-size:13px;color:var(--text-muted);}
 
   .rank-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
   @media (max-width:960px){ .rank-grid{grid-template-columns:repeat(3,1fr);} }
@@ -293,10 +284,7 @@
       <p id="previewLead">데이터를 불러오는 중이에요…</p>
     </div>
 
-    <div class="tabs" role="tablist" aria-label="사이트 선택" id="siteTabs"></div>
-    <p class="tab-note" id="tabNote"></p>
-
-    <div id="rankPanels"></div>
+    <div id="channelSections"></div>
   </div>
 </section>
 
@@ -344,32 +332,16 @@
     );
   }
 
-  function renderSite(site, index){
-    var tab = document.createElement('button');
-    tab.className = 'tab-btn';
-    tab.type = 'button';
-    tab.setAttribute('role', 'tab');
-    tab.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
-    tab.setAttribute('aria-controls', 'panel-' + site.id);
-    tab.id = 'tab-' + site.id;
-    tab.textContent = site.label;
-    document.getElementById('siteTabs').appendChild(tab);
-
-    var panel = document.createElement('div');
-    panel.className = 'rank-grid';
-    panel.setAttribute('role', 'tabpanel');
-    panel.id = 'panel-' + site.id;
-    panel.setAttribute('aria-labelledby', 'tab-' + site.id);
-    if(index !== 0){ panel.hidden = true; }
-    panel.innerHTML = site.items.map(renderRankCard).join('');
-    document.getElementById('rankPanels').appendChild(panel);
-
-    tab.addEventListener('click', function(){
-      document.querySelectorAll('.tab-btn').forEach(function(t){ t.setAttribute('aria-selected','false'); });
-      tab.setAttribute('aria-selected','true');
-      document.querySelectorAll('#rankPanels .rank-grid').forEach(function(p){ p.hidden = true; });
-      panel.hidden = false;
-    });
+  function renderSite(site){
+    var block = document.createElement('div');
+    block.className = 'channel-block';
+    block.innerHTML =
+      '<div class="channel-head">' +
+        '<h3 class="channel-name">' + escapeHtml(site.label) + '</h3>' +
+        '<span class="channel-meta">' + site.date + ' 기준 · ' + site.count + '개</span>' +
+      '</div>' +
+      '<div class="rank-grid">' + site.items.map(renderRankCard).join('') + '</div>';
+    document.getElementById('channelSections').appendChild(block);
   }
 
   fetch('data/latest.json', { cache: 'no-store' })
@@ -382,8 +354,7 @@
       if(sites.length === 0){ throw new Error('아직 수집된 데이터가 없어요'); }
 
       document.getElementById('previewLead').textContent =
-        '사이트별 판매순위 1~10위, 최근 수집일 ' + data.generated_from_dates.join(', ') + ' 기준이에요. 탭을 눌러 사이트를 바꿔보세요.';
-      document.getElementById('tabNote').textContent =
+        '사이트별 판매순위 1~10위, 최근 수집일 ' + data.generated_from_dates.join(', ') + ' 기준이에요. ' +
         '순위 옆 표시는 전날 대비 변동이에요 (NEW = 전날에는 없던 상품 또는 첫 수집일).';
       document.getElementById('navBadge').textContent = '실제 데이터 · ' + sites[0].date + ' 기준';
 
