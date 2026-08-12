@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>헬스랭크</title>
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-alt:#f5f5f7;
+    --surface:#ffffff;
+    --surface-border:#e0e0e0;
+    --text:#1d1d1f;
+    --text-muted:#6e6e73;
+    --text-faint:#8a8a8e;
+    --accent:#0066cc;
+    --accent-strong:#0071e3;
+    --accent-link:#0066cc;
+    --chip-bg:#f5f5f7;
+    --chip-text:#1d1d1f;
+    --success:#1a7f37;
+    --danger:#d1393a;
+    --tile-dark-bg:#1d1d1f;
+    --tile-dark-surface:#2a2a2c;
+    --tile-dark-border:rgba(255,255,255,0.12);
+    --tile-dark-text:#ffffff;
+    --tile-dark-text-muted:#cccccc;
+    --shadow-product:0 8px 30px rgba(0,0,0,0.16);
+    --font-display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;
+    --font-text:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1d1d1f;
+      --bg-alt:#000000;
+      --surface:#272729;
+      --surface-border:rgba(255,255,255,0.12);
+      --text:#ffffff;
+      --text-muted:#cccccc;
+      --text-faint:#98989d;
+      --accent:#0066cc;
+      --accent-strong:#2997ff;
+      --accent-link:#2997ff;
+      --chip-bg:rgba(255,255,255,0.08);
+      --chip-text:#ffffff;
+      --success:#30d158;
+      --danger:#ff453a;
+      --tile-dark-bg:#000000;
+      --tile-dark-surface:#1d1d1f;
+      --tile-dark-border:rgba(255,255,255,0.16);
+      --tile-dark-text:#ffffff;
+      --tile-dark-text-muted:#cccccc;
+      --shadow-product:0 8px 34px rgba(0,0,0,0.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1d1d1f;
+    --bg-alt:#000000;
+    --surface:#272729;
+    --surface-border:rgba(255,255,255,0.12);
+    --text:#ffffff;
+    --text-muted:#cccccc;
+    --text-faint:#98989d;
+    --accent:#0066cc;
+    --accent-strong:#2997ff;
+    --accent-link:#2997ff;
+    --chip-bg:rgba(255,255,255,0.08);
+    --chip-text:#ffffff;
+    --success:#30d158;
+    --danger:#ff453a;
+    --tile-dark-bg:#000000;
+    --tile-dark-surface:#1d1d1f;
+    --tile-dark-border:rgba(255,255,255,0.16);
+    --tile-dark-text:#ffffff;
+    --tile-dark-text-muted:#cccccc;
+    --shadow-product:0 8px 34px rgba(0,0,0,0.5);
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-text);
+    font-size:17px;
+    line-height:1.47;
+    letter-spacing:-0.374px;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+  h1,h2,h3{
+    font-family:var(--font-display);
+    font-weight:600;
+    margin:0;
+    text-wrap:balance;
+  }
+  p{margin:0;}
+  a{color:var(--accent-link);}
+  button{font-family:inherit;}
+  .tabular{font-variant-numeric:tabular-nums;}
+
+  /* ---- global nav (always black, like the source system) ---- */
+  .nav{
+    background:#000;
+    color:#fff;
+    height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+    font-size:12px;
+    letter-spacing:-0.12px;
+  }
+  .nav-brand{display:flex;align-items:center;gap:8px;font-weight:600;font-size:13px;}
+  .nav-badge{
+    background:rgba(255,255,255,0.14);
+    padding:3px 10px;
+    border-radius:9999px;
+    font-size:11px;
+    letter-spacing:0;
+  }
+
+  /* ---- tiles ---- */
+  .tile{padding:80px 24px;}
+  .tile-alt{background:var(--bg-alt);}
+  .tile-dark{background:var(--tile-dark-bg);color:var(--tile-dark-text);}
+  .tile-dark .text-muted{color:var(--tile-dark-text-muted);}
+  .wrap{max-width:980px;margin:0 auto;}
+  .wrap-wide{max-width:1100px;margin:0 auto;}
+
+  @media (max-width:640px){
+    .tile{padding:48px 20px;}
+  }
+
+  /* ---- hero ---- */
+  .eyebrow{
+    display:inline-block;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:-0.224px;
+    color:var(--accent);
+    background:var(--chip-bg);
+    padding:6px 14px;
+    border-radius:9999px;
+    margin-bottom:24px;
+  }
+  .hero h1{
+    font-size:56px;
+    line-height:1.07;
+    letter-spacing:-0.28px;
+  }
+  .hero .lead{
+    font-family:var(--font-text);
+    font-size:24px;
+    font-weight:300;
+    line-height:1.5;
+    letter-spacing:0;
+    color:var(--text-muted);
+    margin-top:20px;
+    max-width:640px;
+  }
+  @media (max-width:640px){ .hero h1{font-size:34px;} }
+
+  /* ---- kpi cards ---- */
+  .card-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin-top:48px;
+  }
+  @media (max-width:900px){ .card-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:480px){ .card-grid{grid-template-columns:1fr;} }
+  .card{
+    background:var(--surface);
+    border:1px solid var(--surface-border);
+    border-radius:18px;
+    padding:24px;
+  }
+  .card .k{font-size:14px;font-weight:600;letter-spacing:-0.224px;color:var(--text-muted);margin-bottom:8px;}
+  .card .v{font-size:17px;font-weight:600;letter-spacing:-0.374px;}
+  .card .d{font-size:14px;color:var(--text-muted);margin-top:6px;line-height:1.43;}
+
+  /* ---- section head ---- */
+  .section-head{margin-bottom:40px;}
+  .section-head h2{font-size:34px;line-height:1.15;letter-spacing:-0.374px;}
+  .section-head p{margin-top:12px;color:var(--text-muted);font-size:17px;max-width:560px;}
+  .tile-dark .section-head p{color:var(--tile-dark-text-muted);}
+
+  /* ---- recommend cards ---- */
+  .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media (max-width:860px){ .rec-grid{grid-template-columns:1fr;} }
+  .rec-card{
+    background:var(--surface);
+    border:1px solid var(--surface-border);
+    border-radius:18px;
+    padding:28px;
+  }
+  .rec-card .tag{font-size:12px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
+  .rec-card h3{font-family:var(--font-display);font-size:21px;font-weight:600;letter-spacing:0.231px;margin-bottom:12px;}
+  .rec-card ul{margin:0 0 14px;padding-left:18px;}
+  .rec-card li{margin-bottom:6px;font-size:15px;}
+  .rec-card .why{font-size:14px;color:var(--text-muted);border-top:1px solid var(--surface-border);padding-top:12px;}
+
+  /* ---- tabs ---- */
+  .tabs{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap;}
+  .tab-btn{
+    appearance:none;
+    border:1px solid var(--tile-dark-border);
+    background:transparent;
+    color:var(--tile-dark-text-muted);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:-0.224px;
+    padding:10px 18px;
+    border-radius:9999px;
+    cursor:pointer;
+    transition:transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+  }
+  .tab-btn:hover{color:var(--tile-dark-text);}
+  .tab-btn:active{transform:scale(0.95);}
+  .tab-btn:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px;}
+  .tab-btn[aria-selected="true"]{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:#fff;
+  }
+  .tab-note{font-size:13px;color:var(--tile-dark-text-muted);margin-bottom:20px;}
+
+  .rank-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+  @media (max-width:960px){ .rank-grid{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:640px){ .rank-grid{grid-template-columns:repeat(2,1fr);} }
+  .rank-card{
+    background:var(--tile-dark-surface);
+    border:1px solid var(--tile-dark-border);
+    border-radius:18px;
+    padding:18px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .rank-top{display:flex;align-items:center;justify-content:space-between;}
+  .rank-num{
+    width:30px;height:30px;
+    border-radius:9999px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:14px;font-weight:600;
+    background:var(--chip-bg);
+    color:var(--tile-dark-text);
+  }
+  .rank-card:nth-child(-n+3) .rank-num{background:var(--accent);color:#fff;}
+  .rank-delta{font-size:12px;font-weight:600;display:flex;align-items:center;gap:3px;}
+  .rank-delta.up{color:var(--success);}
+  .rank-delta.down{color:var(--danger);}
+  .rank-delta.new{color:var(--accent-strong);}
+  .rank-delta.flat{color:var(--tile-dark-text-muted);}
+  .rank-name{font-size:14px;font-weight:600;letter-spacing:-0.224px;line-height:1.35;min-height:38px;}
+  .rank-price{font-size:15px;font-weight:600;color:var(--tile-dark-text-muted);}
+
+  /* ---- roadmap ---- */
+  .roadmap{display:flex;flex-direction:column;gap:0;margin-top:8px;}
+  .step{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--surface-border);}
+  .step:last-child{border-bottom:none;}
+  .step-num{
+    flex:none;width:36px;height:36px;border-radius:9999px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:14px;font-weight:600;
+    border:1px solid var(--surface-border);
+    color:var(--text-muted);
+  }
+  .step.done .step-num{background:var(--accent);border-color:var(--accent);color:#fff;}
+  .step.next .step-num{border-color:var(--accent);color:var(--accent);}
+  .step-body h3{font-family:var(--font-text);font-size:17px;font-weight:600;letter-spacing:-0.374px;}
+  .step-body p{font-size:14px;color:var(--text-muted);margin-top:4px;}
+  .step-status{font-size:12px;font-weight:600;letter-spacing:0.3px;margin-left:auto;flex:none;padding:4px 10px;border-radius:9999px;background:var(--chip-bg);color:var(--text-muted);align-self:start;}
+  .step.done .step-status{color:var(--success);}
+  .step.next .step-status{color:var(--accent);}
+
+  /* ---- next actions / prompt ---- */
+  .actions{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px;}
+  @media (max-width:860px){ .actions{grid-template-columns:1fr;} }
+  .action{
+    background:var(--surface);
+    border:1px solid var(--surface-border);
+    border-radius:18px;
+    padding:20px;
+  }
+  .action .num{font-size:12px;font-weight:600;color:var(--accent);margin-bottom:8px;}
+  .action p{font-size:15px;}
+
+  .prompt-box{
+    position:relative;
+    background:var(--tile-dark-bg);
+    border:1px solid var(--tile-dark-border);
+    border-radius:18px;
+    padding:24px;
+    color:var(--tile-dark-text);
+  }
+  .prompt-box pre{
+    margin:0;
+    white-space:pre-wrap;
+    word-break:break-word;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:13px;
+    line-height:1.6;
+    color:var(--tile-dark-text-muted);
+  }
+  .copy-btn{
+    position:absolute;
+    top:16px;right:16px;
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    border-radius:9999px;
+    padding:8px 16px;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+    transition:transform 0.15s ease;
+  }
+  .copy-btn:active{transform:scale(0.95);}
+  .copy-btn:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px;}
+
+  footer{
+    padding:48px 24px;
+    background:var(--bg-alt);
+    text-align:center;
+    font-size:12px;
+    color:var(--text-faint);
+  }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-brand">💊 헬스랭크</div>
+  <div class="nav-badge">1단계 · 방향 정리 완료</div>
+</div>
+
+<section class="tile hero">
+  <div class="wrap">
+    <span class="eyebrow">AI 인터뷰 요약 · 2026.08.12</span>
+    <h1>건강기능식품 판매순위,<br/>이제 한 페이지에서.</h1>
+    <p class="lead">카카오톡 선물하기 · 다이소몰 · 올리브영을 매일 돌아다니며 확인하던 일을
+      자동으로 모아, 오늘의 순위와 이번 달 흐름을 한눈에 봅니다.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="k">목표</div>
+        <div class="v">데일리 판매순위 통합 확인</div>
+        <div class="d">여러 사이트를 일일이 확인하는 번거로움 해소</div>
+      </div>
+      <div class="card">
+        <div class="k">결과물</div>
+        <div class="v">대시보드 + 월간 리포트</div>
+        <div class="d">평소엔 대시보드로, 월말엔 리포트로</div>
+      </div>
+      <div class="card">
+        <div class="k">데이터 대상</div>
+        <div class="v">카카오선물하기 · 다이소몰 · 올리브영</div>
+        <div class="d">순위 · 상품명 · 가격 수집</div>
+      </div>
+      <div class="card">
+        <div class="k">주기</div>
+        <div class="v">매일 자동 수집</div>
+        <div class="d">매월 초/말 월간 집계 리포트</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tile tile-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>이렇게 만들 것을 추천해요</h2>
+      <p>답변해주신 내용(대시보드+리포트, 크롤링, 매일 반복, 엑셀 정도 다룰 줄 앎, 급하지
+        않음)을 바탕으로 고른 방향이에요.</p>
+    </div>
+    <div class="rec-grid">
+      <div class="rec-card">
+        <div class="tag">기술 스택</div>
+        <h3>Python 크롤러 + 정적 대시보드</h3>
+        <ul>
+          <li>수집: Python (requests/BeautifulSoup, 필요 시 Playwright)</li>
+          <li>저장: CSV → 필요해지면 SQLite</li>
+          <li>화면: HTML + JS (Chart.js), 이후 서버 연동</li>
+        </ul>
+        <div class="why">천천히 키워도 되는 프로젝트라, 처음부터 크게 짓지 않고 파일
+          기반으로 시작해 필요할 때만 넓히는 구조가 유지보수에 유리해요.</div>
+      </div>
+      <div class="rec-card">
+        <div class="tag">추천 툴</div>
+        <h3>Claude Code + 작업 스케줄러</h3>
+        <ul>
+          <li>크롤러 개발/유지보수: Claude Code</li>
+          <li>매일 자동 실행: Windows 작업 스케줄러</li>
+          <li>백업·수동 확인: 엑셀 (이미 다룰 줄 아시는 도구)</li>
+        </ul>
+        <div class="why">이미 엑셀에 익숙하시니, 원본 데이터는 항상 엑셀로도 열어볼 수
+          있게 CSV로 남겨두면 안심하고 검증할 수 있어요.</div>
+      </div>
+      <div class="rec-card">
+        <div class="tag">UI / UX</div>
+        <h3>탭 전환 + 카드 그리드</h3>
+        <ul>
+          <li>사이트별 탭으로 전환 (카카오/다이소/올리브영)</li>
+          <li>순위는 카드 그리드로 한눈에 비교</li>
+          <li>월간 리포트는 스크롤형 요약 문서</li>
+        </ul>
+        <div class="why">사이트마다 성격이 달라서 탭으로 나누는 게 자연스럽고,
+          핵심 지표(순위·가격)는 카드로 볼 때 가장 빨리 비교돼요.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tile tile-dark" id="preview">
+  <div class="wrap-wide">
+    <div class="section-head">
+      <h2>대시보드 화면 미리보기</h2>
+      <p>아직 실제 크롤링 전이라 <strong>샘플 데이터</strong>로 화면 느낌만 먼저 잡아봤어요.
+        탭을 눌러 사이트를 바꿔보세요.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="사이트 선택">
+      <button class="tab-btn" role="tab" aria-selected="true" aria-controls="panel-kakao" id="tab-kakao">카카오톡 선물하기</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-daiso" id="tab-daiso">다이소몰</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-oliveyoung" id="tab-oliveyoung">올리브영</button>
+    </div>
+    <p class="tab-note">예시 화면입니다 — 실제 순위·가격 데이터가 아닙니다.</p>
+
+    <div class="rank-grid" role="tabpanel" id="panel-kakao" aria-labelledby="tab-kakao">
+      <div class="rank-card">
+        <div class="rank-top"><span class="rank-num">1</span><span class="rank-delta up tabular">▲2</span></div>
+        <div class="rank-name">프로바이오틱스 유산균 골드 2000억</div>
+        <div class="rank-price tabular">32,900원</div>
+      </div>
+      <div class="rank-card">
+        <div class="rank-top"><span class="rank-num">2</span><span class="rank-delta flat">–</span></div>
+        <div class="rank-name">홍삼정 에브리타임 스틱</div>
+        <div class="rank-price tabular">68,000원</div>
+      </div>
+      <div class="rank-card">
+        <div class="rank-top"><span class="rank-num">3</span><span class="rank-delta down tabular">▼1</span></div>
+        <div class="rank-name">루테인 지아잔틴 눈건강</div>
+        <div class="rank-price tabular">24,900원</div>
+      </div>
+      <div class="rank-card">
+        <div class="rank-top"><span class="rank-num">4</span><span class="rank-delta up tabular">▲1</span></div>
+        <div class="rank-name">오메가3 이엑스 알티지</div>
+        <div class="rank-price tabular">29,900원</div>
+      </div>
+      <div class="rank-card">
+        <div class="rank-top"><span class="rank-num">5</span><span class="rank-delta new">NEW</span></div>
+        <div class="rank-name">밀크씨슬 실리마린 간건강</div>
+        <div class="rank-price tabular">21,500원</div>
+      </div>
+    </div>
+
+    <div class="rank-grid" role="tabpanel" id="panel-daiso" aria-labelledby="tab-daiso" hidden>
+      <div class="rank-card">
+        <div class="rank-top"><span class="rank-num">1</span><span class="rank-delta up tabular">▲3</span></div>
+        <div class="rank-name">멀티비타민 미네랄 60정</div>
+        <div class="rank-price tabular">5,000원</div>
+      </div>
+      <div class="rank-card">
+        <div class="rank-top"><span class="rank-num">2</span><span class="rank-delta flat">–</span></div>
+        <div class="rank-name">마그네슘 비타민B6</div>
+        <div class="rank-price tabular">5,000원</div>
+      </div>
+      <div class="rank-card">
+        <div class="rank-top"><span class="rank-num">3</span><span class="rank-delta up tabular">▲1</span></div>
+        <div class="rank-name">밀크씨슬 실리마린</div>
+        <div class="rank-price tabular">5,000원</div>
+      </div>
+      <div class="rank-card">
+        <div class="rank-top"><span class="rank-num">4</span><span class="rank-delta down tabular">▼2</span></div>
+        <div class="rank-name">콜라겐 젤리 스틱</div>
+        <div class="rank-price tabular">5,000원</div>
+      </div>
+      <div class="rank-card">
+        <div class="rank-top"><span class="rank-num">5</span><span class="rank-delta new">NEW</span></div>
+        <div class="rank-name">프로바이오틱스 유산균</div>
+        <div class="rank-price tabular">5,000원</div>
+      </div>
+    </div>
+
+    <div class="rank-grid" role="tabpanel" id="panel-oliveyoung" aria-labelledby="tab-oliveyoung" hidden>
+      <div class="rank-card">
+        <div class="rank-top"><span class="rank-num">1</span><span class="rank-delta flat">–</span></div>
+        <div class="rank-name">아연 마그네슘 비타민B6</div>
+        <div class="rank-price tabular">13,500원</div>
+      </div>
+      <div class="rank-card">
+        <div class="rank-top"><span class="rank-num">2</span><span class="rank-delta up tabular">▲1</span></div>
+        <div class="rank-name">비타민C 1000 이너뷰티</div>
+        <div class="rank-price tabular">15,900원</div>
+      </div>
+      <div class="rank-card">
+        <div class="rank-top"><span class="rank-num">3</span><span class="rank-delta down tabular">▼1</span></div>
+        <div class="rank-name">이너뷰티 콜라겐 스틱</div>
+        <div class="rank-price tabular">32,000원</div>
+      </div>
+      <div class="rank-card">
+        <div class="rank-top"><span class="rank-num">4</span><span class="rank-delta up tabular">▲2</span></div>
+        <div class="rank-name">프로바이오틱스 유산균 스틱</div>
+        <div class="rank-price tabular">27,000원</div>
+      </div>
+      <div class="rank-card">
+        <div class="rank-top"><span class="rank-num">5</span><span class="rank-delta new">NEW</span></div>
+        <div class="rank-name">오메가3 트리플</div>
+        <div class="rank-price tabular">24,000원</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tile">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>다음 단계 로드맵</h2>
+      <p>급하지 않게, 순서대로 하나씩 만들어가요. 지금은 1단계가 끝난 상태예요.</p>
+    </div>
+    <div class="roadmap">
+      <div class="step done">
+        <div class="step-num">✓</div>
+        <div class="step-body"><h3>인터뷰 &amp; 방향 확정</h3><p>목표·데이터·주기·형태를 정리했어요.</p></div>
+        <div class="step-status">완료</div>
+      </div>
+      <div class="step next">
+        <div class="step-num">2</div>
+        <div class="step-body"><h3>사이트 1곳부터 크롤러 시작</h3><p>가장 쉬운 사이트 하나로 먼저 확인해봐요.</p></div>
+        <div class="step-status">다음 단계</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body"><h3>3개 사이트 + 매일 자동 수집</h3><p>세 곳 모두 연결하고 스케줄러로 자동화.</p></div>
+        <div class="step-status">예정</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body"><h3>실제 데이터로 대시보드 완성</h3><p>지금 이 화면을 진짜 데이터에 연결.</p></div>
+        <div class="step-status">예정</div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body"><h3>월간 리포트 자동화</h3><p>매월 초/말에 자동으로 리포트 생성.</p></div>
+        <div class="step-status">예정</div>
+      </div>
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-body"><h3>팀/사내 공유용으로 확장</h3><p>완성도를 높여 공유 범위를 넓혀요.</p></div>
+        <div class="step-status">예정</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tile tile-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>지금 할 수 있는 다음 액션 3가지</h2>
+    </div>
+    <div class="actions">
+      <div class="action"><div class="num">1</div><p>카카오톡 선물하기 / 다이소몰 / 올리브영 중 크롤링이 가장 쉬워 보이는 사이트 하나를 먼저 골라보기</p></div>
+      <div class="action"><div class="num">2</div><p>이 화면(카드 배치, 탭 구성)이 실제로 원하는 모습에 가까운지 확인하고 피드백 주기</p></div>
+      <div class="action"><div class="num">3</div><p>준비되면 아래 프롬프트로 새 대화를 열어 2단계(크롤러 제작)를 이어가기</p></div>
+    </div>
+
+    <div class="prompt-box">
+      <button class="copy-btn" id="copyBtn" type="button">복사</button>
+      <pre id="promptText">지난 인터뷰에서 정한 내용이야:
+- 목표: 건강기능식품 데일리 판매순위를 한 페이지에서 확인
+- 이유: 여러 사이트를 매번 확인하는 게 번거로움 + 월간 리포트도 만들고 싶음
+- 방식: 특정 사이트 크롤링
+- 결과물: 인터랙티브 대시보드 + 월간 리포트 둘 다
+- 데이터: 순위, 상품명, 가격
+- 대상 사이트: 카카오톡 선물하기, 다이소몰, 올리브영
+- 열람 대상: 지금은 나만, 나중에 팀 공유
+- 반복 주기: 매일 자동 수집, 매월 초/말 월간 집계
+- 다룰 줄 아는 도구: 엑셀
+- 제약: 없음, 마감 급하지 않음
+
+이제 2단계로, 세 사이트 중 하나를 골라 크롤러 프로토타입부터 같이 만들어줘.
+디자인은 DESIGN-apple.md 스타일을 계속 유지해줘.</pre>
+    </div>
+  </div>
+</section>
+
+<footer>
+  건강기능식품 데일리 판매순위 대시보드 · 1단계 리포트 · PLAYBOOK.md + DESIGN-apple.md 기반
+</footer>
+
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.tab-btn');
+  var panels = {
+    'tab-kakao':'panel-kakao',
+    'tab-daiso':'panel-daiso',
+    'tab-oliveyoung':'panel-oliveyoung'
+  };
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){ t.setAttribute('aria-selected','false'); });
+      tab.setAttribute('aria-selected','true');
+      Object.values(panels).forEach(function(id){
+        document.getElementById(id).hidden = true;
+      });
+      document.getElementById(panels[tab.id]).hidden = false;
+    });
+  });
+
+  var copyBtn = document.getElementById('copyBtn');
+  copyBtn.addEventListener('click', function(){
+    var text = document.getElementById('promptText').innerText;
+    if(navigator.clipboard){
+      navigator.clipboard.writeText(text).then(function(){
+        var original = copyBtn.textContent;
+        copyBtn.textContent = '복사됨';
+        setTimeout(function(){ copyBtn.textContent = original; }, 1500);
+      });
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
