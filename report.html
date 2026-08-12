@@ -189,6 +189,40 @@
   .rank-delta.flat{color:var(--text-muted);}
   .rank-name{font-size:14px;font-weight:600;letter-spacing:-0.224px;line-height:1.35;min-height:38px;}
   .rank-price{font-size:15px;font-weight:600;color:var(--text-muted);}
+  .rank-monthly-meta{font-size:12px;color:var(--text-muted);margin-top:-4px;}
+
+  /* ---- monthly report controls ---- */
+  .monthly-controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:20px;}
+  .month-select{
+    appearance:none;
+    border:1px solid var(--surface-border);
+    background:var(--surface);
+    color:var(--text);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:-0.224px;
+    padding:10px 16px;
+    border-radius:9999px;
+    cursor:pointer;
+  }
+  .month-select:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px;}
+  .monthly-btn{
+    appearance:none;
+    border:1px solid var(--accent);
+    background:var(--accent);
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:-0.224px;
+    padding:10px 20px;
+    border-radius:9999px;
+    cursor:pointer;
+    transition:transform 0.15s ease, opacity 0.15s ease;
+  }
+  .monthly-btn:active{transform:scale(0.96);}
+  .monthly-btn:disabled{opacity:0.6;cursor:default;}
+  .monthly-btn:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px;}
+  .monthly-note{font-size:13px;color:var(--text-muted);margin-bottom:24px;}
 
   footer{
     padding:48px 24px;
@@ -214,6 +248,21 @@
     </div>
 
     <div id="channelSections"></div>
+  </div>
+</section>
+
+<section class="tile" id="monthly">
+  <div class="wrap-wide">
+    <div class="section-head">
+      <h2>월간 판매랭킹 리포트</h2>
+      <p id="monthlyLead">보고 싶은 달을 고르고 버튼을 누르면 그 달 평균 순위 기준 TOP 10을 바로 보여드려요. 수집일의 30% 이상 순위권에 들었던 상품만 후보로 계산해요.</p>
+    </div>
+    <div class="monthly-controls">
+      <select id="monthSelect" class="month-select" aria-label="리포트 월 선택"></select>
+      <button id="monthlyBtn" type="button" class="monthly-btn" disabled>월간 리포트 보기</button>
+    </div>
+    <p class="monthly-note" id="monthlyNote"></p>
+    <div id="monthlySections"></div>
   </div>
 </section>
 
@@ -280,6 +329,106 @@
       '<div class="rank-grid">' + site.items.map(renderRankCard).join('') + '</div>';
     document.getElementById('channelSections').appendChild(block);
   }
+
+  function formatMonthLabel(m){
+    var parts = m.split('-');
+    return parts[0] + '년 ' + parseInt(parts[1], 10) + '월';
+  }
+
+  function renderMonthlyCard(item, index){
+    var delta = item.delta || { type: 'flat', value: 0 };
+    var label = (DELTA_LABEL[delta.type] || DELTA_LABEL.flat)(delta.value);
+    var tag = item.link ? 'a' : 'div';
+    var linkAttrs = item.link
+      ? ' href="' + escapeHtml(item.link) + '" target="_blank" rel="noopener noreferrer"'
+      : '';
+    var thumb = item.image
+      ? '<div class="rank-thumb" style="background-image:url(\'' + escapeHtml(item.image) + '\');"></div>'
+      : '';
+    var top1Badge = item.top1_days > 0
+      ? '<span class="rank-delta flat" style="margin-left:6px;">1위 ' + item.top1_days + '회</span>'
+      : '';
+    return (
+      '<' + tag + ' class="rank-card"' + linkAttrs + '>' +
+        thumb +
+        '<div class="rank-top">' +
+          '<span class="rank-num">' + (index + 1) + '</span>' +
+          '<span class="rank-delta ' + delta.type + ' tabular">' + label + '</span>' +
+        '</div>' +
+        '<div class="rank-name">' + escapeHtml(item.name) + top1Badge + '</div>' +
+        '<div class="rank-price tabular">' + item.price.toLocaleString('ko-KR') + '원</div>' +
+        '<div class="rank-monthly-meta tabular">평균 ' + item.avg_rank + '위 · ' + item.appearances + '일 랭크인</div>' +
+      '</' + tag + '>'
+    );
+  }
+
+  function renderMonthlySite(site){
+    var block = document.createElement('div');
+    block.className = 'channel-block';
+    var items = site.items.slice(0, 10);
+    block.innerHTML =
+      '<div class="channel-head channel-head--' + site.id + '">' +
+        '<h3 class="channel-name">' + escapeHtml(site.label) + '</h3>' +
+        '<span class="channel-meta">' + site.date_range[0] + ' ~ ' + site.date_range[1] +
+          ' · ' + site.days_collected + '일 수집</span>' +
+      '</div>' +
+      '<div class="rank-grid">' + items.map(renderMonthlyCard).join('') + '</div>';
+    document.getElementById('monthlySections').appendChild(block);
+  }
+
+  var monthSelect = document.getElementById('monthSelect');
+  var monthlyBtn = document.getElementById('monthlyBtn');
+  var monthlyNote = document.getElementById('monthlyNote');
+
+  fetch('data/monthly/index.json', { cache: 'no-store' })
+    .then(function(res){
+      if(!res.ok){ throw new Error('월간 리포트 목록을 찾을 수 없어요'); }
+      return res.json();
+    })
+    .then(function(data){
+      var months = data.months || [];
+      if(months.length === 0){ throw new Error('아직 집계된 달이 없어요'); }
+      monthSelect.innerHTML = months.slice().reverse().map(function(m){
+        return '<option value="' + m + '">' + formatMonthLabel(m) + '</option>';
+      }).join('');
+      monthlyBtn.disabled = false;
+    })
+    .catch(function(err){
+      monthlyNote.textContent = '월간 리포트를 준비하지 못했어요 (' + err.message + ').';
+      monthlyBtn.disabled = true;
+    });
+
+  monthlyBtn.addEventListener('click', function(){
+    var month = monthSelect.value;
+    if(!month){ return; }
+
+    monthlyBtn.disabled = true;
+    var originalLabel = monthlyBtn.textContent;
+    monthlyBtn.textContent = '불러오는 중…';
+    monthlyNote.textContent = '';
+    document.getElementById('monthlySections').innerHTML = '';
+
+    fetch('data/monthly/' + month + '.json', { cache: 'no-store' })
+      .then(function(res){
+        if(!res.ok){ throw new Error('해당 달의 리포트를 찾을 수 없어요'); }
+        return res.json();
+      })
+      .then(function(data){
+        var sites = SITE_ORDER.map(function(id){ return data.sites[id]; }).filter(Boolean);
+        if(sites.length === 0){ throw new Error('해당 달에 집계된 데이터가 없어요'); }
+        monthlyNote.textContent =
+          formatMonthLabel(data.month) + ' 평균 순위 기준 TOP 10이에요. ' +
+          '수집일의 30% 이상 순위권에 들었던 상품만 후보로 계산했어요.';
+        sites.forEach(renderMonthlySite);
+      })
+      .catch(function(err){
+        monthlyNote.textContent = '리포트를 불러오지 못했어요 (' + err.message + ').';
+      })
+      .then(function(){
+        monthlyBtn.disabled = false;
+        monthlyBtn.textContent = originalLabel;
+      });
+  });
 
   fetch('data/latest.json', { cache: 'no-store' })
     .then(function(res){
