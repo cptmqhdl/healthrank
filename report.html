@@ -285,6 +285,26 @@
     font-size:13px;
   }
   .category-table tbody tr:last-child td{border-bottom:none;font-weight:600;}
+  .category-suggestions{
+    margin-top:24px;
+    padding:16px 20px;
+    background:var(--chip-bg);
+    border-radius:14px;
+    font-size:13px;
+    color:var(--text-muted);
+    line-height:1.6;
+  }
+  .category-suggestions strong{color:var(--text);}
+  .category-suggestions .kw{
+    display:inline-block;
+    background:var(--surface);
+    border:1px solid var(--surface-border);
+    border-radius:9999px;
+    padding:3px 10px;
+    margin:2px 4px 2px 0;
+    font-weight:600;
+    color:var(--text);
+  }
 
   footer{
     padding:48px 24px;
@@ -324,6 +344,7 @@
     <div class="category-table-wrap">
       <table class="category-table" id="categoryTable"></table>
     </div>
+    <div class="category-suggestions" id="categorySuggestions" hidden></div>
   </div>
 </section>
 
@@ -553,6 +574,22 @@
     table.innerHTML = head + body;
   }
 
+  function renderCategorySuggestions(suggestions){
+    var box = document.getElementById('categorySuggestions');
+    if(!suggestions || suggestions.length === 0){
+      box.hidden = true;
+      return;
+    }
+    var chips = suggestions.map(function(s){
+      var title = escapeHtml(s.examples.join(' · '));
+      return '<span class="kw" title="' + title + '">' + escapeHtml(s.keyword) + ' ' + s.count + '</span>';
+    }).join('');
+    box.innerHTML =
+      '<strong>"기타"에 자주 등장하는 단어(최근 14일)</strong> — 이런 단어가 반복되면 새 카테고리로 ' +
+      '추가하는 걸 검토해보세요.<br/>' + chips;
+    box.hidden = false;
+  }
+
   renderCategoryLegend();
 
   fetch('data/category_daily.json', { cache: 'no-store' })
@@ -568,6 +605,7 @@
         '분류가 애매한 상품은 "기타"로 뒀어요.';
       renderCategoryChart(categories);
       renderCategoryTable(categories);
+      renderCategorySuggestions(data.keyword_suggestions);
     })
     .catch(function(err){
       document.getElementById('categoryLead').textContent = '카테고리 현황을 불러오지 못했어요 (' + err.message + ').';
