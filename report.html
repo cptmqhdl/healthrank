@@ -22,6 +22,9 @@
     --chip-text:#1d1d1f;
     --success:#1a7f37;
     --danger:#d1393a;
+    --cat-1:#2a78d6;
+    --cat-2:#eb6834;
+    --cat-3:#1baf7a;
     --shadow-product:0 8px 30px rgba(0,0,0,0.16);
     --font-display:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;
     --font-text:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",system-ui,sans-serif;
@@ -42,6 +45,9 @@
       --chip-text:#ffffff;
       --success:#30d158;
       --danger:#ff453a;
+      --cat-1:#3987e5;
+      --cat-2:#d95926;
+      --cat-3:#199e70;
       --shadow-product:0 8px 34px rgba(0,0,0,0.5);
     }
   }
@@ -60,6 +66,9 @@
     --chip-text:#ffffff;
     --success:#30d158;
     --danger:#ff453a;
+    --cat-1:#3987e5;
+    --cat-2:#d95926;
+    --cat-3:#199e70;
     --shadow-product:0 8px 34px rgba(0,0,0,0.5);
   }
 
@@ -226,6 +235,57 @@
   .monthly-btn:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px;}
   .monthly-note{font-size:13px;color:var(--text-muted);margin-bottom:24px;}
 
+  /* ---- 카테고리별 현황 (그래프 + 표) ---- */
+  .category-legend{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:24px;}
+  .category-legend-item{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text-muted);}
+  .category-legend-swatch{width:12px;height:12px;border-radius:3px;flex:none;}
+  .category-chart{display:flex;flex-direction:column;gap:14px;margin-bottom:40px;}
+  .category-row{display:flex;align-items:center;gap:14px;}
+  .category-row-label{
+    width:96px;
+    flex:none;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:-0.224px;
+    text-align:right;
+  }
+  .category-row-track{
+    flex:1;
+    display:flex;
+    gap:2px;
+    height:22px;
+    border-radius:4px;
+    overflow:hidden;
+    background:var(--chip-bg);
+  }
+  .category-row-seg{height:100%;}
+  .category-row-seg:first-child{border-top-left-radius:4px;border-bottom-left-radius:4px;}
+  .category-row-seg:last-child{border-top-right-radius:4px;border-bottom-right-radius:4px;}
+  .category-row-total{
+    width:36px;
+    flex:none;
+    font-size:14px;
+    font-weight:600;
+    color:var(--text-muted);
+  }
+  .category-table-wrap{overflow-x:auto;}
+  .category-table{width:100%;border-collapse:collapse;font-size:14px;}
+  .category-table th,
+  .category-table td{
+    padding:10px 14px;
+    text-align:right;
+    border-bottom:1px solid var(--surface-border);
+    white-space:nowrap;
+  }
+  .category-table th:first-child,
+  .category-table td:first-child{text-align:left;}
+  .category-table thead th{
+    font-weight:600;
+    color:var(--text-muted);
+    font-size:13px;
+  }
+  .category-table tbody tr:last-child td{border-bottom:none;font-weight:600;}
+
   footer{
     padding:48px 24px;
     background:var(--bg-alt);
@@ -253,7 +313,21 @@
   </div>
 </section>
 
-<section class="tile" id="monthly">
+<section class="tile" id="categoryReport">
+  <div class="wrap-wide">
+    <div class="section-head">
+      <h2>오늘의 카테고리별 현황</h2>
+      <p id="categoryLead">3개 채널 1~10위 상품을 성분·용도별 카테고리로 모아봤어요. 분류가 애매한 상품은 "기타"로 뒀어요.</p>
+    </div>
+    <div class="category-legend" id="categoryLegend"></div>
+    <div class="category-chart" id="categoryChart"></div>
+    <div class="category-table-wrap">
+      <table class="category-table" id="categoryTable"></table>
+    </div>
+  </div>
+</section>
+
+<section class="tile tile-alt" id="monthly">
   <div class="wrap-wide">
     <div class="section-head">
       <h2>월간 판매랭킹 리포트</h2>
@@ -431,6 +505,73 @@
         monthlyBtn.textContent = originalLabel;
       });
   });
+
+  var CHANNEL_LABEL = { kakao: '카카오톡 선물하기', daiso: '다이소몰', oliveyoung: '올리브영' };
+  var CHANNEL_COLOR_VAR = { kakao: '--cat-1', daiso: '--cat-2', oliveyoung: '--cat-3' };
+
+  function renderCategoryLegend(){
+    var legend = document.getElementById('categoryLegend');
+    legend.innerHTML = SITE_ORDER.map(function(id){
+      return '<span class="category-legend-item">' +
+        '<span class="category-legend-swatch" style="background:var(' + CHANNEL_COLOR_VAR[id] + ');"></span>' +
+        escapeHtml(CHANNEL_LABEL[id]) +
+      '</span>';
+    }).join('');
+  }
+
+  function renderCategoryChart(categories){
+    var maxTotal = Math.max.apply(null, categories.map(function(c){ return c.total; }));
+    var chart = document.getElementById('categoryChart');
+    chart.innerHTML = categories.map(function(c){
+      var segs = SITE_ORDER.map(function(id){
+        var count = c[id] || 0;
+        if(count === 0){ return ''; }
+        var width = (count / maxTotal * 100).toFixed(2) + '%';
+        var title = escapeHtml(CHANNEL_LABEL[id]) + ': ' + count + '개';
+        return '<span class="category-row-seg" style="width:' + width + ';background:var(' + CHANNEL_COLOR_VAR[id] + ');" title="' + title + '" tabindex="0" aria-label="' + title + '"></span>';
+      }).join('');
+      return (
+        '<div class="category-row">' +
+          '<span class="category-row-label">' + escapeHtml(c.name) + '</span>' +
+          '<span class="category-row-track">' + segs + '</span>' +
+          '<span class="category-row-total tabular">' + c.total + '개</span>' +
+        '</div>'
+      );
+    }).join('');
+  }
+
+  function renderCategoryTable(categories){
+    var table = document.getElementById('categoryTable');
+    var head = '<thead><tr><th>카테고리</th>' +
+      SITE_ORDER.map(function(id){ return '<th>' + escapeHtml(CHANNEL_LABEL[id]) + '</th>'; }).join('') +
+      '<th>합계</th></tr></thead>';
+    var body = '<tbody>' + categories.map(function(c){
+      return '<tr><td>' + escapeHtml(c.name) + '</td>' +
+        SITE_ORDER.map(function(id){ return '<td class="tabular">' + (c[id] || 0) + '</td>'; }).join('') +
+        '<td class="tabular">' + c.total + '</td></tr>';
+    }).join('') + '</tbody>';
+    table.innerHTML = head + body;
+  }
+
+  renderCategoryLegend();
+
+  fetch('data/category_daily.json', { cache: 'no-store' })
+    .then(function(res){
+      if(!res.ok){ throw new Error('카테고리 데이터를 찾을 수 없어요'); }
+      return res.json();
+    })
+    .then(function(data){
+      var categories = data.categories || [];
+      if(categories.length === 0){ throw new Error('집계된 카테고리가 없어요'); }
+      document.getElementById('categoryLead').textContent =
+        (data.date || '') + ' 기준, 3개 채널 상품 ' + data.total_items + '개를 카테고리별로 모아봤어요. ' +
+        '분류가 애매한 상품은 "기타"로 뒀어요.';
+      renderCategoryChart(categories);
+      renderCategoryTable(categories);
+    })
+    .catch(function(err){
+      document.getElementById('categoryLead').textContent = '카테고리 현황을 불러오지 못했어요 (' + err.message + ').';
+    });
 
   fetch('data/latest.json', { cache: 'no-store' })
     .then(function(res){
