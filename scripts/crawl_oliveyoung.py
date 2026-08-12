@@ -38,6 +38,12 @@ def main():
         count = items.count()
         print(f"발견된 상품 수: {count}")
 
+        if count == 0:
+            # 원인 진단용: 실제로 어떤 화면이 응답됐는지 확인 (차단/구조 변경 여부 판단)
+            print("응답 상태코드/본문 앞부분 확인:")
+            print("  페이지 제목:", page.title())
+            print("  본문 일부:", page.inner_text("body")[:500].replace("\n", " | "))
+
         for i in range(count):
             item = items.nth(i)
             try:
