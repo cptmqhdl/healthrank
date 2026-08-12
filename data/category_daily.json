@@ -3,40 +3,6 @@
   "total_items": 30,
   "categories": [
     {
-      "name": "여성건강",
-      "kakao": 0,
-      "daiso": 0,
-      "oliveyoung": 2,
-      "total": 2,
-      "examples": [
-        {
-          "site": "oliveyoung",
-          "name": "지노마스터 질유산균 30캡슐 (1개월분)"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "[8월 올영픽/덴프스] 덴마크 유산균이야기 우먼 2개월분(질유산균) + 철분 헤모케어 3포 증정"
-        }
-      ]
-    },
-    {
-      "name": "홍삼",
-      "kakao": 1,
-      "daiso": 1,
-      "oliveyoung": 0,
-      "total": 2,
-      "examples": [
-        {
-          "site": "kakao",
-          "name": "면역력 선물 [정관장] 에브리타임 레귤러 (10ml x 30포) _ 대한민국 명품 홍삼정농축액 함유"
-        },
-        {
-          "site": "daiso",
-          "name": "[신혜선 PICK] 동국제약 면역엔 홍삼 필름 10매 10일분"
-        }
-      ]
-    },
-    {
       "name": "멀티비타민",
       "kakao": 7,
       "daiso": 0,
@@ -70,6 +36,39 @@
       ]
     },
     {
+      "name": "기타",
+      "kakao": 1,
+      "daiso": 2,
+      "oliveyoung": 3,
+      "total": 6,
+      "examples": [
+        {
+          "site": "kakao",
+          "name": "[그레인온] 골드 카무트 브랜드밀 효소 3개월(+선물포장)+9포추가+고단백질바 증정"
+        },
+        {
+          "site": "daiso",
+          "name": "휴럼 하루한포 유기농 야채분말 15포 15일분"
+        },
+        {
+          "site": "daiso",
+          "name": "[의약외품][신혜선 PICK] 동국제약 멜라케어 더블 화이트 정 10정 10일분"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[올영단독] 칼로 스탑/컨트롤 PLUS 15포 2종"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[TWS 이미지카드 증정/8월 올영픽] 미에로화이바 데이톡 14포 (14일분)"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[8월 올영픽/감자숭이 기획] 멜라메이트 구미/로우슈가/버라이어티팩 구미 20/40/50구미"
+        }
+      ]
+    },
+    {
       "name": "다이어트",
       "kakao": 0,
       "daiso": 1,
@@ -91,6 +90,40 @@
         {
           "site": "oliveyoung",
           "name": "[8월 올영픽/파격특가] 콜레올로지 컷팅 젤리 레몬/키위/석류 10+2+2포 기획 외"
+        }
+      ]
+    },
+    {
+      "name": "여성건강",
+      "kakao": 0,
+      "daiso": 0,
+      "oliveyoung": 2,
+      "total": 2,
+      "examples": [
+        {
+          "site": "oliveyoung",
+          "name": "지노마스터 질유산균 30캡슐 (1개월분)"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[8월 올영픽/덴프스] 덴마크 유산균이야기 우먼 2개월분(질유산균) + 철분 헤모케어 3포 증정"
+        }
+      ]
+    },
+    {
+      "name": "홍삼",
+      "kakao": 1,
+      "daiso": 1,
+      "oliveyoung": 0,
+      "total": 2,
+      "examples": [
+        {
+          "site": "kakao",
+          "name": "면역력 선물 [정관장] 에브리타임 레귤러 (10ml x 30포) _ 대한민국 명품 홍삼정농축액 함유"
+        },
+        {
+          "site": "daiso",
+          "name": "[신혜선 PICK] 동국제약 면역엔 홍삼 필름 10매 10일분"
         }
       ]
     },
@@ -177,39 +210,6 @@
         {
           "site": "oliveyoung",
           "name": "고려은단 비타민C1000 600정 (20개월분)"
-        }
-      ]
-    },
-    {
-      "name": "기타",
-      "kakao": 1,
-      "daiso": 2,
-      "oliveyoung": 3,
-      "total": 6,
-      "examples": [
-        {
-          "site": "kakao",
-          "name": "[그레인온] 골드 카무트 브랜드밀 효소 3개월(+선물포장)+9포추가+고단백질바 증정"
-        },
-        {
-          "site": "daiso",
-          "name": "휴럼 하루한포 유기농 야채분말 15포 15일분"
-        },
-        {
-          "site": "daiso",
-          "name": "[의약외품][신혜선 PICK] 동국제약 멜라케어 더블 화이트 정 10정 10일분"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "[올영단독] 칼로 스탑/컨트롤 PLUS 15포 2종"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "[TWS 이미지카드 증정/8월 올영픽] 미에로화이바 데이톡 14포 (14일분)"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "[8월 올영픽/감자숭이 기획] 멜라메이트 구미/로우슈가/버라이어티팩 구미 20/40/50구미"
         }
       ]
     }

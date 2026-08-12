@@ -175,6 +175,7 @@ def main():
         for name in CATEGORY_ORDER
         if counts[name]["total"] > 0
     ]
+    categories.sort(key=lambda c: c["total"], reverse=True)
 
     keyword_suggestions = suggest_keywords()
 
