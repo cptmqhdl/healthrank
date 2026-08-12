@@ -180,11 +180,15 @@
     gap:12px;
     flex-wrap:wrap;
     margin-bottom:18px;
-    padding-bottom:14px;
-    border-bottom:2px solid var(--surface-border);
+    padding:14px 20px;
+    border-radius:14px;
   }
+  /* 사이트 구분을 위해 각 사이트의 브랜드 키컬러를 타이틀 배경에 그대로 사용 */
+  .channel-head--kakao{background:#FEE500;color:#381E1E;}
+  .channel-head--daiso{background:#ED1C24;color:#ffffff;}
+  .channel-head--oliveyoung{background:#9BCE26;color:#1D1D1F;}
   .channel-name{font-family:var(--font-display);font-size:22px;font-weight:600;letter-spacing:-0.374px;}
-  .channel-meta{font-size:13px;color:var(--text-muted);}
+  .channel-meta{font-size:13px;color:inherit;opacity:0.72;}
 
   .rank-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
   @media (max-width:960px){ .rank-grid{grid-template-columns:repeat(3,1fr);} }
@@ -336,7 +340,7 @@
     var block = document.createElement('div');
     block.className = 'channel-block';
     block.innerHTML =
-      '<div class="channel-head">' +
+      '<div class="channel-head channel-head--' + site.id + '">' +
         '<h3 class="channel-name">' + escapeHtml(site.label) + '</h3>' +
         '<span class="channel-meta">' + site.date + ' 기준 · ' + site.count + '개</span>' +
       '</div>' +

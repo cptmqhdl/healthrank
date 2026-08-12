@@ -64,6 +64,13 @@ def main():
         count = cards.count()
         print(f"발견된 상품 카드 수: {count}")
 
+        # 썸네일 이미지는 lazy loading이라 화면에 스크롤로 노출되기 전까지는
+        # src가 기본 placeholder(default_fallback_thumbnail.png)로 남아있는다.
+        # 전체 카드를 한 번씩 스크롤해 실제 이미지 주소가 채워지게 한다.
+        for i in range(count):
+            cards.nth(i).scroll_into_view_if_needed(timeout=5000)
+        page.wait_for_timeout(1000)
+
         rank = 0
         for i in range(count):
             card = cards.nth(i)
