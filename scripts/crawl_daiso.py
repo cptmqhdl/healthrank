@@ -52,7 +52,10 @@ def main():
                     name: nameEl ? nameEl.textContent.trim() : null,
                     price: priceEl ? priceEl.textContent.trim() : null,
                     link: linkEl ? linkEl.getAttribute('href') : null,
-                    image: imgEl ? imgEl.getAttribute('src') : null,
+                    // 스와이프 캐러셀은 swiper-lazy로 이미지를 지연 로딩해, 화면에
+                    // 아직 노출되지 않은 카드는 src가 placeholder(noimage.png)이고
+                    // 실제 주소는 data-src에 미리 들어있다. data-src를 우선 사용한다.
+                    image: imgEl ? (imgEl.getAttribute('data-src') || imgEl.getAttribute('src')) : null,
                 };
             })
         """)

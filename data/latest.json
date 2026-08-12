@@ -245,7 +245,7 @@
           "price": 3000,
           "ad": false,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911058&recmYn=N",
-          "image": "/images/tempLy/noimage.png",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260710/thumb/300/ttaHg18AMnzwMvyaF63v610911058_00_00ttaHg18AMnzwMvyaF63v.jpg",
           "delta": {
             "type": "new",
             "value": null
@@ -258,7 +258,7 @@
           "price": 5000,
           "ad": false,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=033991013&recmYn=N",
-          "image": "/images/tempLy/noimage.png",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/qbG957X6MlxUkPfY6MmA033991013_00_00qbG957X6MlxUkPfY6MmA.png",
           "delta": {
             "type": "new",
             "value": null
@@ -271,7 +271,7 @@
           "price": 5000,
           "ad": false,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=033574091&recmYn=N",
-          "image": "/images/tempLy/noimage.png",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260723/thumb/300/c2TZVCaqecHNLV5z01Uh033574091_00_01c2TZVCaqecHNLV5z01Uh.jpg",
           "delta": {
             "type": "new",
             "value": null
