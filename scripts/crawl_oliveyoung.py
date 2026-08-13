@@ -42,11 +42,7 @@ def main():
         # 올리브영 사이트를 한 번 방문해 세션을 확보한 뒤 XHR로 호출해야 실제
         # "판매랭킹 · 건강식품" 목록(HTML 조각이 아니라 페이지 내부에 렌더링된 리스트)이
         # fltDispCatNo 필터가 적용된 상태로 내려온다.
-        page.goto("https://www.oliveyoung.co.kr/store/main/main.do", timeout=20000, wait_until="domcontentloaded")
-        page.wait_for_timeout(1000)
-
-        raw_items = page.evaluate(
-            """
+        FETCH_SCRIPT = """
             async (url) => {
               const res = await fetch(url, {
                 headers: { 'X-Requested-With': 'XMLHttpRequest' },
@@ -71,9 +67,27 @@ def main():
                 };
               });
             }
-            """,
-            AJAX_URL,
-        )
+            """
+
+        def load_and_fetch():
+            page.goto("https://www.oliveyoung.co.kr/store/main/main.do", timeout=20000, wait_until="domcontentloaded")
+            try:
+                page.wait_for_load_state("networkidle", timeout=10000)
+            except Exception:
+                pass
+            page.wait_for_timeout(2000)
+            return page.evaluate(FETCH_SCRIPT, AJAX_URL)
+
+        # main.do 방문 직후 페이지 내 스크립트가 리다이렉트/새로고침을 일으키면
+        # fetch 도중 실행 컨텍스트가 파괴돼 evaluate가 에러를 낼 수 있어(2026-08-13
+        # 깃허브 액션에서 실제 발생, 로컬 재현은 안 됨 — CI 지연 환경에서 더 잘
+        # 걸리는 레이스 컨디션으로 추정), 1회 재시도를 둔다.
+        try:
+            raw_items = load_and_fetch()
+        except Exception:
+            print("올리브영 목록 조회 1차 시도 실패(페이지 이동으로 추정), 재시도합니다.")
+            page.wait_for_timeout(3000)
+            raw_items = load_and_fetch()
         browser.close()
 
     print(f"발견된 상품 수: {len(raw_items)}")
