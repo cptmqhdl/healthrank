@@ -33,11 +33,19 @@ def main():
         context = browser.new_context(user_agent=UA, locale="ko-KR", viewport={"width": 1400, "height": 1000})
         page = context.new_page()
 
-        page.goto(URL, timeout=20000, wait_until="domcontentloaded")
+        page.goto(URL, timeout=40000, wait_until="domcontentloaded")
         page.wait_for_timeout(2000)
 
-        # "건강식품 카테고리별 랭킹" 위젯까지 스크롤해야 실제 렌더링된다
-        page.get_by_text("건강식품 카테고리별 랭킹", exact=True).first.scroll_into_view_if_needed(timeout=10000)
+        # "건강식품 카테고리별 랭킹" 위젯까지 스크롤해야 실제 렌더링된다.
+        # 깃허브 액션(해외 리전) 실행 시 국내 사이트 접속이 로컬보다 느려 타임아웃이
+        # 날 수 있어(2026-08-13 실제 발생), 넉넉한 타임아웃 + 1회 재시도를 둔다.
+        widget = page.get_by_text("건강식품 카테고리별 랭킹", exact=True).first
+        try:
+            widget.scroll_into_view_if_needed(timeout=30000)
+        except Exception:
+            print("위젯 스크롤 1차 시도 실패, 재시도합니다.")
+            page.wait_for_timeout(3000)
+            widget.scroll_into_view_if_needed(timeout=30000)
         page.wait_for_timeout(2500)
 
         # 스와이프 캐러셀이라 카드 하나씩 순서대로 접근하면 화면이 움직여 타임아웃이 날 수

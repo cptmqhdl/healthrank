@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-13 11:18",
+  "date": "2026-08-13 11:21",
   "total_items": 30,
   "categories": [
     {
@@ -36,39 +36,6 @@
       ]
     },
     {
-      "name": "기타",
-      "kakao": 1,
-      "daiso": 2,
-      "oliveyoung": 3,
-      "total": 6,
-      "examples": [
-        {
-          "site": "kakao",
-          "name": "[그레인온] 골드 카무트 브랜드밀 효소 3개월(+선물포장)+9포추가+고단백질바 증정"
-        },
-        {
-          "site": "daiso",
-          "name": "휴럼 하루한포 유기농 야채분말 15포 15일분"
-        },
-        {
-          "site": "daiso",
-          "name": "[의약외품][신혜선 PICK] 동국제약 멜라케어 더블 화이트 정 10정 10일분"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "[8월올영픽+더블증정] 셀트리온 홀드잇 매드 MAD 10+2정(+2정 온라인)"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "[8월 올영픽] 판도라 브이트리티 7/14+1포 (7/15일분)"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "온리추얼 리셋 브이라인 7포 (+1포 증정) (8일분)"
-        }
-      ]
-    },
-    {
       "name": "다이어트",
       "kakao": 0,
       "daiso": 1,
@@ -98,11 +65,40 @@
       ]
     },
     {
+      "name": "기타",
+      "kakao": 1,
+      "daiso": 1,
+      "oliveyoung": 3,
+      "total": 5,
+      "examples": [
+        {
+          "site": "kakao",
+          "name": "[그레인온] 골드 카무트 브랜드밀 효소 3개월(+선물포장)+9포추가+고단백질바 증정"
+        },
+        {
+          "site": "daiso",
+          "name": "휴럼 하루한포 유기농 야채분말 15포 15일분"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[8월올영픽+더블증정] 셀트리온 홀드잇 매드 MAD 10+2정(+2정 온라인)"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[8월 올영픽] 판도라 브이트리티 7/14+1포 (7/15일분)"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "온리추얼 리셋 브이라인 7포 (+1포 증정) (8일분)"
+        }
+      ]
+    },
+    {
       "name": "에너지",
       "kakao": 2,
-      "daiso": 1,
+      "daiso": 2,
       "oliveyoung": 0,
-      "total": 3,
+      "total": 4,
       "examples": [
         {
           "site": "kakao",
@@ -115,6 +111,10 @@
         {
           "site": "daiso",
           "name": "[보령약국 X Pantio] 2030 에너지 올인원 12포 12일분"
+        },
+        {
+          "site": "daiso",
+          "name": "[보령약국 X Pantio] 60+ 에너지 올인원 12포 12일분"
         }
       ]
     },
@@ -131,7 +131,7 @@
         },
         {
           "site": "daiso",
-          "name": "[신혜선 PICK] 동국제약 면역엔 홍삼 필름 10매 10일분"
+          "name": "[신혜선 PICK] 동국 마이팝 홍삼＆비타B"
         }
       ]
     },
@@ -144,11 +144,11 @@
       "examples": [
         {
           "site": "daiso",
-          "name": "[신혜선 PICK] 동국제약 마데카 글루타치온 필름 12매 12일분"
+          "name": "[신혜선 PICK] 동국제약 마데카 PDRN 필름 10매 10일분"
         },
         {
           "site": "daiso",
-          "name": "[신혜선 PICK] 동국제약 마데카 PDRN 필름 10매 10일분"
+          "name": "[신혜선 PICK] 동국제약 마데카 글루타치온 필름 12매 12일분"
         }
       ]
     },

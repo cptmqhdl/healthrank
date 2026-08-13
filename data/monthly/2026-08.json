@@ -403,18 +403,18 @@
       "label": "카카오톡 선물하기"
     },
     "daiso": {
-      "days_collected": 1,
+      "days_collected": 2,
       "date_range": [
         "2026-08-12",
-        "2026-08-12"
+        "2026-08-13"
       ],
       "items": [
         {
-          "name": "[신혜선 PICK] 동국제약 마데카 글루타치온 필름 12매 12일분",
+          "name": "[신혜선 PICK] 동국 마이팝 홍삼＆비타B",
           "brand": "",
-          "price": 5000,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911099&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260728/thumb/300/NbSqiy25P90IFlYxB3ux610911099_00_01NbSqiy25P90IFlYxB3ux.jpg",
+          "price": 2000,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911030&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260623/thumb/300/xNJvNqGjAYp0B7f9QQ8M610911030_00_00xNJvNqGjAYp0B7f9QQ8M.jpg",
           "avg_rank": 1.0,
           "best_rank": 1,
           "top1_days": 1,
@@ -425,18 +425,33 @@
           }
         },
         {
-          "name": "[신혜선 PICK] 동국 마이팝 푸룬＆식이섬유",
+          "name": "[신혜선 PICK] 동국제약 마데카 글루타치온 필름 12매 12일분",
           "brand": "",
-          "price": 2000,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911029&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260623/thumb/300/QaObI3LjZ86tREQcCYCw610911029_00_00QaObI3LjZ86tREQcCYCw.jpg",
-          "avg_rank": 2.0,
+          "price": 5000,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911099&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260728/thumb/300/NbSqiy25P90IFlYxB3ux610911099_00_01NbSqiy25P90IFlYxB3ux.jpg",
+          "avg_rank": 2.5,
+          "best_rank": 1,
+          "top1_days": 1,
+          "appearances": 2,
+          "delta": {
+            "type": "down",
+            "value": 3
+          }
+        },
+        {
+          "name": "[보령약국 X Pantio] 다이어트 컷 올인원 15포 15일분",
+          "brand": "",
+          "price": 5000,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=033991021&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/xVYROwLnuZYLoqWwcjU6033991021_00_00xVYROwLnuZYLoqWwcjU6.png",
+          "avg_rank": 3.0,
           "best_rank": 2,
           "top1_days": 0,
-          "appearances": 1,
+          "appearances": 2,
           "delta": {
-            "type": "flat",
-            "value": 0
+            "type": "up",
+            "value": 2
           }
         },
         {
@@ -455,33 +470,18 @@
           }
         },
         {
-          "name": "[보령약국 X Pantio] 다이어트 컷 올인원 15포 15일분",
+          "name": "[신혜선 PICK] 동국 마이팝 푸룬＆식이섬유",
           "brand": "",
-          "price": 5000,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=033991021&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/xVYROwLnuZYLoqWwcjU6033991021_00_00xVYROwLnuZYLoqWwcjU6.png",
-          "avg_rank": 4.0,
-          "best_rank": 4,
+          "price": 2000,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911029&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260623/thumb/300/QaObI3LjZ86tREQcCYCw610911029_00_00QaObI3LjZ86tREQcCYCw.jpg",
+          "avg_rank": 3.5,
+          "best_rank": 2,
           "top1_days": 0,
-          "appearances": 1,
+          "appearances": 2,
           "delta": {
-            "type": "flat",
-            "value": 0
-          }
-        },
-        {
-          "name": "[신혜선 PICK] 동국제약 프로폴리스＆아연 필름 12매 12일분",
-          "brand": "",
-          "price": 5000,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911097&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/WQN2sdlFQlgUeYP1OzCA610911097_00_01WQN2sdlFQlgUeYP1OzCA.jpg",
-          "avg_rank": 5.0,
-          "best_rank": 5,
-          "top1_days": 0,
-          "appearances": 1,
-          "delta": {
-            "type": "flat",
-            "value": 0
+            "type": "down",
+            "value": 3
           }
         },
         {
@@ -490,13 +490,28 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911098&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260728/thumb/300/2LpWqYu8CZWzex7rdnk8610911098_00_012LpWqYu8CZWzex7rdnk8.jpg",
-          "avg_rank": 6.0,
-          "best_rank": 6,
+          "avg_rank": 4.5,
+          "best_rank": 3,
           "top1_days": 0,
-          "appearances": 1,
+          "appearances": 2,
           "delta": {
-            "type": "flat",
-            "value": 0
+            "type": "up",
+            "value": 3
+          }
+        },
+        {
+          "name": "[신혜선 PICK] 동국제약 프로폴리스＆아연 필름 12매 12일분",
+          "brand": "",
+          "price": 5000,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911097&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/WQN2sdlFQlgUeYP1OzCA610911097_00_01WQN2sdlFQlgUeYP1OzCA.jpg",
+          "avg_rank": 7.0,
+          "best_rank": 5,
+          "top1_days": 0,
+          "appearances": 2,
+          "delta": {
+            "type": "down",
+            "value": 4
           }
         },
         {
@@ -508,10 +523,25 @@
           "avg_rank": 7.0,
           "best_rank": 7,
           "top1_days": 0,
-          "appearances": 1,
+          "appearances": 2,
           "delta": {
             "type": "flat",
             "value": 0
+          }
+        },
+        {
+          "name": "[보령약국 X Pantio] 2030 에너지 올인원 12포 12일분",
+          "brand": "",
+          "price": 5000,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=033991013&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/qbG957X6MlxUkPfY6MmA033991013_00_00qbG957X6MlxUkPfY6MmA.png",
+          "avg_rank": 7.5,
+          "best_rank": 6,
+          "top1_days": 0,
+          "appearances": 2,
+          "delta": {
+            "type": "up",
+            "value": 3
           }
         },
         {
@@ -530,13 +560,13 @@
           }
         },
         {
-          "name": "[보령약국 X Pantio] 2030 에너지 올인원 12포 12일분",
+          "name": "[보령약국 X Pantio] 60+ 에너지 올인원 12포 12일분",
           "brand": "",
           "price": 5000,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=033991013&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/qbG957X6MlxUkPfY6MmA033991013_00_00qbG957X6MlxUkPfY6MmA.png",
-          "avg_rank": 9.0,
-          "best_rank": 9,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=033991015&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/DhZNccB3rZuh6luNKwab033991015_00_00DhZNccB3rZuh6luNKwab.png",
+          "avg_rank": 8.0,
+          "best_rank": 8,
           "top1_days": 0,
           "appearances": 1,
           "delta": {
@@ -553,7 +583,7 @@
           "avg_rank": 10.0,
           "best_rank": 10,
           "top1_days": 0,
-          "appearances": 1,
+          "appearances": 2,
           "delta": {
             "type": "flat",
             "value": 0
