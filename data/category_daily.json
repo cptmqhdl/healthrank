@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-13 11:21",
+  "date": "2026-08-13 11:23",
   "total_items": 30,
   "categories": [
     {
@@ -36,6 +36,39 @@
       ]
     },
     {
+      "name": "기타",
+      "kakao": 1,
+      "daiso": 2,
+      "oliveyoung": 3,
+      "total": 6,
+      "examples": [
+        {
+          "site": "kakao",
+          "name": "[그레인온] 골드 카무트 브랜드밀 효소 3개월(+선물포장)+9포추가+고단백질바 증정"
+        },
+        {
+          "site": "daiso",
+          "name": "휴럼 하루한포 유기농 야채분말 15포 15일분"
+        },
+        {
+          "site": "daiso",
+          "name": "[보령약국 X Pantio] 스트레스 케어 올인원 15포 15일분"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[8월올영픽+더블증정] 셀트리온 홀드잇 매드 MAD 10+2정(+2정 온라인)"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[8월 올영픽] 판도라 브이트리티 7/14+1포 (7/15일분)"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "온리추얼 리셋 브이라인 7포 (+1포 증정) (8일분)"
+        }
+      ]
+    },
+    {
       "name": "다이어트",
       "kakao": 0,
       "daiso": 1,
@@ -65,40 +98,32 @@
       ]
     },
     {
-      "name": "기타",
+      "name": "홍삼",
       "kakao": 1,
-      "daiso": 1,
-      "oliveyoung": 3,
-      "total": 5,
+      "daiso": 2,
+      "oliveyoung": 0,
+      "total": 3,
       "examples": [
         {
           "site": "kakao",
-          "name": "[그레인온] 골드 카무트 브랜드밀 효소 3개월(+선물포장)+9포추가+고단백질바 증정"
+          "name": "면역력 선물 [정관장] 에브리타임 레귤러 (10ml x 30포) _ 대한민국 명품 홍삼정농축액 함유"
         },
         {
           "site": "daiso",
-          "name": "휴럼 하루한포 유기농 야채분말 15포 15일분"
+          "name": "[신혜선 PICK] 동국 마이팝 홍삼＆비타B"
         },
         {
-          "site": "oliveyoung",
-          "name": "[8월올영픽+더블증정] 셀트리온 홀드잇 매드 MAD 10+2정(+2정 온라인)"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "[8월 올영픽] 판도라 브이트리티 7/14+1포 (7/15일분)"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "온리추얼 리셋 브이라인 7포 (+1포 증정) (8일분)"
+          "site": "daiso",
+          "name": "[신혜선 PICK] 동국제약 면역엔 홍삼 필름 10매 10일분"
         }
       ]
     },
     {
       "name": "에너지",
       "kakao": 2,
-      "daiso": 2,
+      "daiso": 1,
       "oliveyoung": 0,
-      "total": 4,
+      "total": 3,
       "examples": [
         {
           "site": "kakao",
@@ -111,27 +136,6 @@
         {
           "site": "daiso",
           "name": "[보령약국 X Pantio] 2030 에너지 올인원 12포 12일분"
-        },
-        {
-          "site": "daiso",
-          "name": "[보령약국 X Pantio] 60+ 에너지 올인원 12포 12일분"
-        }
-      ]
-    },
-    {
-      "name": "홍삼",
-      "kakao": 1,
-      "daiso": 1,
-      "oliveyoung": 0,
-      "total": 2,
-      "examples": [
-        {
-          "site": "kakao",
-          "name": "면역력 선물 [정관장] 에브리타임 레귤러 (10ml x 30포) _ 대한민국 명품 홍삼정농축액 함유"
-        },
-        {
-          "site": "daiso",
-          "name": "[신혜선 PICK] 동국 마이팝 홍삼＆비타B"
         }
       ]
     },
@@ -144,11 +148,11 @@
       "examples": [
         {
           "site": "daiso",
-          "name": "[신혜선 PICK] 동국제약 마데카 PDRN 필름 10매 10일분"
+          "name": "[신혜선 PICK] 동국제약 마데카 글루타치온 필름 12매 12일분"
         },
         {
           "site": "daiso",
-          "name": "[신혜선 PICK] 동국제약 마데카 글루타치온 필름 12매 12일분"
+          "name": "[신혜선 PICK] 동국제약 마데카 PDRN 필름 10매 10일분"
         }
       ]
     },
@@ -179,19 +183,6 @@
         {
           "site": "oliveyoung",
           "name": "[OY단독] 에버콜라겐 타임 비오틴 셀 30포 (+3포 증정기획) / 인앤업 비오틴 셀 56정 (33/56일분)"
-        }
-      ]
-    },
-    {
-      "name": "혈당관리",
-      "kakao": 0,
-      "daiso": 1,
-      "oliveyoung": 0,
-      "total": 1,
-      "examples": [
-        {
-          "site": "daiso",
-          "name": "LG생활건강 이너뷰 혈당 감소 츄어블 28정 28일분"
         }
       ]
     },
