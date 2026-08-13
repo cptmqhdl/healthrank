@@ -1,13 +1,13 @@
 {
-  "date": "2026-08-12 18:53",
+  "date": "2026-08-13 11:18",
   "total_items": 30,
   "categories": [
     {
       "name": "멀티비타민",
-      "kakao": 7,
+      "kakao": 6,
       "daiso": 0,
-      "oliveyoung": 1,
-      "total": 8,
+      "oliveyoung": 0,
+      "total": 6,
       "examples": [
         {
           "site": "kakao",
@@ -27,11 +27,11 @@
         },
         {
           "site": "kakao",
-          "name": "[센트룸] 맛있는 멀티비타민 미네랄 멀티구미 (80구미)"
+          "name": "명품 비타민 뉴트리포유 듀얼+ 이뮨 종합 멀티비타민&미네랄 7입+2입 증정 - 선물하기 단독 에디션"
         },
         {
           "site": "kakao",
-          "name": "고려은단 메가도스 이뮨샷 최고심 에디션 (20개입) / 멀티비타민 아미노산 아르기닌"
+          "name": "[센트룸] 맛있는 멀티비타민 미네랄 멀티구미 (80구미)"
         }
       ]
     },
@@ -56,15 +56,15 @@
         },
         {
           "site": "oliveyoung",
-          "name": "[올영단독] 칼로 스탑/컨트롤 PLUS 15포 2종"
+          "name": "[8월올영픽+더블증정] 셀트리온 홀드잇 매드 MAD 10+2정(+2정 온라인)"
         },
         {
           "site": "oliveyoung",
-          "name": "[TWS 이미지카드 증정/8월 올영픽] 미에로화이바 데이톡 14포 (14일분)"
+          "name": "[8월 올영픽] 판도라 브이트리티 7/14+1포 (7/15일분)"
         },
         {
           "site": "oliveyoung",
-          "name": "[8월 올영픽/감자숭이 기획] 멜라메이트 구미/로우슈가/버라이어티팩 구미 20/40/50구미"
+          "name": "온리추얼 리셋 브이라인 7포 (+1포 증정) (8일분)"
         }
       ]
     },
@@ -72,8 +72,8 @@
       "name": "다이어트",
       "kakao": 0,
       "daiso": 1,
-      "oliveyoung": 3,
-      "total": 4,
+      "oliveyoung": 4,
+      "total": 5,
       "examples": [
         {
           "site": "daiso",
@@ -85,28 +85,36 @@
         },
         {
           "site": "oliveyoung",
-          "name": "[8월 올영픽/1일 1정] 바이탈뷰티 메타그린 슬림업 30일 (+15일)"
+          "name": "[포켓몬 에디션] 덴프스 유산균이야기 다이어트 14캡슐 기획 (+피카츄 러기지택) (14일분) (OY단독)"
         },
         {
           "site": "oliveyoung",
-          "name": "[8월 올영픽/파격특가] 콜레올로지 컷팅 젤리 레몬/키위/석류 10+2+2포 기획 외"
+          "name": "CJ 바이오코어 비피더스 다이어트 유산균 14캡슐 (2주분)"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[웰니스 루틴] 온리추얼 슬리밍컷 다이어트/리셋 브이라인/글로우업 콜라겐 7포(+1포)/14포 (8/14일분)"
         }
       ]
     },
     {
-      "name": "여성건강",
-      "kakao": 0,
-      "daiso": 0,
-      "oliveyoung": 2,
-      "total": 2,
+      "name": "에너지",
+      "kakao": 2,
+      "daiso": 1,
+      "oliveyoung": 0,
+      "total": 3,
       "examples": [
         {
-          "site": "oliveyoung",
-          "name": "지노마스터 질유산균 30캡슐 (1개월분)"
+          "site": "kakao",
+          "name": "에너지선물 [정관장] 활기력 에너지박스 (20ml x 20병)"
         },
         {
-          "site": "oliveyoung",
-          "name": "[8월 올영픽/덴프스] 덴마크 유산균이야기 우먼 2개월분(질유산균) + 철분 헤모케어 3포 증정"
+          "site": "kakao",
+          "name": "에너지선물 [정관장] 활기력 맥스 에너지박스 (20ml x 16병)"
+        },
+        {
+          "site": "daiso",
+          "name": "[보령약국 X Pantio] 2030 에너지 올인원 12포 12일분"
         }
       ]
     },
@@ -145,19 +153,32 @@
       ]
     },
     {
-      "name": "에너지",
-      "kakao": 1,
-      "daiso": 1,
-      "oliveyoung": 0,
+      "name": "비타민",
+      "kakao": 0,
+      "daiso": 0,
+      "oliveyoung": 2,
       "total": 2,
       "examples": [
         {
-          "site": "kakao",
-          "name": "에너지선물 [정관장] 활기력 에너지박스 (20ml x 20병)"
+          "site": "oliveyoung",
+          "name": "고려은단 비타민C1000 600정 (20개월분)"
         },
         {
-          "site": "daiso",
-          "name": "[보령약국 X Pantio] 2030 에너지 올인원 12포 12일분"
+          "site": "oliveyoung",
+          "name": "뉴케어 스포식스 옵티멈 비타민B (900mgX30정)"
+        }
+      ]
+    },
+    {
+      "name": "콜라겐",
+      "kakao": 0,
+      "daiso": 0,
+      "oliveyoung": 1,
+      "total": 1,
+      "examples": [
+        {
+          "site": "oliveyoung",
+          "name": "[OY단독] 에버콜라겐 타임 비오틴 셀 30포 (+3포 증정기획) / 인앤업 비오틴 셀 56정 (33/56일분)"
         }
       ]
     },
@@ -197,19 +218,6 @@
         {
           "site": "daiso",
           "name": "[신혜선 PICK] 동국제약 프로폴리스＆아연 필름 12매 12일분"
-        }
-      ]
-    },
-    {
-      "name": "비타민",
-      "kakao": 0,
-      "daiso": 0,
-      "oliveyoung": 1,
-      "total": 1,
-      "examples": [
-        {
-          "site": "oliveyoung",
-          "name": "고려은단 비타민C1000 600정 (20개월분)"
         }
       ]
     }
