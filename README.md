@@ -12,9 +12,10 @@
   - [x] 카카오톡 선물하기 — `scripts/crawl_kakao_gift.py` (건강식품·영양제 랭킹)
   - [x] 다이소몰 — `scripts/crawl_daiso.py` (건강식품 카테고리별 랭킹)
   - [x] 올리브영 — `scripts/crawl_oliveyoung.py` (판매랭킹 · 건강식품)
-- [x] 3단계 — 매일 자동 수집: GitHub Actions로 **매일 09:30 KST 자동 실행**되도록 설정
+- [x] 3단계 — 매일 자동 수집: GitHub Actions로 **매일 09:37 KST 자동 실행**되도록 설정
       완료. 내 PC 전원 상태와 무관하게, 깃허브 서버에서 실행되고 결과가 자동으로
-      저장소에 쌓임 (`.github/workflows/daily-crawl.yml`)
+      저장소에 쌓임 (`.github/workflows/daily-crawl.yml`). 원래 09:30이었으나
+      2026-08-13에 09:37로 변경(아래 "알려진 이슈" 참고)
 - [x] 저장소 공개 전환 + 깃허브 페이지(웹 주소) 개설 (2026-08-12, "즉시 테스트"용)
 - [x] 4단계 — 실제 데이터로 대시보드 완성 (2026-08-12). `scripts/build_dashboard_data.py`가
       `data/raw/*.csv`를 읽어 `data/latest.json`으로 가공(사이트별 **1~10위**만, 전날 대비
