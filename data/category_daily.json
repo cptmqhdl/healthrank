@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-14 12:18",
+  "date": "2026-08-14 15:03",
   "total_items": 30,
   "categories": [
     {
@@ -15,6 +15,10 @@
         },
         {
           "site": "daiso",
+          "name": "[보령약국 X Pantio] 풍성한 판토텐산 비오틴 올인원 15포 15일분"
+        },
+        {
+          "site": "daiso",
           "name": "[신혜선 PICK] 동국 마이팝 발효효소＆매실"
         },
         {
@@ -22,12 +26,8 @@
           "name": "휴럼 하루한포 유기농 야채분말 15포 15일분"
         },
         {
-          "site": "daiso",
-          "name": "[보령약국 X Pantio] 풍성한 판토텐산 비오틴 올인원 15포 15일분"
-        },
-        {
           "site": "oliveyoung",
-          "name": "온리추얼 리셋 브이라인 7포 (+1포 증정) (8일분)"
+          "name": "[추성훈 PICK] 헬스헬퍼 맥스컷 프로 크롬 60캡슐 (10일분)"
         },
         {
           "site": "oliveyoung",
@@ -114,11 +114,11 @@
         },
         {
           "site": "daiso",
-          "name": "[보령약국 X Pantio] 4050 에너지 올인원 12포 12일분"
+          "name": "[보령약국 X Pantio] 2030 에너지 올인원 12포 12일분"
         },
         {
           "site": "daiso",
-          "name": "[보령약국 X Pantio] 60+ 에너지 올인원 12포 12일분"
+          "name": "[보령약국 X Pantio] 4050 에너지 올인원 12포 12일분"
         }
       ]
     },
@@ -140,6 +140,23 @@
       ]
     },
     {
+      "name": "피부미용",
+      "kakao": 0,
+      "daiso": 2,
+      "oliveyoung": 0,
+      "total": 2,
+      "examples": [
+        {
+          "site": "daiso",
+          "name": "[신혜선 PICK] 동국제약 마데카 글루타치온 필름 12매 12일분"
+        },
+        {
+          "site": "daiso",
+          "name": "[신혜선 PICK] 동국제약 마데카 PDRN 필름 10매 10일분"
+        }
+      ]
+    },
+    {
       "name": "여성건강",
       "kakao": 0,
       "daiso": 0,
@@ -149,32 +166,6 @@
         {
           "site": "oliveyoung",
           "name": "[8월 올영픽/덴프스] 덴마크 유산균이야기 우먼 2개월분(질유산균) + 철분 헤모케어 3포 증정"
-        }
-      ]
-    },
-    {
-      "name": "피부미용",
-      "kakao": 0,
-      "daiso": 1,
-      "oliveyoung": 0,
-      "total": 1,
-      "examples": [
-        {
-          "site": "daiso",
-          "name": "[신혜선 PICK] 동국제약 마데카 글루타치온 필름 12매 12일분"
-        }
-      ]
-    },
-    {
-      "name": "혈당관리",
-      "kakao": 0,
-      "daiso": 1,
-      "oliveyoung": 0,
-      "total": 1,
-      "examples": [
-        {
-          "site": "daiso",
-          "name": "LG생활건강 이너뷰 혈당 감소 츄어블 28정 28일분"
         }
       ]
     },
