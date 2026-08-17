@@ -1,12 +1,45 @@
 {
-  "date": "2026-08-16 12:32",
+  "date": "2026-08-17 12:33",
   "total_items": 30,
   "categories": [
     {
+      "name": "기타",
+      "kakao": 1,
+      "daiso": 4,
+      "oliveyoung": 3,
+      "total": 8,
+      "examples": [
+        {
+          "site": "kakao",
+          "name": "[그레인온] 골드 카무트 브랜드밀 효소 3개월(+선물포장)+투썸 아박 기프티콘+레드파로효소 캡슐레이션(본품) 증정"
+        },
+        {
+          "site": "daiso",
+          "name": "휴럼 하루한포 유기농 야채분말 15포 15일분"
+        },
+        {
+          "site": "daiso",
+          "name": "[의약외품][신혜선 PICK] 동국 벤포 비타맥스정 10정 10일분"
+        },
+        {
+          "site": "daiso",
+          "name": "[의약외품][신혜선 PICK] 동국제약 멜라케어 더블 화이트 정 10정 10일분"
+        },
+        {
+          "site": "daiso",
+          "name": "[보령약국 X Pantio] 스트레스 케어 올인원 15포 15일분"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[8월 올영픽] 판도라 브이트리티 7/14+1포 (7/15일분)"
+        }
+      ]
+    },
+    {
       "name": "멀티비타민",
-      "kakao": 7,
+      "kakao": 6,
       "daiso": 0,
-      "oliveyoung": 0,
+      "oliveyoung": 1,
       "total": 7,
       "examples": [
         {
@@ -19,11 +52,11 @@
         },
         {
           "site": "kakao",
-          "name": "\"본품2병증정\" GNM 올인원 이뮨 액상 종합비타민 2박스 (총 14+2병) / 멀티비타민 이뮨비타민 이뮨샷 비타민"
+          "name": "독일 명품 비타민 오쏘몰 이뮨 멀티비타민&미네랄 30입 - 시그니처 기프트 에디션 (공식수입)"
         },
         {
           "site": "kakao",
-          "name": "독일 명품 비타민 오쏘몰 이뮨 멀티비타민&미네랄 30입 - 시그니처 기프트 에디션 (공식수입)"
+          "name": "\"본품2병증정\" GNM 올인원 이뮨 액상 종합비타민 2박스 (총 14+2병) / 멀티비타민 이뮨비타민 이뮨샷 비타민"
         },
         {
           "site": "kakao",
@@ -36,94 +69,11 @@
       ]
     },
     {
-      "name": "기타",
-      "kakao": 0,
-      "daiso": 3,
-      "oliveyoung": 4,
-      "total": 7,
-      "examples": [
-        {
-          "site": "daiso",
-          "name": "[신혜선 PICK] 동국 마이팝 발효효소＆매실"
-        },
-        {
-          "site": "daiso",
-          "name": "[보령약국 X Pantio] 풍성한 판토텐산 비오틴 올인원 15포 15일분"
-        },
-        {
-          "site": "daiso",
-          "name": "휴럼 하루한포 유기농 야채분말 15포 15일분"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "[8월 올영픽] 판도라 브이트리티 7/14+1포 (7/15일분)"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "[8월 올영픽/감자숭이 기획] 멜라메이트 구미/로우슈가/버라이어티팩 구미 20/40/50구미"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "[8월 올영픽/곽민경 PICK] 생활약속 기분전환 알파플러스 10포 (+1포 증정기획)"
-        }
-      ]
-    },
-    {
-      "name": "다이어트",
-      "kakao": 0,
-      "daiso": 1,
-      "oliveyoung": 4,
-      "total": 5,
-      "examples": [
-        {
-          "site": "daiso",
-          "name": "[보령약국 X Pantio] 다이어트 컷 올인원 15포 15일분"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "온리추얼 슬리밍컷 다이어트/리셋 브이라인/글로우업 콜라겐 7포(+1포)/14포"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "[8월 올영픽/한선화 PICK] 프로뉴트리션 듀얼플랜 다이어트 유산균 14포"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "[웰니스 루틴] 온리추얼 슬리밍컷 다이어트/리셋 브이라인/글로우업 콜라겐 7포(+1포)/14포 (8/14일분)"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "[8월 올영픽/1일 1정] 바이탈뷰티 메타그린 슬림업 30일 (+15일)"
-        }
-      ]
-    },
-    {
-      "name": "에너지",
+      "name": "홍삼",
       "kakao": 1,
       "daiso": 2,
       "oliveyoung": 0,
       "total": 3,
-      "examples": [
-        {
-          "site": "kakao",
-          "name": "에너지선물 [정관장] 활기력 에너지박스 (20ml x 20병)"
-        },
-        {
-          "site": "daiso",
-          "name": "[보령약국 X Pantio] 2030 에너지 올인원 12포 12일분"
-        },
-        {
-          "site": "daiso",
-          "name": "[보령약국 X Pantio] 4050 에너지 올인원 12포 12일분"
-        }
-      ]
-    },
-    {
-      "name": "홍삼",
-      "kakao": 1,
-      "daiso": 1,
-      "oliveyoung": 0,
-      "total": 2,
       "examples": [
         {
           "site": "kakao",
@@ -132,11 +82,15 @@
         {
           "site": "daiso",
           "name": "[신혜선 PICK] 동국제약 면역엔 홍삼 필름 10매 10일분"
+        },
+        {
+          "site": "daiso",
+          "name": "[신혜선 PICK] 동국 마이팝 홍삼＆비타B"
         }
       ]
     },
     {
-      "name": "콜라겐",
+      "name": "다이어트",
       "kakao": 0,
       "daiso": 0,
       "oliveyoung": 2,
@@ -144,11 +98,28 @@
       "examples": [
         {
           "site": "oliveyoung",
-          "name": "[8월 올영픽] 오니스트 트리플콜라겐 오렌지 14일 루틴 (+스크런치 증정)"
+          "name": "[8월 올영픽/한선화 PICK] 프로뉴트리션 듀얼플랜 다이어트 유산균 14포"
         },
         {
           "site": "oliveyoung",
-          "name": "비비랩 글루타치온 콜라겐 W 30포 (30일분)"
+          "name": "[웰니스 루틴] 온리추얼 슬리밍컷 다이어트/리셋 브이라인/글로우업 콜라겐 7포(+1포)/14포 (8/14일분)"
+        }
+      ]
+    },
+    {
+      "name": "콜라겐",
+      "kakao": 0,
+      "daiso": 1,
+      "oliveyoung": 1,
+      "total": 2,
+      "examples": [
+        {
+          "site": "daiso",
+          "name": "LG생활건강 이너뷰 콜라겐 츄어블 28정 28일분"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[윤광UP]온리추얼 글로우업 글루타치온 콜라겐 7포 (+1포 증정) / 14포"
         }
       ]
     },
@@ -170,15 +141,19 @@
       ]
     },
     {
-      "name": "간건강",
-      "kakao": 1,
+      "name": "에너지",
+      "kakao": 2,
       "daiso": 0,
       "oliveyoung": 0,
-      "total": 1,
+      "total": 2,
       "examples": [
         {
           "site": "kakao",
-          "name": "직장인 30일 습관 이뮨듀오 올인원 비타민 멀티팩/포우먼 1박스 밀크씨슬+테아닌+멀티비타민 미네랄 간 건강 피로개선 피로회복+쇼핑백"
+          "name": "에너지선물 [정관장] 활기력 에너지박스 (20ml x 20병)"
+        },
+        {
+          "site": "kakao",
+          "name": "[정관장] 활기력부스터 박스 (400mg x 20정 + 20ml x 20병,이중복합제형)"
         }
       ]
     },
@@ -186,15 +161,55 @@
       "name": "장건강",
       "kakao": 0,
       "daiso": 1,
-      "oliveyoung": 0,
-      "total": 1,
+      "oliveyoung": 1,
+      "total": 2,
       "examples": [
         {
           "site": "daiso",
           "name": "[신혜선 PICK] 동국 마이팝 푸룬＆식이섬유"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "스톰 식이섬유정 1000 60정 (1개월분)"
+        }
+      ]
+    },
+    {
+      "name": "유산균",
+      "kakao": 0,
+      "daiso": 0,
+      "oliveyoung": 1,
+      "total": 1,
+      "examples": [
+        {
+          "site": "oliveyoung",
+          "name": "[덴프스X카카오프렌즈] 덴마크 유산균이야기 30캡슐 1+1 (+카카오프렌즈 키링) (60일분)"
+        }
+      ]
+    },
+    {
+      "name": "비타민",
+      "kakao": 0,
+      "daiso": 0,
+      "oliveyoung": 1,
+      "total": 1,
+      "examples": [
+        {
+          "site": "oliveyoung",
+          "name": "고려은단 비타민C1000 600정 (20개월분)"
         }
       ]
     }
   ],
-  "keyword_suggestions": []
+  "keyword_suggestions": [
+    {
+      "keyword": "신혜선",
+      "count": 3,
+      "examples": [
+        "[의약외품][신혜선 PICK] 동국제약 멜라케어 더블 화이트 정 10정 10일분",
+        "[신혜선 PICK] 동국 마이팝 발효효소＆매실",
+        "[의약외품][신혜선 PICK] 동국 벤포 비타맥스정 10정 10일분"
+      ]
+    }
+  ]
 }
