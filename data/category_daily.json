@@ -1,17 +1,17 @@
 {
-  "date": "2026-08-17 12:33",
+  "date": "2026-08-18 12:28",
   "total_items": 30,
   "categories": [
     {
       "name": "기타",
       "kakao": 1,
       "daiso": 4,
-      "oliveyoung": 3,
-      "total": 8,
+      "oliveyoung": 5,
+      "total": 10,
       "examples": [
         {
           "site": "kakao",
-          "name": "[그레인온] 골드 카무트 브랜드밀 효소 3개월(+선물포장)+투썸 아박 기프티콘+레드파로효소 캡슐레이션(본품) 증정"
+          "name": "[그레인온] 골드 카무트 브랜드밀 효소 3개월(+선물포장)"
         },
         {
           "site": "daiso",
@@ -31,7 +31,7 @@
         },
         {
           "site": "oliveyoung",
-          "name": "[8월 올영픽] 판도라 브이트리티 7/14+1포 (7/15일분)"
+          "name": "정관장 이너제틱 항산화 클렌즈 20포(10일분)"
         }
       ]
     },
@@ -56,11 +56,11 @@
         },
         {
           "site": "kakao",
-          "name": "\"본품2병증정\" GNM 올인원 이뮨 액상 종합비타민 2박스 (총 14+2병) / 멀티비타민 이뮨비타민 이뮨샷 비타민"
+          "name": "독일 명품 비타민 오쏘몰 이뮨 멀티비타민&미네랄 10입 - 슬리브 기프트 에디션 (공식수입)"
         },
         {
           "site": "kakao",
-          "name": "독일 명품 비타민 오쏘몰 이뮨 멀티비타민&미네랄 10입 - 슬리브 기프트 에디션 (공식수입)"
+          "name": "[센트룸] 맛있는 멀티비타민 미네랄 멀티구미 (80구미)"
         },
         {
           "site": "kakao",
@@ -93,9 +93,13 @@
       "name": "다이어트",
       "kakao": 0,
       "daiso": 0,
-      "oliveyoung": 2,
-      "total": 2,
+      "oliveyoung": 3,
+      "total": 3,
       "examples": [
+        {
+          "site": "oliveyoung",
+          "name": "바이탈뷰티 메타그린 슬림업 14/30일"
+        },
         {
           "site": "oliveyoung",
           "name": "[8월 올영픽/한선화 PICK] 프로뉴트리션 듀얼플랜 다이어트 유산균 14포"
@@ -119,7 +123,7 @@
         },
         {
           "site": "oliveyoung",
-          "name": "[윤광UP]온리추얼 글로우업 글루타치온 콜라겐 7포 (+1포 증정) / 14포"
+          "name": "정관장 이너제틱 항산화 콜라겐 20포(10일분)"
         }
       ]
     },
@@ -142,18 +146,14 @@
     },
     {
       "name": "에너지",
-      "kakao": 2,
+      "kakao": 1,
       "daiso": 0,
       "oliveyoung": 0,
-      "total": 2,
+      "total": 1,
       "examples": [
         {
           "site": "kakao",
           "name": "에너지선물 [정관장] 활기력 에너지박스 (20ml x 20병)"
-        },
-        {
-          "site": "kakao",
-          "name": "[정관장] 활기력부스터 박스 (400mg x 20정 + 20ml x 20병,이중복합제형)"
         }
       ]
     },
@@ -161,42 +161,25 @@
       "name": "장건강",
       "kakao": 0,
       "daiso": 1,
-      "oliveyoung": 1,
-      "total": 2,
+      "oliveyoung": 0,
+      "total": 1,
       "examples": [
         {
           "site": "daiso",
           "name": "[신혜선 PICK] 동국 마이팝 푸룬＆식이섬유"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "스톰 식이섬유정 1000 60정 (1개월분)"
-        }
-      ]
-    },
-    {
-      "name": "유산균",
-      "kakao": 0,
-      "daiso": 0,
-      "oliveyoung": 1,
-      "total": 1,
-      "examples": [
-        {
-          "site": "oliveyoung",
-          "name": "[덴프스X카카오프렌즈] 덴마크 유산균이야기 30캡슐 1+1 (+카카오프렌즈 키링) (60일분)"
         }
       ]
     },
     {
       "name": "비타민",
-      "kakao": 0,
+      "kakao": 1,
       "daiso": 0,
-      "oliveyoung": 1,
+      "oliveyoung": 0,
       "total": 1,
       "examples": [
         {
-          "site": "oliveyoung",
-          "name": "고려은단 비타민C1000 600정 (20개월분)"
+          "site": "kakao",
+          "name": "신상비타민선물 [정관장] 활기마이트(액상30ml+분말500mg) 7입 + [증정] 1입"
         }
       ]
     }
