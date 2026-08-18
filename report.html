@@ -229,9 +229,6 @@
   .monthly-btn:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px;}
   .monthly-note{font-size:13px;color:var(--text-muted);margin-bottom:24px;}
 
-  /* ---- 지금 업데이트 버튼 ---- */
-  .update-now-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:20px;}
-  .update-now-row .monthly-note{margin-bottom:0;}
 
   /* ---- 카테고리별 현황 (그래프 + 표) ---- */
   .category-legend{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:24px;}
@@ -325,10 +322,6 @@
     <div class="section-head">
       <h2>오늘의 판매순위</h2>
       <p id="previewLead">데이터를 불러오는 중이에요…</p>
-      <div class="update-now-row">
-        <button id="updateNowBtn" type="button" class="monthly-btn">지금 업데이트</button>
-        <span class="monthly-note" id="updateNowNote"></span>
-      </div>
     </div>
 
     <div id="channelSections"></div>
@@ -527,22 +520,6 @@
         monthlyBtn.disabled = false;
         monthlyBtn.textContent = originalLabel;
       });
-  });
-
-  // 깃허브 예약(cron) 자동 실행이 불안정해(설계서.md 7.21·7.23절) 이 버튼으로 언제든
-  // 수동 갱신할 수 있게 함. 별도 서버/토큰 설정 없이, 깃허브의 실행 화면을 새 탭으로
-  // 열어주기만 하는 방식(그 화면에서 "Run workflow" 버튼 한 번 더 눌러야 함, 깃허브
-  // 로그인 필요).
-  var WORKFLOW_RUN_URL = 'https://github.com/cptmqhdl/healthrank/actions/workflows/daily-crawl.yml';
-
-  var updateNowBtn = document.getElementById('updateNowBtn');
-  var updateNowNote = document.getElementById('updateNowNote');
-
-  updateNowBtn.addEventListener('click', function(){
-    window.open(WORKFLOW_RUN_URL, '_blank', 'noopener');
-    updateNowNote.textContent =
-      '새 탭에서 초록색 "Run workflow" 버튼을 한 번 더 눌러주세요(깃허브 로그인 필요). ' +
-      '보통 1~2분 안에 끝나요.';
   });
 
   var CHANNEL_LABEL = { kakao: '카카오톡 선물하기', daiso: '다이소몰', oliveyoung: '올리브영' };

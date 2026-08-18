@@ -1,13 +1,13 @@
 {
-  "date": "2026-08-18 12:28",
+  "date": "2026-08-18 17:12",
   "total_items": 30,
   "categories": [
     {
       "name": "기타",
       "kakao": 1,
-      "daiso": 4,
+      "daiso": 5,
       "oliveyoung": 5,
-      "total": 10,
+      "total": 11,
       "examples": [
         {
           "site": "kakao",
@@ -19,7 +19,11 @@
         },
         {
           "site": "daiso",
-          "name": "[의약외품][신혜선 PICK] 동국 벤포 비타맥스정 10정 10일분"
+          "name": "[신혜선 PICK] 동국제약 판비틴 맥주효모 비오틴 14포 14일분"
+        },
+        {
+          "site": "daiso",
+          "name": "휴럼 하루한포 유기농 컬리케일 15포 15일분"
         },
         {
           "site": "daiso",
@@ -27,11 +31,7 @@
         },
         {
           "site": "daiso",
-          "name": "[보령약국 X Pantio] 스트레스 케어 올인원 15포 15일분"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "정관장 이너제틱 항산화 클렌즈 20포(10일분)"
+          "name": "휴럼 하루한포 유기농 양배추분말 15포 15일분"
         }
       ]
     },
@@ -69,33 +69,16 @@
       ]
     },
     {
-      "name": "홍삼",
-      "kakao": 1,
-      "daiso": 2,
-      "oliveyoung": 0,
-      "total": 3,
-      "examples": [
-        {
-          "site": "kakao",
-          "name": "면역력 선물 [정관장] 에브리타임 레귤러 (10ml x 30포) _ 대한민국 명품 홍삼정농축액 함유"
-        },
-        {
-          "site": "daiso",
-          "name": "[신혜선 PICK] 동국제약 면역엔 홍삼 필름 10매 10일분"
-        },
-        {
-          "site": "daiso",
-          "name": "[신혜선 PICK] 동국 마이팝 홍삼＆비타B"
-        }
-      ]
-    },
-    {
       "name": "다이어트",
       "kakao": 0,
-      "daiso": 0,
+      "daiso": 1,
       "oliveyoung": 3,
-      "total": 3,
+      "total": 4,
       "examples": [
+        {
+          "site": "daiso",
+          "name": "[보령약국 X Pantio] 다이어트 컷 올인원 15포 15일분"
+        },
         {
           "site": "oliveyoung",
           "name": "바이탈뷰티 메타그린 슬림업 14/30일"
@@ -107,23 +90,6 @@
         {
           "site": "oliveyoung",
           "name": "[웰니스 루틴] 온리추얼 슬리밍컷 다이어트/리셋 브이라인/글로우업 콜라겐 7포(+1포)/14포 (8/14일분)"
-        }
-      ]
-    },
-    {
-      "name": "콜라겐",
-      "kakao": 0,
-      "daiso": 1,
-      "oliveyoung": 1,
-      "total": 2,
-      "examples": [
-        {
-          "site": "daiso",
-          "name": "LG생활건강 이너뷰 콜라겐 츄어블 28정 28일분"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "정관장 이너제틱 항산화 콜라겐 20포(10일분)"
         }
       ]
     },
@@ -141,6 +107,32 @@
         {
           "site": "daiso",
           "name": "[신혜선 PICK] 동국제약 마데카 PDRN 필름 10매 10일분"
+        }
+      ]
+    },
+    {
+      "name": "홍삼",
+      "kakao": 1,
+      "daiso": 0,
+      "oliveyoung": 0,
+      "total": 1,
+      "examples": [
+        {
+          "site": "kakao",
+          "name": "면역력 선물 [정관장] 에브리타임 레귤러 (10ml x 30포) _ 대한민국 명품 홍삼정농축액 함유"
+        }
+      ]
+    },
+    {
+      "name": "콜라겐",
+      "kakao": 0,
+      "daiso": 0,
+      "oliveyoung": 1,
+      "total": 1,
+      "examples": [
+        {
+          "site": "oliveyoung",
+          "name": "정관장 이너제틱 항산화 콜라겐 20포(10일분)"
         }
       ]
     },
@@ -171,6 +163,19 @@
       ]
     },
     {
+      "name": "면역",
+      "kakao": 0,
+      "daiso": 1,
+      "oliveyoung": 0,
+      "total": 1,
+      "examples": [
+        {
+          "site": "daiso",
+          "name": "[신혜선 PICK] 동국제약 프로폴리스＆아연 필름 12매 12일분"
+        }
+      ]
+    },
+    {
       "name": "비타민",
       "kakao": 1,
       "daiso": 0,
@@ -187,11 +192,38 @@
   "keyword_suggestions": [
     {
       "keyword": "신혜선",
-      "count": 3,
+      "count": 4,
       "examples": [
         "[의약외품][신혜선 PICK] 동국제약 멜라케어 더블 화이트 정 10정 10일분",
         "[신혜선 PICK] 동국 마이팝 발효효소＆매실",
         "[의약외품][신혜선 PICK] 동국 벤포 비타맥스정 10정 10일분"
+      ]
+    },
+    {
+      "keyword": "하루한포",
+      "count": 3,
+      "examples": [
+        "휴럼 하루한포 유기농 야채분말 15포 15일분",
+        "휴럼 하루한포 유기농 컬리케일 15포 15일분",
+        "휴럼 하루한포 유기농 양배추분말 15포 15일분"
+      ]
+    },
+    {
+      "keyword": "휴럼",
+      "count": 3,
+      "examples": [
+        "휴럼 하루한포 유기농 야채분말 15포 15일분",
+        "휴럼 하루한포 유기농 컬리케일 15포 15일분",
+        "휴럼 하루한포 유기농 양배추분말 15포 15일분"
+      ]
+    },
+    {
+      "keyword": "유기농",
+      "count": 3,
+      "examples": [
+        "휴럼 하루한포 유기농 야채분말 15포 15일분",
+        "휴럼 하루한포 유기농 컬리케일 15포 15일분",
+        "휴럼 하루한포 유기농 양배추분말 15포 15일분"
       ]
     }
   ]

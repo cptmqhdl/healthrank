@@ -37,15 +37,23 @@ def main():
         page.wait_for_timeout(2000)
 
         # "건강식품 카테고리별 랭킹" 위젯까지 스크롤해야 실제 렌더링된다.
-        # 깃허브 액션(해외 리전) 실행 시 국내 사이트 접속이 로컬보다 느려 타임아웃이
-        # 날 수 있어(2026-08-13 실제 발생), 넉넉한 타임아웃 + 1회 재시도를 둔다.
+        # 기존에는 Playwright의 scroll_into_view_if_needed(액션 전 요소가 "안정적으로
+        # 멈춰있는지"까지 확인)를 썼는데, 위쪽 배너가 자동으로 움직이는 페이지라 요소
+        # 위치가 계속 흔들려 30초 타임아웃이 CI에서 반복 발생했다(2026-08-15/16/18
+        # 전부 동일한 Locator.scroll_into_view_if_needed 타임아웃으로 실패). 대신
+        # 브라우저 네이티브 scrollIntoView를 evaluate로 직접 호출하면 "안정성" 대기 없이
+        # 즉시 스크롤되어 이 문제를 피할 수 있다.
         widget = page.get_by_text("건강식품 카테고리별 랭킹", exact=True).first
-        try:
-            widget.scroll_into_view_if_needed(timeout=30000)
-        except Exception:
-            print("위젯 스크롤 1차 시도 실패, 재시도합니다.")
-            page.wait_for_timeout(3000)
-            widget.scroll_into_view_if_needed(timeout=30000)
+        widget.wait_for(state="attached", timeout=30000)
+        for attempt in range(3):
+            try:
+                widget.evaluate("el => el.scrollIntoView({block: 'center'})")
+                break
+            except Exception:
+                if attempt == 2:
+                    raise
+                print(f"위젯 스크롤 {attempt + 1}차 시도 실패, 재시도합니다.")
+                page.wait_for_timeout(3000)
         page.wait_for_timeout(2500)
 
         # 스와이프 캐러셀이라 카드 하나씩 순서대로 접근하면 화면이 움직여 타임아웃이 날 수

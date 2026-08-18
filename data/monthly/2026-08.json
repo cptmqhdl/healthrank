@@ -298,10 +298,10 @@
       "label": "카카오톡 선물하기"
     },
     "daiso": {
-      "days_collected": 4,
+      "days_collected": 5,
       "date_range": [
         "2026-08-12",
-        "2026-08-17"
+        "2026-08-18"
       ],
       "items": [
         {
@@ -310,28 +310,13 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911099&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260728/thumb/300/NbSqiy25P90IFlYxB3ux610911099_00_01NbSqiy25P90IFlYxB3ux.jpg",
-          "avg_rank": 1.8,
+          "avg_rank": 1.6,
           "best_rank": 1,
-          "top1_days": 2,
-          "appearances": 4,
+          "top1_days": 3,
+          "appearances": 5,
           "delta": {
             "type": "flat",
             "value": 0
-          }
-        },
-        {
-          "name": "[신혜선 PICK] 동국 마이팝 푸룬＆식이섬유",
-          "brand": "",
-          "price": 2000,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911029&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260623/thumb/300/QaObI3LjZ86tREQcCYCw610911029_00_00QaObI3LjZ86tREQcCYCw.jpg",
-          "avg_rank": 2.8,
-          "best_rank": 1,
-          "top1_days": 1,
-          "appearances": 4,
-          "delta": {
-            "type": "down",
-            "value": 2
           }
         },
         {
@@ -340,10 +325,10 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=033991021&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/xVYROwLnuZYLoqWwcjU6033991021_00_00xVYROwLnuZYLoqWwcjU6.png",
-          "avg_rank": 3.0,
+          "avg_rank": 2.8,
           "best_rank": 2,
           "top1_days": 0,
-          "appearances": 3,
+          "appearances": 4,
           "delta": {
             "type": "up",
             "value": 2
@@ -365,6 +350,21 @@
           }
         },
         {
+          "name": "[신혜선 PICK] 동국 마이팝 푸룬＆식이섬유",
+          "brand": "",
+          "price": 2000,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911029&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260623/thumb/300/QaObI3LjZ86tREQcCYCw610911029_00_00QaObI3LjZ86tREQcCYCw.jpg",
+          "avg_rank": 3.2,
+          "best_rank": 1,
+          "top1_days": 1,
+          "appearances": 5,
+          "delta": {
+            "type": "down",
+            "value": 3
+          }
+        },
+        {
           "name": "[신혜선 PICK] 동국제약 면역엔 홍삼 필름 10매 10일분",
           "brand": "",
           "price": 5000,
@@ -380,45 +380,30 @@
           }
         },
         {
-          "name": "[신혜선 PICK] 동국제약 마데카 PDRN 필름 10매 10일분",
-          "brand": "",
-          "price": 5000,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911098&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260728/thumb/300/2LpWqYu8CZWzex7rdnk8610911098_00_012LpWqYu8CZWzex7rdnk8.jpg",
-          "avg_rank": 5.8,
-          "best_rank": 4,
-          "top1_days": 0,
-          "appearances": 4,
-          "delta": {
-            "type": "down",
-            "value": 2
-          }
-        },
-        {
           "name": "휴럼 하루한포 유기농 야채분말 15포 15일분",
           "brand": "",
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=919157056&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260706/thumb/300/z42ScLP7B6TWURzgDPY0919157056_00_01z42ScLP7B6TWURzgDPY0.jpg",
-          "avg_rank": 6.5,
+          "avg_rank": 5.8,
           "best_rank": 3,
           "top1_days": 0,
-          "appearances": 4,
+          "appearances": 5,
           "delta": {
             "type": "up",
             "value": 4
           }
         },
         {
-          "name": "[신혜선 PICK] 동국제약 프로폴리스＆아연 필름 12매 12일분",
+          "name": "[신혜선 PICK] 동국제약 마데카 PDRN 필름 10매 10일분",
           "brand": "",
           "price": 5000,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911097&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/WQN2sdlFQlgUeYP1OzCA610911097_00_01WQN2sdlFQlgUeYP1OzCA.jpg",
-          "avg_rank": 6.5,
-          "best_rank": 5,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911098&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260728/thumb/300/2LpWqYu8CZWzex7rdnk8610911098_00_012LpWqYu8CZWzex7rdnk8.jpg",
+          "avg_rank": 6.4,
+          "best_rank": 4,
           "top1_days": 0,
-          "appearances": 2,
+          "appearances": 5,
           "delta": {
             "type": "down",
             "value": 3
@@ -430,13 +415,28 @@
           "price": 3000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911058&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260710/thumb/300/ttaHg18AMnzwMvyaF63v610911058_00_00ttaHg18AMnzwMvyaF63v.jpg",
-          "avg_rank": 7.5,
+          "avg_rank": 7.3,
           "best_rank": 7,
           "top1_days": 0,
-          "appearances": 2,
+          "appearances": 3,
           "delta": {
             "type": "up",
             "value": 1
+          }
+        },
+        {
+          "name": "[신혜선 PICK] 동국제약 프로폴리스＆아연 필름 12매 12일분",
+          "brand": "",
+          "price": 5000,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911097&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/WQN2sdlFQlgUeYP1OzCA610911097_00_01WQN2sdlFQlgUeYP1OzCA.jpg",
+          "avg_rank": 7.7,
+          "best_rank": 5,
+          "top1_days": 0,
+          "appearances": 3,
+          "delta": {
+            "type": "down",
+            "value": 5
           }
         },
         {

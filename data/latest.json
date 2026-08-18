@@ -1,8 +1,8 @@
 {
   "generated_from_dates": [
-    "2026-08-17 12:33",
     "2026-08-18 12:26",
-    "2026-08-18 12:28"
+    "2026-08-18 12:28",
+    "2026-08-18 17:12"
   ],
   "sites": {
     "kakao": {
@@ -146,7 +146,7 @@
     "daiso": {
       "id": "daiso",
       "label": "다이소몰",
-      "date": "2026-08-17 12:33",
+      "date": "2026-08-18 17:12",
       "count": 10,
       "items": [
         {
@@ -158,21 +158,21 @@
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911099&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260728/thumb/300/NbSqiy25P90IFlYxB3ux610911099_00_01NbSqiy25P90IFlYxB3ux.jpg",
           "delta": {
-            "type": "up",
-            "value": 2
+            "type": "flat",
+            "value": 0
           }
         },
         {
           "rank": 2,
           "brand": "",
-          "name": "[신혜선 PICK] 동국제약 면역엔 홍삼 필름 10매 10일분",
+          "name": "[보령약국 X Pantio] 다이어트 컷 올인원 15포 15일분",
           "price": 5000,
           "ad": false,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911096&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/X3lfEnRBZWFGAzpNcACh610911096_00_01X3lfEnRBZWFGAzpNcACh.jpg",
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=033991021&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/xVYROwLnuZYLoqWwcjU6033991021_00_00xVYROwLnuZYLoqWwcjU6.png",
           "delta": {
-            "type": "up",
-            "value": 3
+            "type": "new",
+            "value": null
           }
         },
         {
@@ -184,12 +184,25 @@
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=919157056&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260706/thumb/300/z42ScLP7B6TWURzgDPY0919157056_00_01z42ScLP7B6TWURzgDPY0.jpg",
           "delta": {
-            "type": "up",
-            "value": 7
+            "type": "flat",
+            "value": 0
           }
         },
         {
           "rank": 4,
+          "brand": "",
+          "name": "[신혜선 PICK] 동국제약 판비틴 맥주효모 비오틴 14포 14일분",
+          "price": 5000,
+          "ad": false,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911100&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260812/thumb/300/gu25Tm6cSMq795ZE5KWj610911100_00_01gu25Tm6cSMq795ZE5KWj.jpg",
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "rank": 5,
           "brand": "",
           "name": "[신혜선 PICK] 동국 마이팝 푸룬＆식이섬유",
           "price": 2000,
@@ -198,30 +211,17 @@
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260623/thumb/300/QaObI3LjZ86tREQcCYCw610911029_00_00QaObI3LjZ86tREQcCYCw.jpg",
           "delta": {
             "type": "down",
-            "value": 3
-          }
-        },
-        {
-          "rank": 5,
-          "brand": "",
-          "name": "[신혜선 PICK] 동국 마이팝 홍삼＆비타B",
-          "price": 2000,
-          "ad": false,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911030&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260623/thumb/300/xNJvNqGjAYp0B7f9QQ8M610911030_00_00xNJvNqGjAYp0B7f9QQ8M.jpg",
-          "delta": {
-            "type": "new",
-            "value": null
+            "value": 1
           }
         },
         {
           "rank": 6,
           "brand": "",
-          "name": "[의약외품][신혜선 PICK] 동국 벤포 비타맥스정 10정 10일분",
-          "price": 2000,
+          "name": "휴럼 하루한포 유기농 컬리케일 15포 15일분",
+          "price": 5000,
           "ad": false,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911056&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260710/thumb/300/5mTQPvsktLduwds14llY610911056_00_005mTQPvsktLduwds14llY.jpg",
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=919157057&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260706/thumb/300/4dOlrrhIAJM53YybYlxV919157057_00_014dOlrrhIAJM53YybYlxV.jpg",
           "delta": {
             "type": "new",
             "value": null
@@ -236,12 +236,25 @@
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911058&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260710/thumb/300/ttaHg18AMnzwMvyaF63v610911058_00_00ttaHg18AMnzwMvyaF63v.jpg",
           "delta": {
+            "type": "flat",
+            "value": 0
+          }
+        },
+        {
+          "rank": 8,
+          "brand": "",
+          "name": "휴럼 하루한포 유기농 양배추분말 15포 15일분",
+          "price": 5000,
+          "ad": false,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=919157058&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260706/thumb/300/7ivzhVU9jk8zl5gsOS7L919157058_00_017ivzhVU9jk8zl5gsOS7L.jpg",
+          "delta": {
             "type": "new",
             "value": null
           }
         },
         {
-          "rank": 8,
+          "rank": 9,
           "brand": "",
           "name": "[신혜선 PICK] 동국제약 마데카 PDRN 필름 10매 10일분",
           "price": 5000,
@@ -250,30 +263,17 @@
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260728/thumb/300/2LpWqYu8CZWzex7rdnk8610911098_00_012LpWqYu8CZWzex7rdnk8.jpg",
           "delta": {
             "type": "down",
-            "value": 4
-          }
-        },
-        {
-          "rank": 9,
-          "brand": "",
-          "name": "LG생활건강 이너뷰 콜라겐 츄어블 28정 28일분",
-          "price": 5000,
-          "ad": false,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=033574089&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260723/thumb/300/fiuR8VRO7LXZNa2zIgPd033574089_00_01fiuR8VRO7LXZNa2zIgPd.jpg",
-          "delta": {
-            "type": "new",
-            "value": null
+            "value": 1
           }
         },
         {
           "rank": 10,
           "brand": "",
-          "name": "[보령약국 X Pantio] 스트레스 케어 올인원 15포 15일분",
+          "name": "[신혜선 PICK] 동국제약 프로폴리스＆아연 필름 12매 12일분",
           "price": 5000,
           "ad": false,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=033991022&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/bpRaPOFB6GapUUiby4Vv033991022_00_00bpRaPOFB6GapUUiby4Vv.png",
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911097&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/WQN2sdlFQlgUeYP1OzCA610911097_00_01WQN2sdlFQlgUeYP1OzCA.jpg",
           "delta": {
             "type": "new",
             "value": null
