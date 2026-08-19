@@ -1,17 +1,21 @@
 {
-  "date": "2026-08-19 12:30",
+  "date": "2026-08-19 17:00",
   "total_items": 30,
   "categories": [
     {
       "name": "기타",
       "kakao": 0,
-      "daiso": 5,
+      "daiso": 6,
       "oliveyoung": 4,
-      "total": 9,
+      "total": 10,
       "examples": [
         {
           "site": "daiso",
-          "name": "휴럼 하루한포 유기농 야채분말 15포 15일분"
+          "name": "닥터블릿 푸응 7 Days 슬립앤버닝 14정 7일분"
+        },
+        {
+          "site": "daiso",
+          "name": "닥터블릿 스트레스 케어 테아닌 30정 30일분"
         },
         {
           "site": "daiso",
@@ -19,19 +23,15 @@
         },
         {
           "site": "daiso",
-          "name": "휴럼 하루한포 유기농 컬리케일 15포 15일분"
+          "name": "자연관 리프레쉬 마그네슘＆L-테아닌 4병 4일분"
+        },
+        {
+          "site": "daiso",
+          "name": "휴럼 하루한포 유기농 야채분말 15포 15일분"
         },
         {
           "site": "daiso",
           "name": "[의약외품][신혜선 PICK] 동국제약 멜라케어 더블 화이트 정 10정 10일분"
-        },
-        {
-          "site": "daiso",
-          "name": "휴럼 하루한포 유기농 양배추분말 15포 15일분"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "정관장 이너제틱 항산화 클렌즈 20포(10일분)"
         }
       ]
     },
@@ -180,19 +180,6 @@
       ]
     },
     {
-      "name": "면역",
-      "kakao": 0,
-      "daiso": 1,
-      "oliveyoung": 0,
-      "total": 1,
-      "examples": [
-        {
-          "site": "daiso",
-          "name": "[신혜선 PICK] 동국제약 프로폴리스＆아연 필름 12매 12일분"
-        }
-      ]
-    },
-    {
       "name": "비타민",
       "kakao": 1,
       "daiso": 0,
@@ -217,7 +204,7 @@
       ]
     },
     {
-      "keyword": "휴럼",
+      "keyword": "하루한포",
       "count": 3,
       "examples": [
         "휴럼 하루한포 유기농 야채분말 15포 15일분",
@@ -226,7 +213,7 @@
       ]
     },
     {
-      "keyword": "하루한포",
+      "keyword": "휴럼",
       "count": 3,
       "examples": [
         "휴럼 하루한포 유기농 야채분말 15포 15일분",
