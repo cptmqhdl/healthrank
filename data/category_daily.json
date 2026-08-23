@@ -1,46 +1,13 @@
 {
-  "date": "2026-08-22 12:23",
+  "date": "2026-08-23 12:36",
   "total_items": 30,
   "categories": [
-    {
-      "name": "기타",
-      "kakao": 0,
-      "daiso": 5,
-      "oliveyoung": 6,
-      "total": 11,
-      "examples": [
-        {
-          "site": "daiso",
-          "name": "닥터블릿 푸응 7 Days 슬립앤버닝 14정 7일분"
-        },
-        {
-          "site": "daiso",
-          "name": "[의약외품][신혜선 PICK] 동국제약 멜라케어 더블 화이트 정 10정 10일분"
-        },
-        {
-          "site": "daiso",
-          "name": "[보령약국 X Pantio] 혈압 건강 올인원 12포 12일분"
-        },
-        {
-          "site": "daiso",
-          "name": "닥터블릿 스트레스 케어 테아닌 30정 30일분"
-        },
-        {
-          "site": "daiso",
-          "name": "[신혜선 PICK] 동국제약 판비틴 맥주효모 비오틴 14포 14일분"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "[8월 올영픽] 판도라 브이트리티 7/14+1포 (7/15일분)"
-        }
-      ]
-    },
     {
       "name": "멀티비타민",
       "kakao": 7,
       "daiso": 0,
-      "oliveyoung": 0,
-      "total": 7,
+      "oliveyoung": 1,
+      "total": 8,
       "examples": [
         {
           "site": "kakao",
@@ -56,15 +23,48 @@
         },
         {
           "site": "kakao",
-          "name": "독일 명품 비타민 오쏘몰 이뮨 멀티비타민&미네랄 10입 - 슬리브 기프트 에디션 (공식수입)"
-        },
-        {
-          "site": "kakao",
           "name": "'3입 추가 증정' \"독일 명품 비타민\" 오쏘몰 이뮨 멀티비타민&미네랄 30+3입 - 시그니처 기프트 에디션"
         },
         {
           "site": "kakao",
-          "name": "[센트룸] 맛있는 멀티비타민 미네랄 멀티구미 (80구미)"
+          "name": "[사은품 증정/센트룸] 맛있는 멀티비타민 미네랄 멀티구미 (80구미)"
+        },
+        {
+          "site": "kakao",
+          "name": "독일 명품 비타민 오쏘몰 이뮨 멀티비타민&미네랄 10입 - 슬리브 기프트 에디션 (공식수입)"
+        }
+      ]
+    },
+    {
+      "name": "기타",
+      "kakao": 0,
+      "daiso": 4,
+      "oliveyoung": 4,
+      "total": 8,
+      "examples": [
+        {
+          "site": "daiso",
+          "name": "닥터블릿 푸응 7 Days 슬립앤버닝 14정 7일분"
+        },
+        {
+          "site": "daiso",
+          "name": "휴럼 하루한포 유기농 컬리케일 15포 15일분"
+        },
+        {
+          "site": "daiso",
+          "name": "[신혜선 PICK] 동국제약 판비틴 맥주효모 비오틴 14포 14일분"
+        },
+        {
+          "site": "daiso",
+          "name": "휴럼 하루한포 유기농 야채분말 15포 15일분"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[8월 올영픽/곽민경 PICK] 생활약속 기분전환 알파플러스 10포 (+1포 증정기획)"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[8월 올영픽] 판도라 브이트리티 7/14+1포 (7/15일분)"
         }
       ]
     },
@@ -72,8 +72,8 @@
       "name": "다이어트",
       "kakao": 0,
       "daiso": 1,
-      "oliveyoung": 3,
-      "total": 4,
+      "oliveyoung": 4,
+      "total": 5,
       "examples": [
         {
           "site": "daiso",
@@ -85,7 +85,11 @@
         },
         {
           "site": "oliveyoung",
-          "name": "[포켓몬 에디션] 덴프스 유산균이야기 다이어트 14캡슐 기획 (+피카츄 러기지택) (14일분) (OY단독)"
+          "name": "[8월 올영픽/1일 1정] 바이탈뷰티 메타그린 슬림업 30일 (+15일)"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[1등 유산균] 콜레올로지 컷 다이어트 유산균 20캡슐 (10일분)"
         },
         {
           "site": "oliveyoung",
@@ -95,18 +99,26 @@
     },
     {
       "name": "에너지",
-      "kakao": 1,
-      "daiso": 1,
+      "kakao": 2,
+      "daiso": 2,
       "oliveyoung": 0,
-      "total": 2,
+      "total": 4,
       "examples": [
         {
           "site": "kakao",
           "name": "에너지선물 [정관장] 활기력 에너지박스 (20ml x 20병)"
         },
         {
+          "site": "kakao",
+          "name": "[정관장] 아미노 활기력샷 (20ml x 30병)"
+        },
+        {
           "site": "daiso",
-          "name": "[보령약국 X Pantio] 2030 에너지 올인원 12포 12일분"
+          "name": "[보령약국 X Pantio] 60+ 에너지 올인원 12포 12일분"
+        },
+        {
+          "site": "daiso",
+          "name": "[보령약국 X Pantio] 4050 에너지 올인원 12포 12일분"
         }
       ]
     },
@@ -137,6 +149,19 @@
       ]
     },
     {
+      "name": "관절",
+      "kakao": 0,
+      "daiso": 1,
+      "oliveyoung": 0,
+      "total": 1,
+      "examples": [
+        {
+          "site": "daiso",
+          "name": "[보령약국 X Pantio] 관절 건강 올인원 15포 15일분"
+        }
+      ]
+    },
+    {
       "name": "피부미용",
       "kakao": 0,
       "daiso": 1,
@@ -161,32 +186,6 @@
           "name": "LG생활건강 이너뷰 혈당 감소 츄어블 28정 28일분"
         }
       ]
-    },
-    {
-      "name": "면역",
-      "kakao": 0,
-      "daiso": 1,
-      "oliveyoung": 0,
-      "total": 1,
-      "examples": [
-        {
-          "site": "daiso",
-          "name": "[신혜선 PICK] 동국제약 프로폴리스＆아연 필름 12매 12일분"
-        }
-      ]
-    },
-    {
-      "name": "비타민",
-      "kakao": 1,
-      "daiso": 0,
-      "oliveyoung": 0,
-      "total": 1,
-      "examples": [
-        {
-          "site": "kakao",
-          "name": "신상비타민선물 [정관장] 활기마이트(액상30ml+분말500mg) 7입 + [증정] 1입"
-        }
-      ]
     }
   ],
   "keyword_suggestions": [
@@ -200,7 +199,7 @@
       ]
     },
     {
-      "keyword": "하루한포",
+      "keyword": "유기농",
       "count": 3,
       "examples": [
         "휴럼 하루한포 유기농 야채분말 15포 15일분",
@@ -218,21 +217,12 @@
       ]
     },
     {
-      "keyword": "유기농",
+      "keyword": "하루한포",
       "count": 3,
       "examples": [
         "휴럼 하루한포 유기농 야채분말 15포 15일분",
         "휴럼 하루한포 유기농 컬리케일 15포 15일분",
         "휴럼 하루한포 유기농 양배추분말 15포 15일분"
-      ]
-    },
-    {
-      "keyword": "올인원",
-      "count": 3,
-      "examples": [
-        "[보령약국 X Pantio] 스트레스 케어 올인원 15포 15일분",
-        "[보령약국 X Pantio] 풍성한 판토텐산 비오틴 올인원 15포 15일분",
-        "[보령약국 X Pantio] 혈압 건강 올인원 12포 12일분"
       ]
     },
     {
@@ -245,7 +235,16 @@
       ]
     },
     {
-      "keyword": "콜레올로지",
+      "keyword": "올인원",
+      "count": 3,
+      "examples": [
+        "[보령약국 X Pantio] 스트레스 케어 올인원 15포 15일분",
+        "[보령약국 X Pantio] 풍성한 판토텐산 비오틴 올인원 15포 15일분",
+        "[보령약국 X Pantio] 혈압 건강 올인원 12포 12일분"
+      ]
+    },
+    {
+      "keyword": "서현",
       "count": 3,
       "examples": [
         "[서현PICK] 콜레올로지 티 PRO 하비탈출 8,000mg X 7포/15포 (7일분/15일분)",
@@ -254,7 +253,7 @@
       ]
     },
     {
-      "keyword": "서현",
+      "keyword": "콜레올로지",
       "count": 3,
       "examples": [
         "[서현PICK] 콜레올로지 티 PRO 하비탈출 8,000mg X 7포/15포 (7일분/15일분)",
