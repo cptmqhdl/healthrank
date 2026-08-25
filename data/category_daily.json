@@ -1,13 +1,13 @@
 {
-  "date": "2026-08-24 12:40",
+  "date": "2026-08-25 12:30",
   "total_items": 30,
   "categories": [
     {
       "name": "기타",
       "kakao": 0,
       "daiso": 5,
-      "oliveyoung": 4,
-      "total": 9,
+      "oliveyoung": 6,
+      "total": 11,
       "examples": [
         {
           "site": "daiso",
@@ -23,11 +23,11 @@
         },
         {
           "site": "daiso",
-          "name": "휴럼 하루한포 유기농 양배추분말 15포 15일분"
+          "name": "휴럼 하루한포 유기농 컬리케일 15포 15일분"
         },
         {
           "site": "daiso",
-          "name": "[보령약국 X Pantio] 기억력 건강 올인원 15포 15일분"
+          "name": "[보령약국 X Pantio] 스트레스 케어 올인원 15포 15일분"
         },
         {
           "site": "oliveyoung",
@@ -39,8 +39,8 @@
       "name": "멀티비타민",
       "kakao": 7,
       "daiso": 0,
-      "oliveyoung": 1,
-      "total": 8,
+      "oliveyoung": 0,
+      "total": 7,
       "examples": [
         {
           "site": "kakao",
@@ -56,11 +56,11 @@
         },
         {
           "site": "kakao",
-          "name": "독일 명품 비타민 오쏘몰 이뮨 멀티비타민&미네랄 10입 - 슬리브 기프트 에디션 (공식수입)"
+          "name": "[사은품 증정/센트룸] 맛있는 멀티비타민 미네랄 멀티구미 (80구미)"
         },
         {
           "site": "kakao",
-          "name": "[사은품 증정/센트룸] 맛있는 멀티비타민 미네랄 멀티구미 (80구미)"
+          "name": "독일 명품 비타민 오쏘몰 이뮨 멀티비타민&미네랄 10입 - 슬리브 기프트 에디션 (공식수입)"
         },
         {
           "site": "kakao",
@@ -69,16 +69,33 @@
       ]
     },
     {
-      "name": "여성건강",
+      "name": "다이어트",
       "kakao": 0,
-      "daiso": 0,
-      "oliveyoung": 3,
+      "daiso": 1,
+      "oliveyoung": 2,
       "total": 3,
       "examples": [
         {
-          "site": "oliveyoung",
-          "name": "[8월 올영픽/덴프스] 덴마크 유산균이야기 우먼 60캡슐 (+철분헤모케어 3포) (2개월분)"
+          "site": "daiso",
+          "name": "[보령약국 X Pantio] 다이어트 컷 올인원 15포 15일분"
         },
+        {
+          "site": "oliveyoung",
+          "name": "[8월 올영픽/한선화 PICK] 프로뉴트리션 듀얼플랜 다이어트 유산균 14포"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[1등 유산균] 콜레올로지 컷 다이어트 유산균 20캡슐 (10일분)"
+        }
+      ]
+    },
+    {
+      "name": "여성건강",
+      "kakao": 0,
+      "daiso": 0,
+      "oliveyoung": 2,
+      "total": 2,
+      "examples": [
         {
           "site": "oliveyoung",
           "name": "[8월 올영픽/덴프스] 덴마크 유산균이야기 우먼 2개월분(질유산균) + 철분 헤모케어 3포 증정"
@@ -90,19 +107,36 @@
       ]
     },
     {
-      "name": "다이어트",
+      "name": "피부미용",
       "kakao": 0,
-      "daiso": 1,
-      "oliveyoung": 1,
+      "daiso": 2,
+      "oliveyoung": 0,
       "total": 2,
       "examples": [
         {
           "site": "daiso",
-          "name": "[보령약국 X Pantio] 다이어트 컷 올인원 15포 15일분"
+          "name": "[신혜선 PICK] 동국제약 마데카 글루타치온 필름 12매 12일분"
         },
         {
-          "site": "oliveyoung",
-          "name": "[8월 올영픽/한선화 PICK] 프로뉴트리션 듀얼플랜 다이어트 유산균 14포"
+          "site": "daiso",
+          "name": "[신혜선 PICK] 동국제약 마데카 PDRN 필름 10매 10일분"
+        }
+      ]
+    },
+    {
+      "name": "에너지",
+      "kakao": 2,
+      "daiso": 0,
+      "oliveyoung": 0,
+      "total": 2,
+      "examples": [
+        {
+          "site": "kakao",
+          "name": "에너지선물 [정관장] 활기력 에너지박스 (20ml x 20병)"
+        },
+        {
+          "site": "kakao",
+          "name": "[정관장] 활기력부스터 박스 (400mg x 20정 + 20ml x 20병,이중복합제형)"
         }
       ]
     },
@@ -116,58 +150,6 @@
         {
           "site": "kakao",
           "name": "면역력 선물 [정관장] 에브리타임 레귤러 (10ml x 30포) _ 대한민국 명품 홍삼정농축액 함유"
-        }
-      ]
-    },
-    {
-      "name": "유산균",
-      "kakao": 0,
-      "daiso": 0,
-      "oliveyoung": 1,
-      "total": 1,
-      "examples": [
-        {
-          "site": "oliveyoung",
-          "name": "CJ 바이오코어 피부면역유산균 100억 30+10포 / 30캡슐"
-        }
-      ]
-    },
-    {
-      "name": "관절",
-      "kakao": 0,
-      "daiso": 1,
-      "oliveyoung": 0,
-      "total": 1,
-      "examples": [
-        {
-          "site": "daiso",
-          "name": "[보령약국 X Pantio] 관절 건강 올인원 15포 15일분"
-        }
-      ]
-    },
-    {
-      "name": "피부미용",
-      "kakao": 0,
-      "daiso": 1,
-      "oliveyoung": 0,
-      "total": 1,
-      "examples": [
-        {
-          "site": "daiso",
-          "name": "[신혜선 PICK] 동국제약 마데카 글루타치온 필름 12매 12일분"
-        }
-      ]
-    },
-    {
-      "name": "에너지",
-      "kakao": 1,
-      "daiso": 0,
-      "oliveyoung": 0,
-      "total": 1,
-      "examples": [
-        {
-          "site": "kakao",
-          "name": "에너지선물 [정관장] 활기력 에너지박스 (20ml x 20병)"
         }
       ]
     },
@@ -194,19 +176,6 @@
         {
           "site": "daiso",
           "name": "[신혜선 PICK] 동국 마이팝 푸룬＆식이섬유"
-        }
-      ]
-    },
-    {
-      "name": "비타민",
-      "kakao": 1,
-      "daiso": 0,
-      "oliveyoung": 0,
-      "total": 1,
-      "examples": [
-        {
-          "site": "kakao",
-          "name": "신상비타민선물 [정관장] 활기마이트(액상30ml+분말500mg) 7입 + [증정] 1입"
         }
       ]
     }
@@ -249,15 +218,6 @@
       ]
     },
     {
-      "keyword": "휴럼",
-      "count": 3,
-      "examples": [
-        "휴럼 하루한포 유기농 야채분말 15포 15일분",
-        "휴럼 하루한포 유기농 컬리케일 15포 15일분",
-        "휴럼 하루한포 유기농 양배추분말 15포 15일분"
-      ]
-    },
-    {
       "keyword": "유기농",
       "count": 3,
       "examples": [
@@ -267,16 +227,25 @@
       ]
     },
     {
-      "keyword": "콜레올로지",
+      "keyword": "휴럼",
       "count": 3,
       "examples": [
-        "[서현PICK] 콜레올로지 티 PRO 하비탈출 8,000mg X 7포/15포 (7일분/15일분)",
-        "[서현PICK] 콜레올로지 버닝올로지 디데이 3.8g*5포 (5일분)",
-        "[8월 올영픽/서현PICK] 콜레올로지 PRO 600mg*30(+10)/60정 단품"
+        "휴럼 하루한포 유기농 야채분말 15포 15일분",
+        "휴럼 하루한포 유기농 컬리케일 15포 15일분",
+        "휴럼 하루한포 유기농 양배추분말 15포 15일분"
       ]
     },
     {
-      "keyword": "서현",
+      "keyword": "멜라메이트",
+      "count": 3,
+      "examples": [
+        "[8월 올영픽/감자숭이 기획] 멜라메이트 구미/로우슈가/버라이어티팩 구미 20/40/50구미",
+        "멜라메이트 식물성 멜라토닌 함유 구미 20/50구미",
+        "[골라담기/신제품] 멜라메이트 구미 타트체리맛/리치백도맛/애플민트맛/2mg 구미"
+      ]
+    },
+    {
+      "keyword": "콜레올로지",
       "count": 3,
       "examples": [
         "[서현PICK] 콜레올로지 티 PRO 하비탈출 8,000mg X 7포/15포 (7일분/15일분)",
