@@ -343,10 +343,10 @@
       "label": "카카오톡 선물하기"
     },
     "daiso": {
-      "days_collected": 5,
+      "days_collected": 6,
       "date_range": [
         "2026-09-01",
-        "2026-09-05"
+        "2026-09-06"
       ],
       "items": [
         {
@@ -355,12 +355,12 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=033991021&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/xVYROwLnuZYLoqWwcjU6033991021_00_00xVYROwLnuZYLoqWwcjU6.png",
-          "avg_rank": 1.6,
+          "avg_rank": 1.5,
           "best_rank": 1,
-          "top1_days": 3,
-          "appearances": 5,
+          "top1_days": 4,
+          "appearances": 6,
           "delta": {
-            "type": "down",
+            "type": "up",
             "value": 1
           }
         },
@@ -370,13 +370,28 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=919157056&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260706/thumb/300/z42ScLP7B6TWURzgDPY0919157056_00_01z42ScLP7B6TWURzgDPY0.jpg",
-          "avg_rank": 4.0,
+          "avg_rank": 3.6,
           "best_rank": 2,
           "top1_days": 0,
-          "appearances": 4,
+          "appearances": 5,
           "delta": {
             "type": "up",
             "value": 4
+          }
+        },
+        {
+          "name": "닥터블릿 푸응 7 Days 슬립앤버닝 14정 7일분",
+          "brand": "",
+          "price": 5000,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=032306284&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/e483TrUWUwCko9CBv1Da032306284_00_00e483TrUWUwCko9CBv1Da.png",
+          "avg_rank": 4.6,
+          "best_rank": 3,
+          "top1_days": 0,
+          "appearances": 5,
+          "delta": {
+            "type": "flat",
+            "value": 0
           }
         },
         {
@@ -385,12 +400,12 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911092&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260814/thumb/300/qU3FUPerTqzVYxrqf7Lx610911092_00_01qU3FUPerTqzVYxrqf7Lx.jpg",
-          "avg_rank": 4.8,
+          "avg_rank": 4.7,
           "best_rank": 2,
           "top1_days": 0,
-          "appearances": 5,
+          "appearances": 6,
           "delta": {
-            "type": "down",
+            "type": "up",
             "value": 1
           }
         },
@@ -407,21 +422,6 @@
           "delta": {
             "type": "up",
             "value": 3
-          }
-        },
-        {
-          "name": "닥터블릿 푸응 7 Days 슬립앤버닝 14정 7일분",
-          "brand": "",
-          "price": 5000,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=032306284&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/e483TrUWUwCko9CBv1Da032306284_00_00e483TrUWUwCko9CBv1Da.png",
-          "avg_rank": 5.0,
-          "best_rank": 3,
-          "top1_days": 0,
-          "appearances": 4,
-          "delta": {
-            "type": "down",
-            "value": 6
           }
         },
         {
@@ -445,13 +445,13 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911093&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260814/thumb/300/Q823T3m7aYDYd4gzOILy610911093_00_01Q823T3m7aYDYd4gzOILy.jpg",
-          "avg_rank": 5.7,
+          "avg_rank": 6.0,
           "best_rank": 3,
           "top1_days": 0,
-          "appearances": 3,
+          "appearances": 4,
           "delta": {
             "type": "up",
-            "value": 6
+            "value": 3
           }
         },
         {
@@ -460,28 +460,13 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=286314466&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/2bO6NPfrJW4dB8O5FDEz286314466_00_002bO6NPfrJW4dB8O5FDEz.png",
-          "avg_rank": 6.5,
+          "avg_rank": 6.3,
           "best_rank": 5,
           "top1_days": 0,
-          "appearances": 2,
+          "appearances": 3,
           "delta": {
             "type": "up",
-            "value": 3
-          }
-        },
-        {
-          "name": "[신혜선 PICK] 동국제약  프라임도스 비타민D3 4000IU 60정 60일분",
-          "brand": "",
-          "price": 5000,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911095&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260814/thumb/300/OCdRZHWMgR1UGDUjFQp4610911095_00_01OCdRZHWMgR1UGDUjFQp4.jpg",
-          "avg_rank": 6.8,
-          "best_rank": 5,
-          "top1_days": 0,
-          "appearances": 4,
-          "delta": {
-            "type": "up",
-            "value": 4
+            "value": 2
           }
         },
         {
@@ -490,12 +475,27 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911094&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260814/thumb/300/pgiWPPVQ81EjmmAhiAIj610911094_00_01pgiWPPVQ81EjmmAhiAIj.jpg",
-          "avg_rank": 7.5,
-          "best_rank": 7,
+          "avg_rank": 6.7,
+          "best_rank": 5,
           "top1_days": 0,
-          "appearances": 2,
+          "appearances": 3,
           "delta": {
-            "type": "down",
+            "type": "up",
+            "value": 2
+          }
+        },
+        {
+          "name": "[신혜선 PICK] 동국제약  프라임도스 비타민D3 4000IU 60정 60일분",
+          "brand": "",
+          "price": 5000,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911095&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260814/thumb/300/OCdRZHWMgR1UGDUjFQp4610911095_00_01OCdRZHWMgR1UGDUjFQp4.jpg",
+          "avg_rank": 7.0,
+          "best_rank": 5,
+          "top1_days": 0,
+          "appearances": 5,
+          "delta": {
+            "type": "up",
             "value": 1
           }
         },
@@ -519,10 +519,10 @@
       "label": "다이소몰"
     },
     "oliveyoung": {
-      "days_collected": 5,
+      "days_collected": 6,
       "date_range": [
         "2026-09-01",
-        "2026-09-05"
+        "2026-09-06"
       ],
       "items": [
         {
@@ -571,21 +571,6 @@
           }
         },
         {
-          "name": "[9/5 하루특가] 지노마스터 질유산균 30캡슐 기획 (+보라지유 5일분) (1개월분)",
-          "brand": "지노마스터",
-          "price": 26000,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000244929&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=1",
-          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0024/A00000024492945ko.jpg?l=ko",
-          "avg_rank": 3.7,
-          "best_rank": 1,
-          "top1_days": 1,
-          "appearances": 3,
-          "delta": {
-            "type": "up",
-            "value": 3
-          }
-        },
-        {
           "name": "[1일 1정] 바이탈뷰티 메타그린 슬림업 30일 (+15일)",
           "brand": "바이탈뷰티",
           "price": 26320,
@@ -616,6 +601,21 @@
           }
         },
         {
+          "name": "지노마스터 질유산균 30캡슐 기획 (+보라지유 5일분) (1개월분)",
+          "brand": "지노마스터",
+          "price": 27400,
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000244929&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=8",
+          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0024/A00000024492930ko.jpg?l=ko",
+          "avg_rank": 4.8,
+          "best_rank": 1,
+          "top1_days": 1,
+          "appearances": 4,
+          "delta": {
+            "type": "down",
+            "value": 4
+          }
+        },
+        {
           "name": "빌드 프리미엄 테프 효소 유산균 30포 (1개월분)",
           "brand": "빌드",
           "price": 19950,
@@ -633,16 +633,16 @@
         {
           "name": "[파격특가] 콜레올로지 컷팅 젤리 레몬/키위/석류 10+2+2포 기획 외",
           "brand": "푸드올로지",
-          "price": 11900,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000183645&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=10",
+          "price": 18400,
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000183645&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=6",
           "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0018/A00000018364587ko.jpg?l=ko",
-          "avg_rank": 5.7,
+          "avg_rank": 5.8,
           "best_rank": 2,
           "top1_days": 0,
-          "appearances": 3,
+          "appearances": 4,
           "delta": {
             "type": "down",
-            "value": 5
+            "value": 1
           }
         },
         {
@@ -691,6 +691,21 @@
           }
         },
         {
+          "name": "[9월 올영픽/품절대란] 닥터아돌 카테킨 아세로라 칼시페롤 C D 60정 (+시나모롤 틴케이스 키링)",
+          "brand": "닥터아돌",
+          "price": 26900,
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000218073&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=5",
+          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0021/A00000021807373ko.png?l=ko",
+          "avg_rank": 7.3,
+          "best_rank": 5,
+          "top1_days": 0,
+          "appearances": 3,
+          "delta": {
+            "type": "up",
+            "value": 4
+          }
+        },
+        {
           "name": "[스테디셀러 특가][감자숭이 기획] 멜라메이트 구미/로우슈가/버라이어티팩 구미 20/40/50구미",
           "brand": "멜라메이트",
           "price": 14900,
@@ -717,21 +732,6 @@
           "appearances": 2,
           "delta": {
             "type": "down",
-            "value": 1
-          }
-        },
-        {
-          "name": "[9월 올영픽/품절대란] 닥터아돌 카테킨 아세로라 칼시페롤 C D 60정 (+시나모롤 틴케이스 키링)",
-          "brand": "닥터아돌",
-          "price": 24900,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000218073&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=8",
-          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0021/A00000021807373ko.png?l=ko",
-          "avg_rank": 8.5,
-          "best_rank": 8,
-          "top1_days": 0,
-          "appearances": 2,
-          "delta": {
-            "type": "up",
             "value": 1
           }
         },
