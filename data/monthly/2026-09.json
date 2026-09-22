@@ -328,10 +328,10 @@
       "label": "카카오톡 선물하기"
     },
     "daiso": {
-      "days_collected": 21,
+      "days_collected": 22,
       "date_range": [
         "2026-09-01",
-        "2026-09-21"
+        "2026-09-22"
       ],
       "items": [
         {
@@ -343,10 +343,10 @@
           "avg_rank": 2.0,
           "best_rank": 1,
           "top1_days": 3,
-          "appearances": 8,
+          "appearances": 9,
           "delta": {
-            "type": "flat",
-            "value": 0
+            "type": "down",
+            "value": 1
           }
         },
         {
@@ -355,13 +355,13 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=919157094&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260826/thumb/300/o7EiJdX7BYMCuTvEmVmE919157094_00_01o7EiJdX7BYMCuTvEmVmE.jpg",
-          "avg_rank": 2.1,
+          "avg_rank": 2.2,
           "best_rank": 1,
           "top1_days": 7,
-          "appearances": 14,
+          "appearances": 15,
           "delta": {
             "type": "down",
-            "value": 1
+            "value": 3
           }
         },
         {
@@ -385,28 +385,13 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=919157095&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260826/thumb/300/gxSEg0bfLulOAScPenvi919157095_00_01gxSEg0bfLulOAScPenvi.jpg",
-          "avg_rank": 4.1,
+          "avg_rank": 4.4,
           "best_rank": 2,
           "top1_days": 0,
-          "appearances": 13,
+          "appearances": 14,
           "delta": {
             "type": "down",
-            "value": 1
-          }
-        },
-        {
-          "name": "[신혜선 PICK] 동국제약 마데카 글루타치온 필름 12매 12일분",
-          "brand": "",
-          "price": 5000,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911099&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260728/thumb/300/NbSqiy25P90IFlYxB3ux610911099_00_01NbSqiy25P90IFlYxB3ux.jpg",
-          "avg_rank": 5.2,
-          "best_rank": 2,
-          "top1_days": 0,
-          "appearances": 16,
-          "delta": {
-            "type": "up",
-            "value": 3
+            "value": 6
           }
         },
         {
@@ -425,18 +410,33 @@
           }
         },
         {
+          "name": "[신혜선 PICK] 동국제약 마데카 글루타치온 필름 12매 12일분",
+          "brand": "",
+          "price": 5000,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911099&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260728/thumb/300/NbSqiy25P90IFlYxB3ux610911099_00_01NbSqiy25P90IFlYxB3ux.jpg",
+          "avg_rank": 5.4,
+          "best_rank": 2,
+          "top1_days": 0,
+          "appearances": 17,
+          "delta": {
+            "type": "flat",
+            "value": 0
+          }
+        },
+        {
           "name": "[신혜선 PICK] 동국제약 프라임도스 비타민C 2000 30포 30일분",
           "brand": "",
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911092&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260814/thumb/300/qU3FUPerTqzVYxrqf7Lx610911092_00_01qU3FUPerTqzVYxrqf7Lx.jpg",
-          "avg_rank": 5.4,
+          "avg_rank": 5.6,
           "best_rank": 1,
           "top1_days": 1,
-          "appearances": 17,
+          "appearances": 18,
           "delta": {
-            "type": "flat",
-            "value": 0
+            "type": "down",
+            "value": 5
           }
         },
         {
@@ -448,9 +448,9 @@
           "avg_rank": 6.5,
           "best_rank": 2,
           "top1_days": 0,
-          "appearances": 20,
+          "appearances": 21,
           "delta": {
-            "type": "down",
+            "type": "up",
             "value": 1
           }
         },
@@ -505,13 +505,13 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=919157057&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260706/thumb/300/4dOlrrhIAJM53YybYlxV919157057_00_014dOlrrhIAJM53YybYlxV.jpg",
-          "avg_rank": 8.1,
+          "avg_rank": 8.2,
           "best_rank": 7,
           "top1_days": 0,
-          "appearances": 7,
+          "appearances": 8,
           "delta": {
             "type": "down",
-            "value": 3
+            "value": 2
           }
         }
       ],
@@ -519,10 +519,10 @@
       "label": "다이소몰"
     },
     "oliveyoung": {
-      "days_collected": 21,
+      "days_collected": 22,
       "date_range": [
         "2026-09-01",
-        "2026-09-21"
+        "2026-09-22"
       ],
       "items": [
         {
@@ -533,26 +533,26 @@
           "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0022/A00000022593803ko.jpg?l=ko",
           "avg_rank": 1.3,
           "best_rank": 1,
-          "top1_days": 7,
-          "appearances": 9,
+          "top1_days": 8,
+          "appearances": 10,
           "delta": {
             "type": "flat",
             "value": 0
           }
         },
         {
-          "name": "[덴프스] 덴마크 유산균이야기 30캡슐 1+1 기획 (+트루바이타민 3포 증정)",
-          "brand": "덴프스",
-          "price": 30400,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000206861&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=1",
-          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0020/A00000020686148ko.jpg?l=ko",
-          "avg_rank": 4.5,
-          "best_rank": 1,
-          "top1_days": 3,
-          "appearances": 11,
+          "name": "판도라 브이트리티 7/14+1포 (7/15일분)",
+          "brand": "판도라",
+          "price": 24700,
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000227334&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=6",
+          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0022/A00000022733451ko.png?l=ko",
+          "avg_rank": 4.4,
+          "best_rank": 2,
+          "top1_days": 0,
+          "appearances": 7,
           "delta": {
-            "type": "flat",
-            "value": 0
+            "type": "down",
+            "value": 3
           }
         },
         {
@@ -588,16 +588,31 @@
         {
           "name": "덴프스 덴마크 유산균이야기 우먼 2개월분(질유산균) + 철분 헤모케어 3포 증정",
           "brand": "덴프스",
-          "price": 31400,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000202658&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=5",
+          "price": 31900,
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000202658&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=3",
           "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0020/A00000020265829ko.jpg?l=ko",
-          "avg_rank": 4.7,
+          "avg_rank": 4.6,
           "best_rank": 2,
           "top1_days": 0,
-          "appearances": 18,
+          "appearances": 19,
           "delta": {
             "type": "up",
-            "value": 1
+            "value": 3
+          }
+        },
+        {
+          "name": "[덴프스] 덴마크 유산균이야기 30캡슐 1+1 기획 (+트루바이타민 3포 증정)",
+          "brand": "덴프스",
+          "price": 30400,
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000206861&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=5",
+          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0020/A00000020686148ko.jpg?l=ko",
+          "avg_rank": 4.6,
+          "best_rank": 1,
+          "top1_days": 3,
+          "appearances": 12,
+          "delta": {
+            "type": "down",
+            "value": 4
           }
         },
         {
