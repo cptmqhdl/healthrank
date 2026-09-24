@@ -2,10 +2,10 @@
   "month": "2026-09",
   "sites": {
     "kakao": {
-      "days_collected": 20,
+      "days_collected": 21,
       "date_range": [
         "2026-09-01",
-        "2026-09-23"
+        "2026-09-24"
       ],
       "items": [
         {
@@ -16,8 +16,8 @@
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20260831092457_c9ec264b75c847a2a3e6db3fc0b1959c.jpg",
           "avg_rank": 1.0,
           "best_rank": 1,
-          "top1_days": 20,
-          "appearances": 20,
+          "top1_days": 21,
+          "appearances": 21,
           "delta": {
             "type": "flat",
             "value": 0
@@ -29,13 +29,13 @@
           "price": 26900,
           "link": "https://gift.kakao.com/product/7608679",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20260907094243_6872802604f04e1aad5886d9e457af18.jpg",
-          "avg_rank": 2.5,
+          "avg_rank": 2.6,
           "best_rank": 2,
           "top1_days": 0,
-          "appearances": 20,
+          "appearances": 21,
           "delta": {
             "type": "down",
-            "value": 2
+            "value": 1
           }
         },
         {
@@ -47,7 +47,7 @@
           "avg_rank": 2.6,
           "best_rank": 2,
           "top1_days": 0,
-          "appearances": 20,
+          "appearances": 21,
           "delta": {
             "type": "up",
             "value": 1
@@ -59,10 +59,10 @@
           "price": 99000,
           "link": "https://gift.kakao.com/product/2484405",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20260907082858_3910675c66b1495890273ec4879739ea.jpg",
-          "avg_rank": 4.7,
+          "avg_rank": 4.8,
           "best_rank": 4,
           "top1_days": 0,
-          "appearances": 20,
+          "appearances": 21,
           "delta": {
             "type": "down",
             "value": 1
@@ -74,13 +74,13 @@
           "price": 52500,
           "link": "https://gift.kakao.com/product/6371333",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20260908081851_4d0550ed1a954951bdb93e57359b3454.jpg",
-          "avg_rank": 6.2,
+          "avg_rank": 6.0,
           "best_rank": 3,
           "top1_days": 0,
-          "appearances": 20,
+          "appearances": 21,
           "delta": {
             "type": "up",
-            "value": 15
+            "value": 14
           }
         },
         {
@@ -89,13 +89,13 @@
           "price": 39900,
           "link": "https://gift.kakao.com/product/7066484",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20260921172107_1491532147b046618215badf0cacb744.jpg",
-          "avg_rank": 7.8,
+          "avg_rank": 7.7,
           "best_rank": 5,
           "top1_days": 0,
-          "appearances": 20,
+          "appearances": 21,
           "delta": {
             "type": "up",
-            "value": 4
+            "value": 2
           }
         },
         {
@@ -134,13 +134,13 @@
           "price": 64900,
           "link": "https://gift.kakao.com/product/8254873",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20260921172946_0d163b337f6d4304a748c1d15c8d5947.jpg",
-          "avg_rank": 10.8,
+          "avg_rank": 10.6,
           "best_rank": 6,
           "top1_days": 0,
-          "appearances": 16,
+          "appearances": 17,
           "delta": {
             "type": "up",
-            "value": 4
+            "value": 3
           }
         },
         {
@@ -152,10 +152,10 @@
           "avg_rank": 11.0,
           "best_rank": 5,
           "top1_days": 0,
-          "appearances": 13,
+          "appearances": 14,
           "delta": {
             "type": "up",
-            "value": 4
+            "value": 3
           }
         },
         {
@@ -164,10 +164,10 @@
           "price": 24650,
           "link": "https://gift.kakao.com/product/999713",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20250707082607_8bbbfe2e4a3641e3996324de4c0e3909.jpeg",
-          "avg_rank": 11.8,
+          "avg_rank": 11.7,
           "best_rank": 6,
           "top1_days": 0,
-          "appearances": 20,
+          "appearances": 21,
           "delta": {
             "type": "up",
             "value": 4
@@ -179,13 +179,13 @@
           "price": 96300,
           "link": "https://gift.kakao.com/product/1299642",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20250911102608_c973ad48b2bb4d54a3a6e46a60a34a13.jpg",
-          "avg_rank": 12.1,
+          "avg_rank": 12.2,
           "best_rank": 9,
           "top1_days": 0,
-          "appearances": 9,
+          "appearances": 10,
           "delta": {
-            "type": "up",
-            "value": 2
+            "type": "flat",
+            "value": 0
           }
         },
         {
@@ -209,13 +209,13 @@
           "price": 43000,
           "link": "https://gift.kakao.com/product/11866425",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20260831093017_c95c591e7b5b4e3d9e549888b299930a.jpg",
-          "avg_rank": 12.5,
+          "avg_rank": 12.7,
           "best_rank": 7,
           "top1_days": 0,
-          "appearances": 20,
+          "appearances": 21,
           "delta": {
             "type": "down",
-            "value": 4
+            "value": 5
           }
         },
         {
@@ -224,13 +224,13 @@
           "price": 33000,
           "link": "https://gift.kakao.com/product/12159594",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20260812135521_25667cc1efc34a698d1813fe75189344.jpg",
-          "avg_rank": 13.2,
+          "avg_rank": 13.3,
           "best_rank": 4,
           "top1_days": 0,
-          "appearances": 20,
+          "appearances": 21,
           "delta": {
             "type": "down",
-            "value": 10
+            "value": 7
           }
         },
         {
@@ -287,10 +287,10 @@
           "avg_rank": 16.7,
           "best_rank": 13,
           "top1_days": 0,
-          "appearances": 17,
+          "appearances": 18,
           "delta": {
-            "type": "down",
-            "value": 2
+            "type": "flat",
+            "value": 0
           }
         },
         {
@@ -299,13 +299,13 @@
           "price": 59900,
           "link": "https://gift.kakao.com/product/11090567",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20260904193818_f59d395f51c84f2da56ebd3fc14b52f2.jpg",
-          "avg_rank": 16.7,
+          "avg_rank": 17.0,
           "best_rank": 7,
           "top1_days": 0,
-          "appearances": 6,
+          "appearances": 7,
           "delta": {
             "type": "down",
-            "value": 13
+            "value": 12
           }
         },
         {
@@ -314,13 +314,13 @@
           "price": 45000,
           "link": "https://gift.kakao.com/product/7621131",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20250911102423_76562725fddb4dd3b783f7571bf3181e.jpg",
-          "avg_rank": 17.9,
+          "avg_rank": 17.2,
           "best_rank": 8,
           "top1_days": 0,
-          "appearances": 10,
+          "appearances": 11,
           "delta": {
             "type": "up",
-            "value": 12
+            "value": 10
           }
         },
         {
@@ -329,10 +329,10 @@
           "price": 30000,
           "link": "https://gift.kakao.com/product/14022928",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20260918092807_47b80239e4a4434c8c2e7e35b84c1d5c.jpg",
-          "avg_rank": 18.0,
+          "avg_rank": 17.5,
           "best_rank": 14,
           "top1_days": 0,
-          "appearances": 7,
+          "appearances": 8,
           "delta": {
             "type": "up",
             "value": 6
@@ -343,40 +343,40 @@
       "label": "카카오톡 선물하기"
     },
     "daiso": {
-      "days_collected": 23,
+      "days_collected": 24,
       "date_range": [
         "2026-09-01",
-        "2026-09-23"
+        "2026-09-24"
       ],
       "items": [
-        {
-          "name": "[옥수수수염＆호박] 동국제약 맛있는 센텔라 공주캔디 20정 20일분",
-          "brand": "",
-          "price": 3000,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911213&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260907/thumb/300/E3CpURjLLswf9MgzRChF610911213_00_01E3CpURjLLswf9MgzRChF.jpg",
-          "avg_rank": 2.0,
-          "best_rank": 1,
-          "top1_days": 3,
-          "appearances": 10,
-          "delta": {
-            "type": "down",
-            "value": 1
-          }
-        },
         {
           "name": "휴럼 하루한알 침향환 9환 9일분",
           "brand": "",
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=919157094&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260826/thumb/300/o7EiJdX7BYMCuTvEmVmE919157094_00_01o7EiJdX7BYMCuTvEmVmE.jpg",
-          "avg_rank": 2.2,
+          "avg_rank": 2.5,
           "best_rank": 1,
           "top1_days": 7,
-          "appearances": 15,
+          "appearances": 16,
           "delta": {
             "type": "down",
-            "value": 3
+            "value": 6
+          }
+        },
+        {
+          "name": "[옥수수수염＆호박] 동국제약 맛있는 센텔라 공주캔디 20정 20일분",
+          "brand": "",
+          "price": 3000,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911213&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260907/thumb/300/E3CpURjLLswf9MgzRChF610911213_00_01E3CpURjLLswf9MgzRChF.jpg",
+          "avg_rank": 2.5,
+          "best_rank": 1,
+          "top1_days": 3,
+          "appearances": 11,
+          "delta": {
+            "type": "down",
+            "value": 7
           }
         },
         {
@@ -400,13 +400,13 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=919157095&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260826/thumb/300/gxSEg0bfLulOAScPenvi919157095_00_01gxSEg0bfLulOAScPenvi.jpg",
-          "avg_rank": 4.3,
+          "avg_rank": 4.4,
           "best_rank": 2,
           "top1_days": 0,
-          "appearances": 15,
+          "appearances": 16,
           "delta": {
             "type": "down",
-            "value": 2
+            "value": 4
           }
         },
         {
@@ -415,13 +415,13 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=032306284&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260805/thumb/300/e483TrUWUwCko9CBv1Da032306284_00_00e483TrUWUwCko9CBv1Da.png",
-          "avg_rank": 5.3,
+          "avg_rank": 5.1,
           "best_rank": 2,
           "top1_days": 0,
-          "appearances": 19,
+          "appearances": 20,
           "delta": {
-            "type": "down",
-            "value": 3
+            "type": "up",
+            "value": 1
           }
         },
         {
@@ -430,12 +430,12 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911092&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260814/thumb/300/qU3FUPerTqzVYxrqf7Lx610911092_00_01qU3FUPerTqzVYxrqf7Lx.jpg",
-          "avg_rank": 5.6,
+          "avg_rank": 5.5,
           "best_rank": 1,
           "top1_days": 1,
-          "appearances": 19,
+          "appearances": 20,
           "delta": {
-            "type": "down",
+            "type": "up",
             "value": 1
           }
         },
@@ -460,13 +460,13 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=919157056&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260706/thumb/300/z42ScLP7B6TWURzgDPY0919157056_00_01z42ScLP7B6TWURzgDPY0.jpg",
-          "avg_rank": 6.5,
+          "avg_rank": 6.3,
           "best_rank": 2,
           "top1_days": 0,
-          "appearances": 22,
+          "appearances": 23,
           "delta": {
-            "type": "down",
-            "value": 1
+            "type": "up",
+            "value": 3
           }
         },
         {
@@ -475,13 +475,13 @@
           "price": 5000,
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911093&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260814/thumb/300/Q823T3m7aYDYd4gzOILy610911093_00_01Q823T3m7aYDYd4gzOILy.jpg",
-          "avg_rank": 6.6,
+          "avg_rank": 6.5,
           "best_rank": 3,
           "top1_days": 0,
-          "appearances": 10,
+          "appearances": 11,
           "delta": {
-            "type": "flat",
-            "value": 0
+            "type": "up",
+            "value": 5
           }
         },
         {
@@ -534,10 +534,10 @@
       "label": "다이소몰"
     },
     "oliveyoung": {
-      "days_collected": 23,
+      "days_collected": 24,
       "date_range": [
         "2026-09-01",
-        "2026-09-23"
+        "2026-09-24"
       ],
       "items": [
         {
@@ -556,33 +556,18 @@
           }
         },
         {
-          "name": "판도라 브이트리티 7/14+1포 (7/15일분)",
-          "brand": "판도라",
-          "price": 24700,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000227334&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=6",
-          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0022/A00000022733451ko.png?l=ko",
-          "avg_rank": 4.4,
-          "best_rank": 2,
-          "top1_days": 0,
-          "appearances": 7,
-          "delta": {
-            "type": "down",
-            "value": 3
-          }
-        },
-        {
           "name": "덴프스 덴마크 유산균이야기 우먼 2개월분(질유산균) + 철분 헤모케어 3포 증정",
           "brand": "덴프스",
           "price": 31900,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000202658&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=1",
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000202658&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=6",
           "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0020/A00000020265829ko.jpg?l=ko",
           "avg_rank": 4.5,
           "best_rank": 1,
           "top1_days": 1,
-          "appearances": 20,
+          "appearances": 21,
           "delta": {
-            "type": "up",
-            "value": 5
+            "type": "flat",
+            "value": 0
           }
         },
         {
@@ -619,15 +604,15 @@
           "name": "[덴프스] 덴마크 유산균이야기 30캡슐 1+1 기획 (+트루바이타민 3포 증정)",
           "brand": "덴프스",
           "price": 30400,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000206861&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=5",
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000206861&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=10",
           "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0020/A00000020686148ko.jpg?l=ko",
-          "avg_rank": 4.6,
+          "avg_rank": 5.0,
           "best_rank": 1,
           "top1_days": 3,
-          "appearances": 12,
+          "appearances": 13,
           "delta": {
             "type": "down",
-            "value": 4
+            "value": 9
           }
         },
         {
@@ -661,33 +646,18 @@
           }
         },
         {
-          "name": "[파격특가] 콜레올로지 컷팅 젤리 레몬/키위/석류 10+2+2포 기획 외",
-          "brand": "푸드올로지",
-          "price": 18800,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000183645&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=6",
-          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0018/A00000018364587ko.jpg?l=ko",
-          "avg_rank": 6.7,
-          "best_rank": 2,
-          "top1_days": 0,
-          "appearances": 7,
-          "delta": {
-            "type": "down",
-            "value": 1
-          }
-        },
-        {
           "name": "[9월 올영픽/산리오콜라보] CJ 바이오코어 유산균 3종 (피부/다이어트/500억) (+산리오 러기지택)",
           "brand": "바이오코어유산균",
           "price": 12900,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000200143&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=9",
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000200143&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=1",
           "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0020/A00000020014347ko.jpg?l=ko",
-          "avg_rank": 6.8,
-          "best_rank": 2,
-          "top1_days": 0,
-          "appearances": 10,
+          "avg_rank": 6.3,
+          "best_rank": 1,
+          "top1_days": 1,
+          "appearances": 11,
           "delta": {
             "type": "up",
-            "value": 1
+            "value": 9
           }
         },
         {
@@ -703,21 +673,6 @@
           "delta": {
             "type": "up",
             "value": 5
-          }
-        },
-        {
-          "name": "오쏘몰 이뮨 멀티비타민&미네랄 14+1입",
-          "brand": "오쏘몰",
-          "price": 53900,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000193086&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=6",
-          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0019/A00000019308652ko.jpg?l=ko",
-          "avg_rank": 7.0,
-          "best_rank": 3,
-          "top1_days": 0,
-          "appearances": 7,
-          "delta": {
-            "type": "up",
-            "value": 4
           }
         }
       ],
