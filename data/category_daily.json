@@ -1,25 +1,21 @@
 {
-  "date": "2026-10-05 15:08",
+  "date": "2026-10-06 15:48",
   "total_items": 30,
   "categories": [
     {
       "name": "기타",
-      "kakao": 1,
-      "daiso": 4,
-      "oliveyoung": 7,
-      "total": 12,
+      "kakao": 0,
+      "daiso": 5,
+      "oliveyoung": 4,
+      "total": 9,
       "examples": [
-        {
-          "site": "kakao",
-          "name": "리센느 에디션 캡슐레이션 효소 1.8g 2개월분 (5종 중 택1)"
-        },
-        {
-          "site": "daiso",
-          "name": "닥터블릿 푸응 7 Days 슬립앤버닝 14정 7일분"
-        },
         {
           "site": "daiso",
           "name": "[옥수수수염＆호박] 동국제약 맛있는 센텔라 공주캔디 20정 20일분"
+        },
+        {
+          "site": "daiso",
+          "name": "[혈액 생성] 동화약품 배러크런치 철분 사과맛 30정 10일분"
         },
         {
           "site": "daiso",
@@ -30,17 +26,21 @@
           "name": "[항산화] 동화약품 배러크런치C 레몬맛 30정 10일분"
         },
         {
+          "site": "daiso",
+          "name": "닥터블릿 푸응 7 Days 슬립앤버닝 14정 7일분"
+        },
+        {
           "site": "oliveyoung",
-          "name": "콜레올로지 PRO 600mg*30정/60정/120정 (15/30/60일분)"
+          "name": "[올영단독] 칼로 스탑/컨트롤 PLUS 15포 2종"
         }
       ]
     },
     {
       "name": "멀티비타민",
-      "kakao": 6,
+      "kakao": 7,
       "daiso": 0,
       "oliveyoung": 0,
-      "total": 6,
+      "total": 7,
       "examples": [
         {
           "site": "kakao",
@@ -60,7 +60,7 @@
         },
         {
           "site": "kakao",
-          "name": "명품 비타민 뉴트리포유 듀얼+ 이뮨 종합 멀티비타민&미네랄 7입+2입 증정 - 선물하기 단독 에디션"
+          "name": "독일 명품 비타민 오쏘몰 이뮨 멀티비타민&미네랄 10입 - 추석 기프트 에디션 (공식수입)"
         },
         {
           "site": "kakao",
@@ -69,27 +69,23 @@
       ]
     },
     {
-      "name": "비타민",
-      "kakao": 1,
-      "daiso": 3,
-      "oliveyoung": 0,
-      "total": 4,
+      "name": "다이어트",
+      "kakao": 0,
+      "daiso": 0,
+      "oliveyoung": 3,
+      "total": 3,
       "examples": [
         {
-          "site": "kakao",
-          "name": "고함량 비타민C 고려은단 메가도스C 3000 100포 / 분말비타민C"
+          "site": "oliveyoung",
+          "name": "[한선화 PICK] 프로뉴트리션 듀얼플랜 다이어트 유산균 14포"
         },
         {
-          "site": "daiso",
-          "name": "[신혜선 PICK] 동국제약 프라임도스 비타민C 2000 30포 30일분"
+          "site": "oliveyoung",
+          "name": "[1일 1정] 바이탈뷰티 메타그린 슬림업 30일"
         },
         {
-          "site": "daiso",
-          "name": "[신혜선 PICK] 동국제약  프라임도스 비타민B 맥스 30정 30일분"
-        },
-        {
-          "site": "daiso",
-          "name": "[신혜선 PICK] 동국제약  프라임도스 비타민D3 4000IU 60정 60일분"
+          "site": "oliveyoung",
+          "name": "바이탈헬스 바이탈슬림 다이어트 올인원 데이 20포 (10일분)"
         }
       ]
     },
@@ -128,28 +124,49 @@
       ]
     },
     {
-      "name": "다이어트",
-      "kakao": 0,
+      "name": "에너지",
+      "kakao": 2,
       "daiso": 0,
-      "oliveyoung": 1,
-      "total": 1,
+      "oliveyoung": 0,
+      "total": 2,
       "examples": [
         {
-          "site": "oliveyoung",
-          "name": "[한선화 PICK] 프로뉴트리션 듀얼플랜 다이어트 유산균 14포"
+          "site": "kakao",
+          "name": "에너지선물 [정관장] 활기력 맥스 에너지박스 (20ml x 16병)"
+        },
+        {
+          "site": "kakao",
+          "name": "에너지선물 [정관장] 활기력 에너지박스 (30ml x 16병)"
         }
       ]
     },
     {
-      "name": "에너지",
-      "kakao": 1,
-      "daiso": 0,
+      "name": "비타민",
+      "kakao": 0,
+      "daiso": 1,
+      "oliveyoung": 1,
+      "total": 2,
+      "examples": [
+        {
+          "site": "daiso",
+          "name": "[신혜선 PICK] 동국제약 프라임도스 비타민C 2000 30포 30일분"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "온리추얼 비타민C 글로우업 트리플 7포+1포 (8일분)"
+        }
+      ]
+    },
+    {
+      "name": "남성건강",
+      "kakao": 0,
+      "daiso": 1,
       "oliveyoung": 0,
       "total": 1,
       "examples": [
         {
-          "site": "kakao",
-          "name": "에너지선물 [정관장] 활기력 에너지박스 (30ml x 16병)"
+          "site": "daiso",
+          "name": "[김종국 PICK] 익스트림 블랙마카 800+ 60정 30일분"
         }
       ]
     },
@@ -212,8 +229,8 @@
       "keyword": "휴럼",
       "count": 4,
       "examples": [
-        "휴럼 하루한알 침향환 9환 9일분",
         "휴럼 하루한포 유기농 야채분말 15포 15일분",
+        "휴럼 하루한알 침향환 9환 9일분",
         "휴럼 하루한포 유기농 컬리케일 15포 15일분"
       ]
     },
