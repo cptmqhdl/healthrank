@@ -1,17 +1,21 @@
 {
-  "date": "2026-10-24 13:58",
+  "date": "2026-10-25 14:11",
   "total_items": 30,
   "categories": [
     {
       "name": "기타",
       "kakao": 0,
-      "daiso": 6,
-      "oliveyoung": 5,
-      "total": 11,
+      "daiso": 5,
+      "oliveyoung": 4,
+      "total": 9,
       "examples": [
         {
           "site": "daiso",
-          "name": "대웅제약 셀레늄 아연 30정 30일분"
+          "name": "[월경 전 불편함 케어] 대웅제약 감마리놀렌산 30캡슐 30일분"
+        },
+        {
+          "site": "daiso",
+          "name": "대웅제약 커큐민250 30정 30일분"
         },
         {
           "site": "daiso",
@@ -19,19 +23,15 @@
         },
         {
           "site": "daiso",
+          "name": "닥터블릿 스트레스 케어 테아닌 30정 30일분"
+        },
+        {
+          "site": "daiso",
           "name": "휴럼 하루한알 침향환 9환 9일분"
         },
         {
-          "site": "daiso",
-          "name": "[항산화] 동화약품 배러크런치C 레몬맛 30정 10일분"
-        },
-        {
-          "site": "daiso",
-          "name": "[혈액 생성] 동화약품 배러크런치 철분 사과맛 30정 10일분"
-        },
-        {
-          "site": "daiso",
-          "name": "닥터블릿 스트레스 케어 테아닌 30정 30일분"
+          "site": "oliveyoung",
+          "name": "세노비스 마그네슘 180정 기획 (6개월분)"
         }
       ]
     },
@@ -39,8 +39,8 @@
       "name": "멀티비타민",
       "kakao": 6,
       "daiso": 0,
-      "oliveyoung": 0,
-      "total": 6,
+      "oliveyoung": 1,
+      "total": 7,
       "examples": [
         {
           "site": "kakao",
@@ -56,15 +56,36 @@
         },
         {
           "site": "kakao",
-          "name": "[센트룸] 맛있는 멀티비타민 미네랄 멀티구미 (80구미)"
-        },
-        {
-          "site": "kakao",
           "name": "\"멀티비타민 이뮨 명작\" 옵티젠 마스터 컬렉션 종합비타민 멀티팩 30포 / 1박스"
         },
         {
           "site": "kakao",
+          "name": "[센트룸] 맛있는 멀티비타민 미네랄 멀티구미 (80구미)"
+        },
+        {
+          "site": "kakao",
           "name": "독일 명품 비타민 오쏘몰 이뮨 멀티비타민&미네랄 10입 - 슬리브 기프트 에디션 (공식수입)"
+        }
+      ]
+    },
+    {
+      "name": "다이어트",
+      "kakao": 0,
+      "daiso": 1,
+      "oliveyoung": 2,
+      "total": 3,
+      "examples": [
+        {
+          "site": "daiso",
+          "name": "스키니랩 다이글로핏 다이어트 플러스 7정 7일분"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[한선화 PICK] 프로뉴트리션 듀얼플랜 다이어트 유산균 14포"
+        },
+        {
+          "site": "oliveyoung",
+          "name": "[1+1 교차증정/NEW] 그린몬스터 다이어트젤리 쾌변쑥 (푸룬맛) / 체지방쏙 (애플망고맛) 7포"
         }
       ]
     },
@@ -114,29 +135,12 @@
       "name": "여성건강",
       "kakao": 0,
       "daiso": 0,
-      "oliveyoung": 2,
-      "total": 2,
-      "examples": [
-        {
-          "site": "oliveyoung",
-          "name": "덴프스 덴마크 유산균이야기 우먼 2개월분(질유산균) + 철분 헤모케어 3포 증정"
-        },
-        {
-          "site": "oliveyoung",
-          "name": "지노마스터 질유산균 30캡슐 기획 (+보라지유 5일분) (1개월분)"
-        }
-      ]
-    },
-    {
-      "name": "다이어트",
-      "kakao": 0,
-      "daiso": 0,
       "oliveyoung": 1,
       "total": 1,
       "examples": [
         {
           "site": "oliveyoung",
-          "name": "[한선화 PICK] 프로뉴트리션 듀얼플랜 다이어트 유산균 14포"
+          "name": "덴프스 덴마크 유산균이야기 우먼 2개월분(질유산균) + 철분 헤모케어 3포 증정"
         }
       ]
     },
