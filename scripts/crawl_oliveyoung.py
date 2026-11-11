@@ -4,10 +4,11 @@
 """
 
 import csv
-from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
+
+from common import already_collected, kst_now, kst_today, with_retry
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
@@ -21,7 +22,6 @@ AJAX_URL = (
     "&t_click=%EB%9E%AD%ED%82%B9BEST%EC%83%81%ED%92%88%EB%B8%8C%EB%9E%9C%EB%93%9C_%EC%9D%B8%EA%B8%B0%EC%83%81%ED%92%88%EB%8D%94%EB%B3%B4%EA%B8%B0"
 )
 TOP_N = 10
-KST = timezone(timedelta(hours=9))
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUT_DIR = BASE_DIR / "data" / "raw"
@@ -29,10 +29,17 @@ OUT_DIR = BASE_DIR / "data" / "raw"
 
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    today = date.today().isoformat()
-    collected_at = datetime.now(KST).strftime("%Y-%m-%d %H:%M")
+    today = kst_today()
+    collected_at = kst_now().strftime("%Y-%m-%d %H:%M")
     out_path = OUT_DIR / f"{SITE}_{today}.csv"
+    if already_collected(out_path):
+        print(f"오늘({today}) 데이터가 이미 있어 건너뜁니다: {out_path}")
+        return
+    rows = with_retry(lambda: scrape(today, collected_at), label=SITE)
+    write_csv(out_path, rows)
 
+
+def scrape(today: str, collected_at: str) -> list[dict]:
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         context = browser.new_context(user_agent=UA, locale="ko-KR")
@@ -112,12 +119,11 @@ def main():
             "이미지": raw["image"] or "",
         })
 
-    if not rows:
-        print("수집된 상품이 없습니다. 사이트 구조가 바뀌었을 수 있어요.")
-        raise SystemExit(1)
-
     rows.sort(key=lambda r: r["순위"])
+    return rows
 
+
+def write_csv(out_path: Path, rows: list[dict]):
     fieldnames = ["수집일", "수집시각", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격", "링크", "이미지"]
     with open(out_path, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)

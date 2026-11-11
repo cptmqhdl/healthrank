@@ -1,87 +1,79 @@
 """data/raw/*.csv 를 읽어 대시보드(report.html)가 바로 쓸 수 있는 data/latest.json 을 만든다.
 
-사이트별로 가장 최근 날짜의 데이터를 뽑고, 그 전날 데이터가 있으면 상품명을 기준으로
-순위 변동(▲▼-/NEW)을 계산한다. 전날 데이터가 없으면(수집 첫날 등) 전부 NEW로 표시한다.
+사이트별로 가장 최근 날짜의 데이터를 뽑고, 직전 수집일 데이터와 비교해 순위 변동
+(▲▼-/NEW)을 계산한다.
+
+2026-11-11 변경:
+- 비교 기준을 상품명 → 링크 속 고유 상품번호로 변경. "[11월 올영픽]"처럼 프로모션
+  문구만 바뀌어도 NEW로 잘못 표시되던 문제 수정 (월간 리포트와 같은 방식).
+- 직전 수집일이 바로 전날이 아니면(수집 누락) 그 날짜를 prev_date로 기록해 화면에
+  "N일 전 대비"로 보여준다.
 """
 
-import csv
 import json
-from pathlib import Path
+from datetime import date
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-RAW_DIR = BASE_DIR / "data" / "raw"
+from common import BASE_DIR, SITES, product_key, read_csv, site_files
+
 OUT_PATH = BASE_DIR / "data" / "latest.json"
-
-# (사이트 id, 파일명 접두어, 화면에 보여줄 이름)
-SITES = [
-    ("kakao", "카카오선물하기", "카카오톡 선물하기"),
-    ("daiso", "다이소몰", "다이소몰"),
-    ("oliveyoung", "올리브영", "올리브영"),
-]
-
-# 대시보드에는 사이트별 1~10위까지만 보여준다 (크롤러는 더 많이 수집해도 화면 노출은 10위까지)
 TOP_N = 10
 
 
-def read_csv(path: Path) -> list[dict]:
-    with path.open(encoding="utf-8-sig", newline="") as f:
-        return list(csv.DictReader(f))
-
-
-def build_site(site_id: str, prefix: str, label: str) -> dict | None:
-    files = sorted(RAW_DIR.glob(f"{prefix}_*.csv"))
+def build_site(site_id: str, label: str) -> dict | None:
+    files = site_files(site_id)
     if not files:
         return None
 
-    latest_path = files[-1]
-    latest_date = latest_path.stem.replace(f"{prefix}_", "")
+    latest_date, latest_path = files[-1]
     latest_rows = read_csv(latest_path)
-    # "수집시각"(날짜+시간) 컬럼이 있으면 그걸 우선 쓰고, 옛날 데이터라 없으면
-    # 파일명의 날짜만 사용한다.
     collected_at = (latest_rows[0].get("수집시각") if latest_rows else None) or latest_date
 
-    prev_by_name: dict[str, int] = {}
+    prev_rank: dict[str, int] = {}
+    prev_date = None
     if len(files) >= 2:
-        prev_rows = read_csv(files[-2])
-        for row in prev_rows:
-            prev_by_name[row["상품명"]] = int(row["순위"])
+        prev_date, prev_path = files[-2]
+        for row in read_csv(prev_path):
+            prev_rank[product_key(site_id, row)] = int(row["순위"])
 
     items = []
     for row in latest_rows:
         rank = int(row["순위"])
         if rank > TOP_N:
             continue
-        name = row["상품명"]
-        prev_rank = prev_by_name.get(name)
-
-        if prev_rank is None:
+        key = product_key(site_id, row)
+        before = prev_rank.get(key)
+        if before is None:
             delta = {"type": "new", "value": None}
-        elif prev_rank == rank:
+        elif before == rank:
             delta = {"type": "flat", "value": 0}
-        elif prev_rank > rank:
-            delta = {"type": "up", "value": prev_rank - rank}
+        elif before > rank:
+            delta = {"type": "up", "value": before - rank}
         else:
-            delta = {"type": "down", "value": rank - prev_rank}
+            delta = {"type": "down", "value": rank - before}
 
-        items.append(
-            {
-                "rank": rank,
-                "brand": row.get("브랜드") or "",
-                "name": name,
-                "price": int(row["가격"]),
-                "ad": row.get("광고여부") == "Y",
-                "link": row.get("링크") or "",
-                "image": row.get("이미지") or "",
-                "delta": delta,
-            }
-        )
+        items.append({
+            "key": key,
+            "rank": rank,
+            "brand": row.get("브랜드") or "",
+            "name": row["상품명"],
+            "price": int(row["가격"]),
+            "ad": row.get("광고여부") == "Y",
+            "link": row.get("링크") or "",
+            "image": row.get("이미지") or "",
+            "delta": delta,
+        })
 
     items.sort(key=lambda x: x["rank"])
+    gap_days = None
+    if prev_date:
+        gap_days = (date.fromisoformat(latest_date) - date.fromisoformat(prev_date)).days
 
     return {
         "id": site_id,
         "label": label,
         "date": collected_at,
+        "prev_date": prev_date,
+        "prev_gap_days": gap_days,
         "count": len(items),
         "items": items,
     }
@@ -89,21 +81,17 @@ def build_site(site_id: str, prefix: str, label: str) -> dict | None:
 
 def main():
     sites = {}
-    for site_id, prefix, label in SITES:
-        result = build_site(site_id, prefix, label)
+    for site_id, _prefix, label in SITES:
+        result = build_site(site_id, label)
         if result:
             sites[site_id] = result
 
-    dates = [s["date"] for s in sites.values()]
     payload = {
-        "generated_from_dates": sorted(set(dates)),
+        "generated_from_dates": sorted({s["date"] for s in sites.values()}),
         "sites": sites,
     }
-
-    OUT_PATH.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    summary = ", ".join(f"{site_id}:{s['count']}개" for site_id, s in sites.items())
+    OUT_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    summary = ", ".join(f"{sid}:{s['count']}개" for sid, s in sites.items())
     print(f"저장 완료: {OUT_PATH} ({summary})")
 
 

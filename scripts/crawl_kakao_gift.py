@@ -5,10 +5,11 @@
 
 import csv
 import re
-from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
+
+from common import already_collected, kst_now, kst_today, with_retry
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
@@ -16,7 +17,6 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 SITE = "카카오선물하기"
 CATEGORY = "건강식품·영양제"
 URL = "https://gift.kakao.com/ranking/category/8"
-KST = timezone(timedelta(hours=9))
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUT_DIR = BASE_DIR / "data" / "raw"
@@ -47,20 +47,19 @@ def parse_item(text: str):
     }
 
 
-def main():
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    today = date.today().isoformat()
-    collected_at = datetime.now(KST).strftime("%Y-%m-%d %H:%M")
-    out_path = OUT_DIR / f"{SITE}_{today}.csv"
-
+def scrape(today: str, collected_at: str) -> list[dict]:
     rows = []
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         context = browser.new_context(user_agent=UA, locale="ko-KR")
         page = context.new_page()
 
-        page.goto(URL, timeout=20000, wait_until="domcontentloaded")
-        page.wait_for_timeout(2000)
+        page.goto(URL, timeout=40000, wait_until="domcontentloaded")
+        # 예전엔 고정 2초만 기다려서, 깃허브 서버가 느린 날엔 카드가 아직 안 그려진
+        # 상태로 읽어 "수집된 상품이 없습니다"로 실패했다(9~10월 9일 누락). 카드가
+        # 실제로 나타날 때까지 기다린다.
+        page.wait_for_selector("div.unit_prd", timeout=30000)
+        page.wait_for_timeout(1500)
 
         cards = page.locator("div.unit_prd")
         count = cards.count()
@@ -99,10 +98,19 @@ def main():
             rows.append(item)
 
         browser.close()
+    return rows
 
-    if not rows:
-        print("수집된 상품이 없습니다. 사이트 구조가 바뀌었을 수 있어요.")
-        raise SystemExit(1)
+
+def main():
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    today = kst_today()
+    collected_at = kst_now().strftime("%Y-%m-%d %H:%M")
+    out_path = OUT_DIR / f"{SITE}_{today}.csv"
+    if already_collected(out_path):
+        print(f"오늘({today}) 데이터가 이미 있어 건너뜁니다: {out_path}")
+        return
+
+    rows = with_retry(lambda: scrape(today, collected_at), label=SITE)
 
     fieldnames = ["수집일", "수집시각", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격", "광고여부", "링크", "이미지"]
     with open(out_path, "w", newline="", encoding="utf-8-sig") as f:

@@ -13,10 +13,11 @@
 
 import csv
 import html
-from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
+
+from common import already_collected, kst_now, kst_today, with_retry
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
@@ -28,7 +29,6 @@ API_URL = "https://fapi.daisomall.co.kr/pd/rank/list"
 PRODUCT_URL_TMPL = "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo={pd_no}&recmYn=N"
 CDN_HOST = "https://cdn.daisomall.co.kr"
 TOP_N = 10
-KST = timezone(timedelta(hours=9))
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUT_DIR = BASE_DIR / "data" / "raw"
@@ -50,10 +50,17 @@ def build_image_url(pd_img_url: str) -> str:
 
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    today = date.today().isoformat()
-    collected_at = datetime.now(KST).strftime("%Y-%m-%d %H:%M")
+    today = kst_today()
+    collected_at = kst_now().strftime("%Y-%m-%d %H:%M")
     out_path = OUT_DIR / f"{SITE}_{today}.csv"
+    if already_collected(out_path):
+        print(f"오늘({today}) 데이터가 이미 있어 건너뜁니다: {out_path}")
+        return
+    rows = with_retry(lambda: fetch(today, collected_at), label=SITE)
+    write_csv(out_path, rows)
 
+
+def fetch(today: str, collected_at: str) -> list[dict]:
     payload = {
         "mallId": "MALL_BH",
         "pageNum": 1,
@@ -95,11 +102,10 @@ def main():
             "링크": PRODUCT_URL_TMPL.format(pd_no=pd_no),
             "이미지": build_image_url(item.get("pdImgUrl") or ""),
         })
+    return rows
 
-    if not rows:
-        print("수집된 상품이 없습니다. 사이트 구조가 바뀌었을 수 있어요.")
-        raise SystemExit(1)
 
+def write_csv(out_path: Path, rows: list[dict]):
     fieldnames = ["수집일", "수집시각", "사이트", "카테고리", "순위", "브랜드", "상품명", "가격", "링크", "이미지"]
     with open(out_path, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
