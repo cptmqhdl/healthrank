@@ -387,6 +387,12 @@
     });
   }
   function md(d){ var p = d.split('-'); return parseInt(p[1],10) + '/' + parseInt(p[2],10); }
+  // 주 시작(월요일) 날짜 → "8월 2주차". 그 달의 몇 번째 월요일인지로 센다(8/10 → 8월 2주차).
+  function wkLabel(d){ var p = d.split('-'); return parseInt(p[1],10) + '월 ' + Math.ceil(parseInt(p[2],10) / 7) + '주차'; }
+  function wkRange(d){
+    var p = d.split('-'), s = new Date(+p[0], +p[1] - 1, +p[2]), e = new Date(s.getTime() + 6 * 864e5);
+    return (s.getMonth() + 1) + '/' + s.getDate() + '~' + (e.getMonth() === s.getMonth() ? '' : (e.getMonth() + 1) + '/') + e.getDate();
+  }
   function kstToday(){
     var now = new Date(Date.now() + 9 * 3600 * 1000);
     return now.toISOString().slice(0, 10);
@@ -589,13 +595,14 @@
     var LIMIT = 12;
     var shown = catState.showAll ? rows : rows.slice(0, LIMIT);
     var head = '<thead><tr><th class="cat">카테고리</th>' + cw.weeks.map(function(w){
-      return '<th scope="col">' + md(w) + '주</th>';
+      var l = wkLabel(w).split(' ');
+      return '<th scope="col" title="' + wkLabel(w) + ' (' + wkRange(w) + ')">' + l[0] + '<br>' + l[1] + '</th>';
     }).join('') + '<th scope="col">전체</th></tr></thead>';
     var body = '<tbody>' + shown.map(function(r){
       return '<tr><th class="cat" scope="row">' + esc(r.name) + '</th>' + r.cells.map(function(v, w){
         if(v == null){ return '<td class="empty" title="수집 없음">·</td>'; }
         var dark = v / max > 0.6;
-        var t = esc(r.name) + ' · ' + md(cw.weeks[w]) + '주 · ' + v.toFixed(1) + '%';
+        var t = esc(r.name) + ' · ' + wkLabel(cw.weeks[w]) + '(' + wkRange(cw.weeks[w]) + ') · ' + v.toFixed(1) + '%';
         return '<td class="tabular" style="background:' + heatColor(v, max) + ';color:' + (dark ? '#fff' : 'var(--text)') + '" title="' + t + '">' +
           (v >= 0.5 ? Math.round(v) : '') + '</td>';
       }).join('') + '<td class="tabular" style="font-weight:600">' + r.total.toFixed(1) + '%</td></tr>';
