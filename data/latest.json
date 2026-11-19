@@ -1,15 +1,14 @@
 {
   "generated_from_dates": [
-    "2026-11-19 01:03",
-    "2026-11-19 01:04",
-    "2026-11-19 16:54"
+    "2026-11-20 01:06",
+    "2026-11-20 01:07"
   ],
   "sites": {
     "kakao": {
       "id": "kakao",
       "label": "카카오톡 선물하기",
-      "date": "2026-11-19 16:54",
-      "prev_date": "2026-11-18",
+      "date": "2026-11-20 01:06",
+      "prev_date": "2026-11-19",
       "prev_gap_days": 1,
       "count": 10,
       "items": [
@@ -84,8 +83,22 @@
           }
         },
         {
-          "key": "2941722",
+          "key": "7320451",
           "rank": 6,
+          "brand": "센트룸",
+          "name": "[센트룸] 맛있는 멀티비타민 미네랄 멀티구미 (80구미)",
+          "price": 19900,
+          "ad": false,
+          "link": "https://gift.kakao.com/product/7320451",
+          "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20260901110153_bb9a8b1870e2492e99dbbf1747444c66.jpg",
+          "delta": {
+            "type": "up",
+            "value": 2
+          }
+        },
+        {
+          "key": "2941722",
+          "rank": 7,
           "brand": "정관장",
           "name": "에너지선물 [정관장] 활기력 맥스 에너지박스 (20ml x 16병) + [증정] 활기마이트 1입 + 페레로로쉐",
           "price": 33900,
@@ -93,33 +106,19 @@
           "link": "https://gift.kakao.com/product/2941722",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261116082445_8f8951631cf94716b27534d4c27a598c.jpg",
           "delta": {
-            "type": "flat",
-            "value": 0
+            "type": "down",
+            "value": 1
           }
         },
         {
           "key": "14022928",
-          "rank": 7,
+          "rank": 8,
           "brand": "옵티젠",
           "name": "\"멀티비타민 이뮨 명작\" 옵티젠 마스터 컬렉션 종합비타민 멀티팩 30포 / 1박스 (+장미꽃&키링)",
           "price": 30000,
           "ad": false,
           "link": "https://gift.kakao.com/product/14022928",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261118110223_d4f9df7146fe4889a8677d4bc43a5df9.jpg",
-          "delta": {
-            "type": "up",
-            "value": 1
-          }
-        },
-        {
-          "key": "7320451",
-          "rank": 8,
-          "brand": "센트룸",
-          "name": "[센트룸] 맛있는 멀티비타민 미네랄 멀티구미 (80구미)",
-          "price": 19900,
-          "ad": false,
-          "link": "https://gift.kakao.com/product/7320451",
-          "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20260901110153_bb9a8b1870e2492e99dbbf1747444c66.jpg",
           "delta": {
             "type": "down",
             "value": 1
@@ -158,8 +157,8 @@
     "daiso": {
       "id": "daiso",
       "label": "다이소몰",
-      "date": "2026-11-19 01:03",
-      "prev_date": "2026-11-18",
+      "date": "2026-11-20 01:07",
+      "prev_date": "2026-11-19",
       "prev_gap_days": 1,
       "count": 10,
       "items": [
@@ -173,8 +172,8 @@
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911101&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260907/thumb/300/BQeSyYNH21gmMrEclYYV610911101_00_01BQeSyYNH21gmMrEclYYV.jpg",
           "delta": {
-            "type": "up",
-            "value": 3
+            "type": "flat",
+            "value": 0
           }
         },
         {
@@ -187,8 +186,8 @@
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911102&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260907/thumb/300/D3MtLfS4wvzyyoiG4ppT610911102_00_01D3MtLfS4wvzyyoiG4ppT.jpg",
           "delta": {
-            "type": "up",
-            "value": 5
+            "type": "flat",
+            "value": 0
           }
         },
         {
@@ -201,27 +200,13 @@
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=591581931&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20261028/thumb/300/CgML6RHO2yPxJMu6Aa2r591581931_00_00CgML6RHO2yPxJMu6Aa2r.jpg",
           "delta": {
-            "type": "up",
-            "value": 2
-          }
-        },
-        {
-          "key": "963970139",
-          "rank": 4,
-          "brand": "",
-          "name": "오브맘 CLA 버닝 다이어트 30캡슐 15일분",
-          "price": 5000,
-          "ad": false,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=963970139&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20261028/thumb/300/rfXdpvqwuz6qhDphPODc963970139_00_01rfXdpvqwuz6qhDphPODc.jpg",
-          "delta": {
-            "type": "down",
-            "value": 3
+            "type": "flat",
+            "value": 0
           }
         },
         {
           "key": "963970137",
-          "rank": 5,
+          "rank": 4,
           "brand": "",
           "name": "오브맘 비타민C 3000 30포 30일분",
           "price": 5000,
@@ -234,28 +219,42 @@
           }
         },
         {
-          "key": "025575279",
-          "rank": 6,
+          "key": "963970139",
+          "rank": 5,
           "brand": "",
-          "name": "[다영 PICK] 셀트리온 식후 혈당 케어 혈당 S 프레소 10포 10일분",
-          "price": 2000,
+          "name": "오브맘 CLA 버닝 다이어트 30캡슐 15일분",
+          "price": 5000,
           "ad": false,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=025575279&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20261020/thumb/300/Z2XnO6JE9zpIdYULVsQV025575279_00_01Z2XnO6JE9zpIdYULVsQV.jpg",
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=963970139&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20261028/thumb/300/rfXdpvqwuz6qhDphPODc963970139_00_01rfXdpvqwuz6qhDphPODc.jpg",
           "delta": {
             "type": "down",
-            "value": 3
+            "value": 1
           }
         },
         {
-          "key": "976195543",
-          "rank": 7,
+          "key": "963970138",
+          "rank": 6,
           "brand": "",
-          "name": "스키니랩 다이글로핏 다이어트 플러스 7정 7일분",
+          "name": "오브맘 회화나무열매 갱년기 케어 30캡슐 15일분",
           "price": 5000,
           "ad": false,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=976195543&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20261013/thumb/300/gVty8q4kjdOzvveGcanw976195543_00_01gVty8q4kjdOzvveGcanw.png",
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=963970138&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20261028/thumb/300/soUyFQSTNvpIt5mIKokD963970138_00_01soUyFQSTNvpIt5mIKokD.jpg",
+          "delta": {
+            "type": "up",
+            "value": 4
+          }
+        },
+        {
+          "key": "610911213",
+          "rank": 7,
+          "brand": "",
+          "name": "[옥수수수염＆호박] 동국제약 맛있는 센텔라 공주캔디 20정 20일분",
+          "price": 3000,
+          "ad": false,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=610911213&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260907/thumb/300/E3CpURjLLswf9MgzRChF610911213_00_01E3CpURjLLswf9MgzRChF.jpg",
           "delta": {
             "type": "new",
             "value": null
@@ -271,36 +270,36 @@
           "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=601678607&recmYn=N",
           "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260825/thumb/300/1a3CLvRrBJMActwA3NW5601678607_00_021a3CLvRrBJMActwA3NW5.jpg",
           "delta": {
-            "type": "new",
-            "value": null
-          }
-        },
-        {
-          "key": "591581941",
-          "rank": 9,
-          "brand": "",
-          "name": "종근당건강 혈압혈당엔 코엔자임 바나바 30캡슐 30일분",
-          "price": 5000,
-          "ad": false,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=591581941&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20261028/thumb/300/sNEXBWdQdK5knJ1zgxd0591581941_00_00sNEXBWdQdK5knJ1zgxd0.jpg",
-          "delta": {
-            "type": "new",
-            "value": null
-          }
-        },
-        {
-          "key": "963970138",
-          "rank": 10,
-          "brand": "",
-          "name": "오브맘 회화나무열매 갱년기 케어 30캡슐 15일분",
-          "price": 5000,
-          "ad": false,
-          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=963970138&recmYn=N",
-          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20261028/thumb/300/soUyFQSTNvpIt5mIKokD963970138_00_01soUyFQSTNvpIt5mIKokD.jpg",
-          "delta": {
             "type": "flat",
             "value": 0
+          }
+        },
+        {
+          "key": "601678608",
+          "rank": 9,
+          "brand": "",
+          "name": "[식후 혈당] 동화 배러크런치 바나바 요구르트맛 30정 10일분",
+          "price": 3000,
+          "ad": false,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=601678608&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260825/thumb/300/oxNqPxCfU3Tre5j0PQQk601678608_00_02oxNqPxCfU3Tre5j0PQQk.jpg",
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "key": "601678606",
+          "rank": 10,
+          "brand": "",
+          "name": "[정상 면역] 동화약품 배러크런치 아연 청포도맛 30정 10일분",
+          "price": 3000,
+          "ad": false,
+          "link": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=601678606&recmYn=N",
+          "image": "https://cdn.daisomall.co.kr/file/resize/PD/20260825/thumb/300/9arKLwQMyanllW5dsWAc601678606_00_029arKLwQMyanllW5dsWAc.jpg",
+          "delta": {
+            "type": "new",
+            "value": null
           }
         }
       ]
@@ -308,20 +307,20 @@
     "oliveyoung": {
       "id": "oliveyoung",
       "label": "올리브영",
-      "date": "2026-11-19 01:04",
-      "prev_date": "2026-11-18",
+      "date": "2026-11-20 01:07",
+      "prev_date": "2026-11-19",
       "prev_gap_days": 1,
       "count": 10,
       "items": [
         {
-          "key": "A000000225938",
+          "key": "A000000258641",
           "rank": 1,
-          "brand": "고려은단",
-          "name": "고려은단 비타민C1000 600정 (20개월분)",
-          "price": 42900,
+          "brand": "리쥬란",
+          "name": "[11월 올영픽] 리쥬란 이너닷 DNA 글로우 젤리/부스팅/토닝/하이드로 베리어(기획/단품)",
+          "price": 24900,
           "ad": false,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000225938&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=1",
-          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0022/A00000022593803ko.jpg?l=ko",
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000258641&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=1",
+          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0025/A00000025864128ko.jpg?l=ko",
           "delta": {
             "type": "new",
             "value": null
@@ -337,19 +336,33 @@
           "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000001002526&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=2",
           "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0100/A00000100252604ko.jpg?l=ko",
           "delta": {
-            "type": "down",
-            "value": 1
+            "type": "flat",
+            "value": 0
           }
         },
         {
-          "key": "A000000227154",
+          "key": "A000000244929",
           "rank": 3,
-          "brand": "것시스",
-          "name": "[다이어트 유산균] 것시스 다이어트 B프로 14캡슐 (14일분) / 체지방CUT",
-          "price": 19900,
+          "brand": "지노마스터",
+          "name": "지노마스터 질유산균 30캡슐 기획 (+보라지유 5일분) (1개월분)",
+          "price": 27400,
           "ad": false,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000227154&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=3",
-          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0022/A00000022715419ko.jpg?l=ko",
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000244929&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=3",
+          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0024/A00000024492948ko.jpg?l=ko",
+          "delta": {
+            "type": "up",
+            "value": 2
+          }
+        },
+        {
+          "key": "A000000200143",
+          "rank": 4,
+          "brand": "바이오코어유산균",
+          "name": "CJ 바이오코어 유산균 3종 (피부/다이어트/500억)",
+          "price": 13950,
+          "ad": false,
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000200143&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=4",
+          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0020/A00000020014349ko.jpg?l=ko",
           "delta": {
             "type": "new",
             "value": null
@@ -357,12 +370,12 @@
         },
         {
           "key": "B000000249860",
-          "rank": 4,
+          "rank": 5,
           "brand": "오쏘몰",
           "name": "[파격특가] 오쏘몰 이뮨 멀티비타민&미네랄 30입(27년 4월~)",
           "price": 68000,
           "ad": false,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=B000000249860&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=4",
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=B000000249860&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=5",
           "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0024/B00000024986005ko.jpg?l=ko",
           "delta": {
             "type": "down",
@@ -370,84 +383,70 @@
           }
         },
         {
-          "key": "A000000244929",
-          "rank": 5,
-          "brand": "지노마스터",
-          "name": "지노마스터 질유산균 30캡슐 기획 (+보라지유 5일분) (1개월분)",
-          "price": 26900,
+          "key": "A000000202658",
+          "rank": 6,
+          "brand": "덴프스",
+          "name": "덴프스 덴마크 유산균이야기 우먼 2개월분(질유산균) + 철분 헤모케어 3포 증정",
+          "price": 31900,
           "ad": false,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000244929&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=5",
-          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0024/A00000024492952ko.jpg?l=ko",
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000202658&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=6",
+          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0020/A00000020265829ko.jpg?l=ko",
           "delta": {
-            "type": "down",
+            "type": "up",
             "value": 1
           }
         },
         {
-          "key": "A000000205496",
-          "rank": 6,
-          "brand": "프로뉴트리션",
-          "name": "[한선화 PICK] 프로뉴트리션 듀얼플랜 다이어트 유산균 14포",
-          "price": 34900,
-          "ad": false,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000205496&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=6",
-          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0020/A00000020549621ko.jpg?l=ko",
-          "delta": {
-            "type": "up",
-            "value": 2
-          }
-        },
-        {
-          "key": "A000000202658",
+          "key": "A000000208888",
           "rank": 7,
-          "brand": "덴프스",
-          "name": "덴프스 덴마크 유산균이야기 우먼 2개월분(질유산균) + 철분 헤모케어 3포 증정",
-          "price": 31400,
+          "brand": "비비랩",
+          "name": "[11월 올영픽] 비비랩 저분자콜라겐S 30포 더블기획 (2개월분)",
+          "price": 29800,
           "ad": false,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000202658&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=7",
-          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0020/A00000020265829ko.jpg?l=ko",
-          "delta": {
-            "type": "down",
-            "value": 2
-          }
-        },
-        {
-          "key": "A000000187268",
-          "rank": 8,
-          "brand": "고려은단",
-          "name": "[11월 올영픽] 고려은단 메가도스C 비타민C 3000mg 30포",
-          "price": 9900,
-          "ad": false,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000187268&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=8",
-          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0018/A00000018726813ko.jpg?l=ko",
-          "delta": {
-            "type": "down",
-            "value": 2
-          }
-        },
-        {
-          "key": "A000000262412",
-          "rank": 9,
-          "brand": "대원제약",
-          "name": "[오늘의 특가] 대원제약 대원헬스 꿀잠샷 20gX12포 (+2포+수면안대) (14일분)",
-          "price": 20500,
-          "ad": false,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000262412&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=9",
-          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0026/A00000026241214ko.jpg?l=ko",
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000208888&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=7",
+          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0020/A00000020888832ko.png?l=ko",
           "delta": {
             "type": "new",
             "value": null
           }
         },
         {
-          "key": "A000000247861",
-          "rank": 10,
-          "brand": "씨제이웰케어",
-          "name": "[골라담기] CJ웰케어 건강루틴 가격혁명 12종 택 1",
-          "price": 5900,
+          "key": "A000000206861",
+          "rank": 8,
+          "brand": "덴프스",
+          "name": "[덴프스] 덴마크 유산균이야기 30캡슐 1+1 기획 (+트루바이타민 3포 증정)",
+          "price": 32000,
           "ad": false,
-          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000247861&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=10",
-          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0024/A00000024786110ko.jpg?l=ko",
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000206861&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=8",
+          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0020/A00000020686148ko.jpg?l=ko",
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "key": "A000000227457",
+          "rank": 9,
+          "brand": "알디콤",
+          "name": "[1+1]알디콤 Plus 숙취해소제 21ml 4포입",
+          "price": 17300,
+          "ad": false,
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000227457&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=9",
+          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0022/A00000022745736ko.png?l=ko",
+          "delta": {
+            "type": "new",
+            "value": null
+          }
+        },
+        {
+          "key": "A000000249509",
+          "rank": 10,
+          "brand": "지노마스터",
+          "name": "[올영단독] 지노마스터 질유산균 70캡슐 (70일분)",
+          "price": 59000,
+          "ad": false,
+          "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000249509&dispCatNo=90000010009&trackingCd=Best_Sellingbest&t_page=랭킹&t_click=판매랭킹_건강식품_상품상세&t_number=10",
+          "image": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/400/10/0000/0024/A00000024950901ko.png?l=ko",
           "delta": {
             "type": "new",
             "value": null
