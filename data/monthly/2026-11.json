@@ -2,10 +2,10 @@
   "month": "2026-11",
   "sites": {
     "kakao": {
-      "days_collected": 18,
+      "days_collected": 19,
       "date_range": [
         "2026-11-01",
-        "2026-11-18"
+        "2026-11-19"
       ],
       "items": [
         {
@@ -16,8 +16,8 @@
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261116084730_4510077a17274863ab4c0b82a3ef4c52.jpg",
           "avg_rank": 1.0,
           "best_rank": 1,
-          "top1_days": 18,
-          "appearances": 18,
+          "top1_days": 19,
+          "appearances": 19,
           "delta": {
             "type": "flat",
             "value": 0
@@ -32,7 +32,7 @@
           "avg_rank": 2.0,
           "best_rank": 2,
           "top1_days": 0,
-          "appearances": 18,
+          "appearances": 19,
           "delta": {
             "type": "flat",
             "value": 0
@@ -44,10 +44,10 @@
           "price": 62000,
           "link": "https://gift.kakao.com/product/556025",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261028074453_eff88425ecea43248807ea78a06d4171.jpg",
-          "avg_rank": 3.3,
+          "avg_rank": 3.4,
           "best_rank": 3,
           "top1_days": 0,
-          "appearances": 18,
+          "appearances": 19,
           "delta": {
             "type": "flat",
             "value": 0
@@ -59,10 +59,10 @@
           "price": 19900,
           "link": "https://gift.kakao.com/product/10056171",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261112102140_cb9daf75d089429ca8f8179f200f022c.jpg",
-          "avg_rank": 5.1,
+          "avg_rank": 4.9,
           "best_rank": 3,
           "top1_days": 0,
-          "appearances": 18,
+          "appearances": 19,
           "delta": {
             "type": "up",
             "value": 3
@@ -77,7 +77,7 @@
           "avg_rank": 5.3,
           "best_rank": 3,
           "top1_days": 0,
-          "appearances": 18,
+          "appearances": 19,
           "delta": {
             "type": "up",
             "value": 7
@@ -88,14 +88,14 @@
           "brand": "옵티젠",
           "price": 30000,
           "link": "https://gift.kakao.com/product/14022928",
-          "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261113173527_a7d35f6bdbd04dc08ba5981a22b4ce52.jpg",
+          "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261118110223_d4f9df7146fe4889a8677d4bc43a5df9.jpg",
           "avg_rank": 7.9,
           "best_rank": 3,
           "top1_days": 0,
-          "appearances": 18,
+          "appearances": 19,
           "delta": {
             "type": "down",
-            "value": 5
+            "value": 4
           }
         },
         {
@@ -104,10 +104,10 @@
           "price": 109000,
           "link": "https://gift.kakao.com/product/2484405",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261116084311_677ec4c1b0e84f109bbfd3c81c1f5355.jpg",
-          "avg_rank": 8.2,
+          "avg_rank": 8.3,
           "best_rank": 5,
           "top1_days": 0,
-          "appearances": 18,
+          "appearances": 19,
           "delta": {
             "type": "up",
             "value": 1
@@ -122,10 +122,10 @@
           "avg_rank": 8.4,
           "best_rank": 6,
           "top1_days": 0,
-          "appearances": 18,
+          "appearances": 19,
           "delta": {
-            "type": "flat",
-            "value": 0
+            "type": "down",
+            "value": 1
           }
         },
         {
@@ -134,10 +134,10 @@
           "price": 33900,
           "link": "https://gift.kakao.com/product/2941722",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261116082445_8f8951631cf94716b27534d4c27a598c.jpg",
-          "avg_rank": 8.6,
+          "avg_rank": 8.4,
           "best_rank": 6,
           "top1_days": 0,
-          "appearances": 18,
+          "appearances": 19,
           "delta": {
             "type": "up",
             "value": 2
@@ -149,13 +149,13 @@
           "price": 46400,
           "link": "https://gift.kakao.com/product/7066484",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261116081327_201d3ed98370480cbcacf596a98fcef5.jpg",
-          "avg_rank": 9.7,
+          "avg_rank": 9.9,
           "best_rank": 6,
           "top1_days": 0,
-          "appearances": 18,
+          "appearances": 19,
           "delta": {
             "type": "down",
-            "value": 3
+            "value": 5
           }
         },
         {
@@ -164,10 +164,10 @@
           "price": 31000,
           "link": "https://gift.kakao.com/product/12159594",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261116083950_7dcfc847aa1d45ee91179c0091205a4f.jpg",
-          "avg_rank": 10.7,
+          "avg_rank": 10.6,
           "best_rank": 5,
           "top1_days": 0,
-          "appearances": 18,
+          "appearances": 19,
           "delta": {
             "type": "down",
             "value": 5
@@ -209,12 +209,12 @@
           "price": 29000,
           "link": "https://gift.kakao.com/product/999713",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20250707082607_8bbbfe2e4a3641e3996324de4c0e3909.jpeg",
-          "avg_rank": 14.5,
+          "avg_rank": 14.4,
           "best_rank": 12,
           "top1_days": 0,
-          "appearances": 18,
+          "appearances": 19,
           "delta": {
-            "type": "down",
+            "type": "up",
             "value": 2
           }
         },
@@ -227,10 +227,10 @@
           "avg_rank": 15.6,
           "best_rank": 13,
           "top1_days": 0,
-          "appearances": 18,
+          "appearances": 19,
           "delta": {
             "type": "down",
-            "value": 4
+            "value": 3
           }
         },
         {
@@ -249,33 +249,18 @@
           }
         },
         {
-          "name": "성별 맞춤 설계 오쏘몰 바이탈 m/f 남성/여성 선택가능 14입 - 시그니처 기프트 에디션 (공식수입)",
-          "brand": "오쏘몰",
-          "price": 59800,
-          "link": "https://gift.kakao.com/product/8167919",
-          "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261026112443_35b6bcb5a63247d99af28ae3f95f1a7f.jpg",
-          "avg_rank": 16.0,
-          "best_rank": 12,
-          "top1_days": 0,
-          "appearances": 7,
-          "delta": {
-            "type": "down",
-            "value": 2
-          }
-        },
-        {
           "name": "고함량 비타민C 고려은단 메가도스C 3000 100포 / 분말비타민C",
           "brand": "고려은단",
           "price": 28000,
           "link": "https://gift.kakao.com/product/3252731",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20260909091732_b68718856ae342d0b37c3e36916af86b.jpg",
-          "avg_rank": 16.2,
+          "avg_rank": 16.0,
           "best_rank": 11,
           "top1_days": 0,
-          "appearances": 16,
+          "appearances": 17,
           "delta": {
             "type": "up",
-            "value": 1
+            "value": 2
           }
         },
         {
@@ -283,29 +268,29 @@
           "brand": "종근당",
           "price": 21900,
           "link": "https://gift.kakao.com/product/7948462",
-          "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261021165902_21b05aa0e01f45619c6e98e6dcb213a7.jpg",
-          "avg_rank": 16.2,
+          "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261116094414_c52c2e996383437095e11471a2d924e9.jpg",
+          "avg_rank": 16.1,
           "best_rank": 11,
           "top1_days": 0,
-          "appearances": 11,
+          "appearances": 12,
           "delta": {
             "type": "up",
-            "value": 9
+            "value": 5
           }
         },
         {
-          "name": "[정관장] 에브리타임 (10ml x 30포) _ 대한민국 명품 홍삼",
-          "brand": "정관장",
-          "price": 96300,
-          "link": "https://gift.kakao.com/product/1299642",
-          "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20250911102608_c973ad48b2bb4d54a3a6e46a60a34a13.jpg",
-          "avg_rank": 16.7,
-          "best_rank": 14,
+          "name": "성별 맞춤 설계 오쏘몰 바이탈 m/f 남성/여성 선택가능 14입 - 시그니처 기프트 에디션 (공식수입)",
+          "brand": "오쏘몰",
+          "price": 59800,
+          "link": "https://gift.kakao.com/product/8167919",
+          "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261026112443_35b6bcb5a63247d99af28ae3f95f1a7f.jpg",
+          "avg_rank": 16.2,
+          "best_rank": 12,
           "top1_days": 0,
-          "appearances": 6,
+          "appearances": 8,
           "delta": {
             "type": "down",
-            "value": 6
+            "value": 1
           }
         },
         {
@@ -324,18 +309,33 @@
           }
         },
         {
+          "name": "[정관장] 에브리타임 (10ml x 30포) _ 대한민국 명품 홍삼",
+          "brand": "정관장",
+          "price": 107000,
+          "link": "https://gift.kakao.com/product/1299642",
+          "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20250911102608_c973ad48b2bb4d54a3a6e46a60a34a13.jpg",
+          "avg_rank": 17.1,
+          "best_rank": 14,
+          "top1_days": 0,
+          "appearances": 7,
+          "delta": {
+            "type": "down",
+            "value": 6
+          }
+        },
+        {
           "name": "비타민 선물 추천 아임비타 멀티비타민 이뮨샷 1박스(5입) / 비타민선물 응원선물 에너지 선물 직장동료 선물",
           "brand": "종근당건강",
           "price": 15900,
           "link": "https://gift.kakao.com/product/5551542",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20260513082713_f5025425b9024348b2621639f67a34af.jpg",
-          "avg_rank": 17.7,
-          "best_rank": 14,
+          "avg_rank": 17.2,
+          "best_rank": 11,
           "top1_days": 0,
-          "appearances": 12,
+          "appearances": 13,
           "delta": {
             "type": "up",
-            "value": 4
+            "value": 8
           }
         }
       ],

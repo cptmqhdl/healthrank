@@ -1,15 +1,15 @@
 {
   "generated_from_dates": [
-    "2026-11-18 01:25",
     "2026-11-19 01:03",
-    "2026-11-19 01:04"
+    "2026-11-19 01:04",
+    "2026-11-19 16:54"
   ],
   "sites": {
     "kakao": {
       "id": "kakao",
       "label": "카카오톡 선물하기",
-      "date": "2026-11-18 01:25",
-      "prev_date": "2026-11-17",
+      "date": "2026-11-19 16:54",
+      "prev_date": "2026-11-18",
       "prev_gap_days": 1,
       "count": 10,
       "items": [
@@ -93,13 +93,27 @@
           "link": "https://gift.kakao.com/product/2941722",
           "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261116082445_8f8951631cf94716b27534d4c27a598c.jpg",
           "delta": {
+            "type": "flat",
+            "value": 0
+          }
+        },
+        {
+          "key": "14022928",
+          "rank": 7,
+          "brand": "옵티젠",
+          "name": "\"멀티비타민 이뮨 명작\" 옵티젠 마스터 컬렉션 종합비타민 멀티팩 30포 / 1박스 (+장미꽃&키링)",
+          "price": 30000,
+          "ad": false,
+          "link": "https://gift.kakao.com/product/14022928",
+          "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261118110223_d4f9df7146fe4889a8677d4bc43a5df9.jpg",
+          "delta": {
             "type": "up",
             "value": 1
           }
         },
         {
           "key": "7320451",
-          "rank": 7,
+          "rank": 8,
           "brand": "센트룸",
           "name": "[센트룸] 맛있는 멀티비타민 미네랄 멀티구미 (80구미)",
           "price": 19900,
@@ -109,20 +123,6 @@
           "delta": {
             "type": "down",
             "value": 1
-          }
-        },
-        {
-          "key": "14022928",
-          "rank": 8,
-          "brand": "옵티젠",
-          "name": "\"멀티비타민 이뮨 명작\" 옵티젠 마스터 컬렉션 종합비타민 멀티팩 30포 / 1박스 (+장미꽃&키링)",
-          "price": 30000,
-          "ad": false,
-          "link": "https://gift.kakao.com/product/14022928",
-          "image": "https://img1.kakaocdn.net/thumb/C175x175@2x.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20261113173527_a7d35f6bdbd04dc08ba5981a22b4ce52.jpg",
-          "delta": {
-            "type": "flat",
-            "value": 0
           }
         },
         {
